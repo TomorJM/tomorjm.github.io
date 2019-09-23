@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TomorJM - Love and Share. on TomorJM - Love and Share.</title>
-    <link>https://example.com/</link>
+    <link>www.tomorjm.com/</link>
     <description>Recent content in TomorJM - Love and Share. on TomorJM - Love and Share.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/" rel="self" type="application/rss+xml" />
+    <atom:link href="www.tomorjm.com/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>图数据库初学者:为什么图形技术是未来?</title>
-      <link>https://example.com/why-graph-databases-are-the-future/</link>
+      <link>www.tomorjm.com/why-graph-databases-are-the-future/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/why-graph-databases-are-the-future/</guid>
+      <guid>www.tomorjm.com/why-graph-databases-are-the-future/</guid>
       <description>
 
 &lt;p&gt;图形技术的世界已经发生了变化(而且仍在变化)，因此我们重新启动“图数据库初学者”系列，以反映图形技术世界的新内容——同时帮助新手跟上图形范式的发展速度。&lt;/p&gt;
@@ -119,10 +119,10 @@
     
     <item>
       <title>图数据库初学者:数据建模的基础知识</title>
-      <link>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</link>
+      <link>www.tomorjm.com/graph-databases-for-beginners-the-basics-of-data-modeling/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</guid>
+      <guid>www.tomorjm.com/graph-databases-for-beginners-the-basics-of-data-modeling/</guid>
       <description>
 
 &lt;p&gt;我在生命中的六个月时间里，是一名数据库开发人员。&lt;/p&gt;
@@ -257,10 +257,10 @@
     
     <item>
       <title>kubeadm在CentOS7下安装提示</title>
-      <link>https://example.com/kubead-in-centos7/</link>
+      <link>www.tomorjm.com/kubead-in-centos7/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/kubead-in-centos7/</guid>
+      <guid>www.tomorjm.com/kubead-in-centos7/</guid>
       <description>
 
 &lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
@@ -321,10 +321,10 @@ systemctl enable kubelet &amp;amp;&amp;amp; systemctl start kubelet
     
     <item>
       <title>开始使用GraphQL Java和Spring Boot</title>
-      <link>https://example.com/learn-graphql-java/</link>
+      <link>www.tomorjm.com/learn-graphql-java/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/learn-graphql-java/</guid>
+      <guid>www.tomorjm.com/learn-graphql-java/</guid>
       <description>
 
 &lt;p&gt;这是一篇为想要用Java搭建GraphQL服务器的小伙伴们准备的教程。需要你有一定的Spring Boot和Java开发相关知识，虽然我们简要介绍了GraphQL，但是本教程的重点是用Java开发一个GraphQL服务器。&lt;/p&gt;
@@ -712,10 +712,10 @@ public class GraphQLDataFetchers {
     
     <item>
       <title>iOS应用内多语言切换的奇思妙想</title>
-      <link>https://example.com/ios-multi-language/</link>
+      <link>www.tomorjm.com/ios-multi-language/</link>
       <pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/ios-multi-language/</guid>
+      <guid>www.tomorjm.com/ios-multi-language/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -1112,10 +1112,10 @@ static NSString *buttonTitleText;
     
     <item>
       <title>通过Xcodeproj深入探究Xcode工程文件 二</title>
-      <link>https://example.com/xcodeproj-2/</link>
+      <link>www.tomorjm.com/xcodeproj-2/</link>
       <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/xcodeproj-2/</guid>
+      <guid>www.tomorjm.com/xcodeproj-2/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -1252,10 +1252,10 @@ end
     
     <item>
       <title>通过Xcodeproj深入探究Xcode工程文件 一</title>
-      <link>https://example.com/xcodeproj-1/</link>
+      <link>www.tomorjm.com/xcodeproj-1/</link>
       <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/xcodeproj-1/</guid>
+      <guid>www.tomorjm.com/xcodeproj-1/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -1437,10 +1437,10 @@ XCConfigurationList
     
     <item>
       <title>使用强大的消息转发机制实现多代理</title>
-      <link>https://example.com/ios-target-delegate/</link>
+      <link>www.tomorjm.com/ios-target-delegate/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/ios-target-delegate/</guid>
+      <guid>www.tomorjm.com/ios-target-delegate/</guid>
       <description>
 
 &lt;p&gt;传统的代理模式只能实现一对多的代理,即每个对象同一时刻只能有一个代理,这就可能导致在某些使用场景下失效,如果对象A在处理某些事情的情况下要将结果同时通知给B和C该怎么办?这时候代理就没法用了,而通知机制虽然能够解决,但它是APP生命周期的管理,如果项目中大量使用通知,必然会不好维护且也不够优雅。这时候可以考虑使用OC强大的运行时机制,利用消息转发实现多代理。&lt;/p&gt;
@@ -1545,10 +1545,10 @@ XCConfigurationList
     
     <item>
       <title>一个波纹阴影点击和长按效果的TableViewCell</title>
-      <link>https://example.com/shadow-click-tableviewcell/</link>
+      <link>www.tomorjm.com/shadow-click-tableviewcell/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/shadow-click-tableviewcell/</guid>
+      <guid>www.tomorjm.com/shadow-click-tableviewcell/</guid>
       <description>
 
 &lt;p&gt;在推酷安卓客户端看到的这种效果,发现iOS端没有这种点击的动效,就随手研究了下。&lt;/p&gt;
@@ -1666,10 +1666,10 @@ XCConfigurationList
     
     <item>
       <title>再见,科比!永别,青春!</title>
-      <link>https://example.com/kobe-say-goodbye/</link>
+      <link>www.tomorjm.com/kobe-say-goodbye/</link>
       <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/kobe-say-goodbye/</guid>
+      <guid>www.tomorjm.com/kobe-say-goodbye/</guid>
       <description>
 
 &lt;p&gt;今天是2016年4月14日,这一天是本赛季NBA常规赛最后一场比赛,也就意味着科比也就退役了。&lt;/p&gt;
@@ -1704,10 +1704,10 @@ XCConfigurationList
     
     <item>
       <title>2016年伊始</title>
-      <link>https://example.com/beginning-of-2016/</link>
+      <link>www.tomorjm.com/beginning-of-2016/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/beginning-of-2016/</guid>
+      <guid>www.tomorjm.com/beginning-of-2016/</guid>
       <description>
 
 &lt;p&gt;时间过得好快好快。&lt;/p&gt;
@@ -1732,10 +1732,10 @@ XCConfigurationList
     
     <item>
       <title>有趣的滚轮按钮</title>
-      <link>https://example.com/funny-roll/</link>
+      <link>www.tomorjm.com/funny-roll/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/funny-roll/</guid>
+      <guid>www.tomorjm.com/funny-roll/</guid>
       <description>
 
 &lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
@@ -1761,10 +1761,10 @@ XCConfigurationList
     
     <item>
       <title>简单的卡片转场效果</title>
-      <link>https://example.com/trans-annimation/</link>
+      <link>www.tomorjm.com/trans-annimation/</link>
       <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/trans-annimation/</guid>
+      <guid>www.tomorjm.com/trans-annimation/</guid>
       <description>
 
 &lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
@@ -1794,10 +1794,10 @@ XCConfigurationList
     
     <item>
       <title>About</title>
-      <link>https://example.com/about/</link>
+      <link>www.tomorjm.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>www.tomorjm.com/about/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Name: JaimeZhang&lt;/li&gt;
 &lt;li&gt;Location: Hangzhou,China&lt;/li&gt;
@@ -1808,10 +1808,10 @@ XCConfigurationList
     
     <item>
       <title>List</title>
-      <link>https://example.com/list/</link>
+      <link>www.tomorjm.com/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/list/</guid>
+      <guid>www.tomorjm.com/list/</guid>
       <description>
 
 &lt;p&gt;这个空间记录着我在学习、生活、探索中遇到或看到的喜欢的&lt;strong&gt;Everything&lt;/strong&gt;。&lt;/p&gt;

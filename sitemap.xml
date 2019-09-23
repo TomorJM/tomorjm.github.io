@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://example.com/categories/</loc>
+      <loc>www.tomorjm.com/categories/</loc>
       
       <lastmod>2019-08-05T00:00:00+00:00</lastmod>
       
@@ -14,7 +14,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/posts/</loc>
+      <loc>www.tomorjm.com/posts/</loc>
       
       <lastmod>2019-08-05T00:00:00+00:00</lastmod>
       
@@ -26,7 +26,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/</loc>
+      <loc>www.tomorjm.com/</loc>
       
       <lastmod>2019-08-05T00:00:00+00:00</lastmod>
       
@@ -38,7 +38,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/why-graph-databases-are-the-future/</loc>
+      <loc>www.tomorjm.com/why-graph-databases-are-the-future/</loc>
       
       <lastmod>2019-08-05T00:00:00+00:00</lastmod>
       
@@ -52,7 +52,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/categories/%E6%8A%80%E6%9C%AF/</loc>
+      <loc>www.tomorjm.com/categories/%E6%8A%80%E6%9C%AF/</loc>
       
       <lastmod>2019-08-05T00:00:00+00:00</lastmod>
       
@@ -64,7 +64,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</loc>
+      <loc>www.tomorjm.com/graph-databases-for-beginners-the-basics-of-data-modeling/</loc>
       
       <lastmod>2019-08-04T00:00:00+00:00</lastmod>
       
@@ -78,7 +78,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/kubead-in-centos7/</loc>
+      <loc>www.tomorjm.com/kubead-in-centos7/</loc>
       
       <lastmod>2019-07-16T00:00:00+00:00</lastmod>
       
@@ -92,7 +92,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/learn-graphql-java/</loc>
+      <loc>www.tomorjm.com/learn-graphql-java/</loc>
       
       <lastmod>2019-03-12T00:00:00+00:00</lastmod>
       
@@ -106,7 +106,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/ios-multi-language/</loc>
+      <loc>www.tomorjm.com/ios-multi-language/</loc>
       
       <lastmod>2016-11-15T00:00:00+00:00</lastmod>
       
@@ -120,7 +120,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/xcodeproj-2/</loc>
+      <loc>www.tomorjm.com/xcodeproj-2/</loc>
       
       <lastmod>2016-10-06T00:00:00+00:00</lastmod>
       
@@ -134,7 +134,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/xcodeproj-1/</loc>
+      <loc>www.tomorjm.com/xcodeproj-1/</loc>
       
       <lastmod>2016-10-05T00:00:00+00:00</lastmod>
       
@@ -148,7 +148,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/ios-target-delegate/</loc>
+      <loc>www.tomorjm.com/ios-target-delegate/</loc>
       
       <lastmod>2016-08-02T00:00:00+00:00</lastmod>
       
@@ -162,7 +162,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/shadow-click-tableviewcell/</loc>
+      <loc>www.tomorjm.com/shadow-click-tableviewcell/</loc>
       
       <lastmod>2016-05-15T00:00:00+00:00</lastmod>
       
@@ -176,7 +176,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/kobe-say-goodbye/</loc>
+      <loc>www.tomorjm.com/kobe-say-goodbye/</loc>
       
       <lastmod>2016-04-18T00:00:00+00:00</lastmod>
       
@@ -190,7 +190,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/categories/%E7%94%9F%E6%B4%BB/</loc>
+      <loc>www.tomorjm.com/categories/%E7%94%9F%E6%B4%BB/</loc>
       
       <lastmod>2016-04-18T00:00:00+00:00</lastmod>
       
@@ -202,7 +202,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/beginning-of-2016/</loc>
+      <loc>www.tomorjm.com/beginning-of-2016/</loc>
       
       <lastmod>2016-04-05T00:00:00+00:00</lastmod>
       
@@ -216,7 +216,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/funny-roll/</loc>
+      <loc>www.tomorjm.com/funny-roll/</loc>
       
       <lastmod>2016-02-08T00:00:00+00:00</lastmod>
       
@@ -230,7 +230,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/trans-annimation/</loc>
+      <loc>www.tomorjm.com/trans-annimation/</loc>
       
       <lastmod>2016-01-14T00:00:00+00:00</lastmod>
       
@@ -244,7 +244,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/about/</loc>
+      <loc>www.tomorjm.com/about/</loc>
       
       
       <changefreq>monthly</changefreq>
@@ -256,7 +256,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/list/</loc>
+      <loc>www.tomorjm.com/list/</loc>
       
       
       <changefreq>monthly</changefreq>
@@ -268,7 +268,7 @@
     </url>
   
     <url>
-      <loc>https://example.com/tags/</loc>
+      <loc>www.tomorjm.com/tags/</loc>
       
       
       

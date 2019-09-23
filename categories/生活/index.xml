@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生活 on TomorJM - Love and Share.</title>
-    <link>https://example.com/categories/%E7%94%9F%E6%B4%BB/</link>
+    <link>www.tomorjm.com/categories/%E7%94%9F%E6%B4%BB/</link>
     <description>Recent content in 生活 on TomorJM - Love and Share.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 18 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="www.tomorjm.com/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>再见,科比!永别,青春!</title>
-      <link>https://example.com/kobe-say-goodbye/</link>
+      <link>www.tomorjm.com/kobe-say-goodbye/</link>
       <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/kobe-say-goodbye/</guid>
+      <guid>www.tomorjm.com/kobe-say-goodbye/</guid>
       <description>今天是2016年4月14日,这一天是本赛季NBA常规赛最后一场比赛,也就意味着科比也就退役了。 不关注NBA许久了,高三后到现在的大三快要结束</description>
     </item>
     
     <item>
       <title>2016年伊始</title>
-      <link>https://example.com/beginning-of-2016/</link>
+      <link>www.tomorjm.com/beginning-of-2016/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/beginning-of-2016/</guid>
+      <guid>www.tomorjm.com/beginning-of-2016/</guid>
       <description>时间过得好快好快。 计划 转眼间大三下学期了,也到了2016年,感觉在学校的时间过得越来越快了,转眼间两个周又飘过,现在后悔的是两年多前刚踏入大</description>
     </item>
     

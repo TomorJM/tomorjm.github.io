@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on TomorJM - Love and Share.</title>
-    <link>https://example.com/posts/</link>
+    <link>www.tomorjm.com/posts/</link>
     <description>Recent content in Posts on TomorJM - Love and Share.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="www.tomorjm.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>图数据库初学者:为什么图形技术是未来?</title>
-      <link>https://example.com/why-graph-databases-are-the-future/</link>
+      <link>www.tomorjm.com/why-graph-databases-are-the-future/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/why-graph-databases-are-the-future/</guid>
+      <guid>www.tomorjm.com/why-graph-databases-are-the-future/</guid>
       <description>图形技术的世界已经发生了变化(而且仍在变化)，因此我们重新启动“图数据库初学者”系列，以反映图形技术世界的新内容——同时帮助新手跟上图形范式</description>
     </item>
     
     <item>
       <title>图数据库初学者:数据建模的基础知识</title>
-      <link>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</link>
+      <link>www.tomorjm.com/graph-databases-for-beginners-the-basics-of-data-modeling/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</guid>
+      <guid>www.tomorjm.com/graph-databases-for-beginners-the-basics-of-data-modeling/</guid>
       <description>我在生命中的六个月时间里，是一名数据库开发人员。 首先，我学到的第一件事是数据建模。我们的团队使用的是关系数据库（RDBMS），特别是MySQ</description>
     </item>
     
     <item>
       <title>kubeadm在CentOS7下安装提示</title>
-      <link>https://example.com/kubead-in-centos7/</link>
+      <link>www.tomorjm.com/kubead-in-centos7/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/kubead-in-centos7/</guid>
+      <guid>www.tomorjm.com/kubead-in-centos7/</guid>
       <description>问题 使用Kubernetes的kubeadm快速创建k8s集群 CentOS 7 墙内的云主机安装: cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg exclude=kube* EOF # 将 SELinux 设置为 permissive 模式(将其禁用</description>
     </item>
     
     <item>
       <title>开始使用GraphQL Java和Spring Boot</title>
-      <link>https://example.com/learn-graphql-java/</link>
+      <link>www.tomorjm.com/learn-graphql-java/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/learn-graphql-java/</guid>
+      <guid>www.tomorjm.com/learn-graphql-java/</guid>
       <description>这是一篇为想要用Java搭建GraphQL服务器的小伙伴们准备的教程。需要你有一定的Spring Boot和Java开发相关知识，虽然我们简要</description>
     </item>
     
     <item>
       <title>iOS应用内多语言切换的奇思妙想</title>
-      <link>https://example.com/ios-multi-language/</link>
+      <link>www.tomorjm.com/ios-multi-language/</link>
       <pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/ios-multi-language/</guid>
+      <guid>www.tomorjm.com/ios-multi-language/</guid>
       <description>前言 如今,许多应用也变得更加人性化,考虑到国际友人的需要,添加了国际化多语言的处理。同时也有许多应用如网易邮箱大师、支付宝、微信等为了满足部</description>
     </item>
     
     <item>
       <title>通过Xcodeproj深入探究Xcode工程文件 二</title>
-      <link>https://example.com/xcodeproj-2/</link>
+      <link>www.tomorjm.com/xcodeproj-2/</link>
       <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/xcodeproj-2/</guid>
+      <guid>www.tomorjm.com/xcodeproj-2/</guid>
       <description>前言 上文介绍了Xcode的配置文件project.pbxproj里面的内容并且提到了Cocoapods正是利用Xcodeproj这个组件实现</description>
     </item>
     
     <item>
       <title>通过Xcodeproj深入探究Xcode工程文件 一</title>
-      <link>https://example.com/xcodeproj-1/</link>
+      <link>www.tomorjm.com/xcodeproj-1/</link>
       <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/xcodeproj-1/</guid>
+      <guid>www.tomorjm.com/xcodeproj-1/</guid>
       <description>前言 你是否好奇Cocoapods是如何修改掉Xcode工程的结构?你也是否曾被Xcode工程的配置文件里面杂乱的内容搞得摸不清头脑?你又是否</description>
     </item>
     
     <item>
       <title>使用强大的消息转发机制实现多代理</title>
-      <link>https://example.com/ios-target-delegate/</link>
+      <link>www.tomorjm.com/ios-target-delegate/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/ios-target-delegate/</guid>
+      <guid>www.tomorjm.com/ios-target-delegate/</guid>
       <description>传统的代理模式只能实现一对多的代理,即每个对象同一时刻只能有一个代理,这就可能导致在某些使用场景下失效,如果对象A在处理某些事情的情况下要将</description>
     </item>
     
     <item>
       <title>一个波纹阴影点击和长按效果的TableViewCell</title>
-      <link>https://example.com/shadow-click-tableviewcell/</link>
+      <link>www.tomorjm.com/shadow-click-tableviewcell/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/shadow-click-tableviewcell/</guid>
+      <guid>www.tomorjm.com/shadow-click-tableviewcell/</guid>
       <description>在推酷安卓客户端看到的这种效果,发现iOS端没有这种点击的动效,就随手研究了下。 先看效果 分为三种效果: 单击 单击长按并滑动手指 单击长按滑动ta</description>
     </item>
     
     <item>
       <title>再见,科比!永别,青春!</title>
-      <link>https://example.com/kobe-say-goodbye/</link>
+      <link>www.tomorjm.com/kobe-say-goodbye/</link>
       <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/kobe-say-goodbye/</guid>
+      <guid>www.tomorjm.com/kobe-say-goodbye/</guid>
       <description>今天是2016年4月14日,这一天是本赛季NBA常规赛最后一场比赛,也就意味着科比也就退役了。 不关注NBA许久了,高三后到现在的大三快要结束</description>
     </item>
     
     <item>
       <title>2016年伊始</title>
-      <link>https://example.com/beginning-of-2016/</link>
+      <link>www.tomorjm.com/beginning-of-2016/</link>
       <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/beginning-of-2016/</guid>
+      <guid>www.tomorjm.com/beginning-of-2016/</guid>
       <description>时间过得好快好快。 计划 转眼间大三下学期了,也到了2016年,感觉在学校的时间过得越来越快了,转眼间两个周又飘过,现在后悔的是两年多前刚踏入大</description>
     </item>
     
     <item>
       <title>有趣的滚轮按钮</title>
-      <link>https://example.com/funny-roll/</link>
+      <link>www.tomorjm.com/funny-roll/</link>
       <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/funny-roll/</guid>
+      <guid>www.tomorjm.com/funny-roll/</guid>
       <description>效果 学习了CA和CG两个框架后一发不可收拾,学习各种动画制作的效果,以后也会持续更新。 这个效果的思路如下 重写一个类JMMagicCircle</description>
     </item>
     
     <item>
       <title>简单的卡片转场效果</title>
-      <link>https://example.com/trans-annimation/</link>
+      <link>www.tomorjm.com/trans-annimation/</link>
       <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/trans-annimation/</guid>
+      <guid>www.tomorjm.com/trans-annimation/</guid>
       <description>效果 网上自定义Controller转场相关基本知识的教程有很多,这里就不一一介绍了,大家自行Google。这里解释下这个动画的思路 modal</description>
     </item>
     
