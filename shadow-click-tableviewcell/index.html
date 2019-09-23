@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://example.com/kobe-say-goodbye/" />
+  <link rel="next" href="https://example.com/ios-target-delegate/" />
+  <link rel="canonical" href="https://example.com/shadow-click-tableviewcell/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           一个波纹阴影点击和长按效果的TableViewCell | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="一个波纹阴影点击和长按效果的TableViewCell | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一个波纹阴影点击和长按效果的TableViewCell"/>
+<meta name="twitter:description" content="在推酷安卓客户端看到的这种效果,发现iOS端没有这种点击的动效,就随手研究了下。 先看效果 分为三种效果: 单击 单击长按并滑动手指 单击长按滑动ta"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "一个波纹阴影点击和长按效果的TableViewCell",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/shadow-click-tableviewcell\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  1368 ,
+  "url": "https:\/\/example.com\/shadow-click-tableviewcell\/",
+  "datePublished": "2016-05-15T00:00:00\x2b00:00",
+  "dateModified": "2016-05-15T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">一个波纹阴影点击和长按效果的TableViewCell</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-05-15 >15 May 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                3 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>在推酷安卓客户端看到的这种效果,发现iOS端没有这种点击的动效,就随手研究了下。</p>
+
+<h2 id="先看效果">先看效果</h2>
+
+<p>分为三种效果:</p>
+
+<ul>
+<li>单击</li>
+<li>单击长按并滑动手指</li>
+<li>单击长按滑动tableview</li>
+</ul>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/demo.gif" alt="demo" class="lazyload"><figcaption class="image-caption">demo</figcaption></figure></p>
+
+<h2 id="思路">思路</h2>
+
+<h3 id="思路一">思路一</h3>
+
+<h4 id="过程">过程</h4>
+
+<p>在tableviewcell的contentview里面添加两个手势,一个<code>UITapGestureRecognizer</code>和一个<code>UILongPressGestureRecognizer</code>来获取当前点击是单击还是长按操作,方便的是如果是长按操作,那么在一个方法里面就可以捕捉整个长按的过程:</p>
+
+<pre><code class="language-objc">/**
+ *  处理长按手势
+ *
+ *  @param longPressGestureRecognizer 长按手势
+ */
+- (void)handleLongPressGestures:(UILongPressGestureRecognizer *)longPressGestureRecognizer
+{
+    if (longPressGestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        //长按开始.......
+        //开始慢速动画
+    }
+    if((longPressGestureRecognizer.state == UIGestureRecognizerStateEnded || longPressGestureRecognizer.state == UIGestureRecognizerStateCancelled))
+    {
+      //长按结束和取消.....
+      //如果动画结束,直接移除layer
+      //如果动画没有结束,继续加速动画
+    }
+    if (longPressGestureRecognizer.state == UIGestureRecognizerStateChanged) {
+       //长按状态改变,手指滑动.....
+       //用[longPressGestureRecognizer locationInView:self]返回的CGPoint判断手指是在移到cell外部,加速动画至结束后移除
+}
+</code></pre>
+
+<p>这里配合着给layer添加的animation的delegate使用,来判断动画是否在进行或者结束。</p>
+
+<h4 id="问题">问题</h4>
+
+<p>我先是在view上做效果,效果完成后改用自定义的cell调试,这时候发现了问题:
+使用了自定义cell的tableview的<code>didSelectRowAtIndexPath</code>这个代理方法不会调用。研究发现原来是我添加的两个手势和系统的select手势操作发生了冲突。导致那两个手势把系统手势拦截了下来,该方法不执行。那么该怎么解决这个问题呢?
+我发现了这个方法:</p>
+
+<pre><code class="language-objc">- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+        //假如自定义添加了两个手势,那么该方法会调用三次,其中包括一次系统手势
+        //gestureRecognizer 返回的手势
+        // touch 接受的touch点击
+        //返回值代表是否拦截事件
+}
+</code></pre>
+
+<p>在这个方法里面就可以做判断,如果是系统手势,就不拦截。如果是自定义手势,则拦截。</p>
+
+<h3 id="思路二">思路二</h3>
+
+<p>利用系统提供的<code>touchesBegan</code>,<code>touchesMoved</code>,<code>touchesEnded</code>,<code>touchesCancelled</code>四个方法进行逻辑判断提供动画效果。
+因为我要在<code>touchesBegan</code>这个方法里面判断是单击还是长按,来分别做快速和慢速动画,所以这里用了个小技巧,就是用<code>延迟0.1秒</code>和<code>touchCancelledOrEnded</code>做动画。</p>
+
+<pre><code class="language-objc">-(void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    _touchCancelledOrEnded = NO;
+        excute_block_after(0.1f, ^{
+            [self creatAnimation];
+    });
+}
+- (void)touchesEnded:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    _touchCancelledOrEnded = YES;
+}
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
+    _touchCancelledOrEnded = YES;
+}
+
+- (void)creatAnimation
+{
+    if(_touchCancelledOrEnded == YES)
+    {
+        //快速动画
+    }else
+    {
+        //快速动画
+    }
+}
+</code></pre>
+
+<p>具体过程请看代码。</p>
+
+<h2 id="待解决的问题">待解决的问题</h2>
+
+<p>事实上,这个效果目前还不够完善。比如说在<code>didSelectRowAtIndexPath</code>这个tableview代理里面填写代码在点击cell的时候跳转到另一个控制器。上面的演示demo也可以看出,单击的时候由于控制器之间的跳转太快,导致阴影动画看不清楚。最理想的状态是:在自定义cell内部拦截这个select事件,等到cell的动画结束后,再通知tableview的<code>didSelectRowAtIndexPath</code>方法执行响应的控制器跳转代码。为了方便其他人使用,我应该在cell内部完成整个拦截和通知过程。
+我曾在stackoverflow上查找相关问题无果后,问了这个问题,希望有人知道的话,能给我一个思路,我将非常感激您并完善它。</p>
+
+<blockquote>
+<p>GitHub地址:<a href="https://github.com/tomorOoO/XMRippleShadowCell" rel="nofollow noreferrer" target="_blank">点击这里</a></p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>1368</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2fshadow-click-tableviewcell%2f&amp;text=%e4%b8%80%e4%b8%aa%e6%b3%a2%e7%ba%b9%e9%98%b4%e5%bd%b1%e7%82%b9%e5%87%bb%e5%92%8c%e9%95%bf%e6%8c%89%e6%95%88%e6%9e%9c%e7%9a%84TableViewCell&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fshadow-click-tableviewcell%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fshadow-click-tableviewcell%2f&amp;title=%e4%b8%80%e4%b8%aa%e6%b3%a2%e7%ba%b9%e9%98%b4%e5%bd%b1%e7%82%b9%e5%87%bb%e5%92%8c%e9%95%bf%e6%8c%89%e6%95%88%e6%9e%9c%e7%9a%84TableViewCell" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2fshadow-click-tableviewcell%2f&amp;title=%e4%b8%80%e4%b8%aa%e6%b3%a2%e7%ba%b9%e9%98%b4%e5%bd%b1%e7%82%b9%e5%87%bb%e5%92%8c%e9%95%bf%e6%8c%89%e6%95%88%e6%9e%9c%e7%9a%84TableViewCell" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2fshadow-click-tableviewcell%2f&amp;appkey=&amp;title=%e4%b8%80%e4%b8%aa%e6%b3%a2%e7%ba%b9%e9%98%b4%e5%bd%b1%e7%82%b9%e5%87%bb%e5%92%8c%e9%95%bf%e6%8c%89%e6%95%88%e6%9e%9c%e7%9a%84TableViewCell" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/kobe-say-goodbye/" class="prev" rel="prev" title="再见,科比!永别,青春!"><i class="iconfont icon-dajiantou"></i>&nbsp;再见,科比!永别,青春!</a>
+         
+        
+        <a href="https://example.com/ios-target-delegate/" class="next" rel="next" title="使用强大的消息转发机制实现多代理">使用强大的消息转发机制实现多代理&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

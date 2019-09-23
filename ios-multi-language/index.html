@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://example.com/xcodeproj-2/" />
+  <link rel="next" href="https://example.com/learn-graphql-java/" />
+  <link rel="canonical" href="https://example.com/ios-multi-language/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           iOS应用内多语言切换的奇思妙想 | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="iOS应用内多语言切换的奇思妙想 | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="iOS应用内多语言切换的奇思妙想"/>
+<meta name="twitter:description" content="前言 如今,许多应用也变得更加人性化,考虑到国际友人的需要,添加了国际化多语言的处理。同时也有许多应用如网易邮箱大师、支付宝、微信等为了满足部"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "iOS应用内多语言切换的奇思妙想",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/ios-multi-language\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  5559 ,
+  "url": "https:\/\/example.com\/ios-multi-language\/",
+  "datePublished": "2016-11-15T00:00:00\x2b00:00",
+  "dateModified": "2016-11-15T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">iOS应用内多语言切换的奇思妙想</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-11-15 >15 November 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                12 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>如今,许多应用也变得更加人性化,考虑到国际友人的需要,添加了国际化多语言的处理。同时也有许多应用如网易邮箱大师、支付宝、微信等为了满足部分用户的需求,添加了应用内多语言切换的功能,使得用户可以不通过设置系统语言随心所欲得切换应用内语言。那么这种不重启App就随意切换应用语言的功能是如何实现的呢?本文将对
+这一问题进行探讨。</p>
+
+<h2 id="系统实现多语言的过程">系统实现多语言的过程</h2>
+
+<ul>
+<li>iOS系统首先搜索用户的语言偏好设置(设置-通用-语言与地区)</li>
+<li>检测你的应用是否支持用户的语言，先用偏好设置(NSUserdefault)的第一个语言，检测应用是否包含该语言对应的文件夹(后缀是.lproj，文件名部分，英语为en，中文简体为zh-Hans)如果存在，那就是该语言，否则用偏好设置第二个语言来匹配。重复该过程。</li>
+<li>一旦系统为应用确定了语言，对应的<code>.lproj</code>文件夹就会用作本地化资源</li>
+</ul>
+
+<h2 id="探究过程">探究过程</h2>
+
+<p>大多数App自定义的国际化文件使用<code>localizable.string</code>,并且在代码里使用<code>NSLocalizedString(key, comment)</code>进行国际化文案处理,那么国际化的文字则完全根据系统语言执行。这个时候如果需要实现应用内的国际化多语言切换,就需要特殊处理。</p>
+
+<h3 id="方案一-暴力修改nsuserdefault中的值">方案一: 暴力修改NSUserDefault中的值</h3>
+
+<p>再愁一眼上面说到的系统国际化多语言的实现过程,既然iOS系统默认会选择<code>NSUserdefault</code>对应数组中的第一个元素作为语言的选择,那么我尝试将该数组中的元素调整下位置,看下是否可行?</p>
+
+<p>我们先在demo中提前做一下基本的多语言本地化的处理(准备工作)。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%9B%BE1.png" alt="代码国际化资源" class="lazyload"><figcaption class="image-caption">代码国际化资源</figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/xib%E5%9B%BD%E9%99%85%E5%8C%96.png" alt="xib国际化资源" class="lazyload"><figcaption class="image-caption">xib国际化资源</figcaption></figure></p>
+
+<p>界面上所有的国际化文案(代码和xib)已经就位,那么开始整起。</p>
+
+<p>主界面如图:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E4%B8%BB%E7%95%8C%E9%9D%A2%E4%B8%AD%E6%96%87.png" alt="主界面-中文" class="lazyload"><figcaption class="image-caption">主界面-中文</figcaption></figure></p>
+
+<p>首先主界面上有两个<code>button</code>,上面的<code>button</code>是代码进行初始化的(如下),所以相应国际化文案的加载位于<code>Localizable.strings</code></p>
+
+<pre><code class="language-objc">//  ViewController.m
+[self.changeBtn setTitle:NSLocalizedString(@&quot;邮箱大师&quot;, @&quot;&quot;) forState:UIControlStateNormal];
+</code></pre>
+
+<p>下面的<code>button</code>跟随<code>黄色view</code>在<code>xib</code>中进行初始化(如下),所以相应国际化文案的加载位于<code>TestView.strings</code></p>
+
+<pre><code class="language-objc">/* Class = &quot;UIButton&quot;; normalTitle = &quot;Button&quot;; ObjectID = &quot;Sic-kz-b1y&quot;; */
+&quot;Sic-kz-b1y.normalTitle&quot; = &quot;邮箱大师_xib&quot;;
+</code></pre>
+
+<p>下面的讨论我们重点关心这两个<code>button</code>的国际化文案变化。</p>
+
+<p>在<code>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent*)event</code>中添加了以下内容</p>
+
+<pre><code class="language-objc">// Viewcontroller.m
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent*)event
+{
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [userDefault objectForKey:@&quot;AppleLanguages&quot;];
+    NSString *current = [languages objectAtIndex:0];
+    NSLog(@&quot;支持的语言:%@,当前语言:%@&quot;,languages,current);
+}
+</code></pre>
+
+<p>点击空白处,打印如下:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%9B%BE5.png" alt="中文点击空白处" class="lazyload"><figcaption class="image-caption">中文点击空白处</figcaption></figure></p>
+
+<p>这个时候我们将系统切换为英文,重新启动App
+主界面文案和点击空白处打印如下:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E4%B8%BB%E7%95%8C%E9%9D%A2%E8%8B%B1%E6%96%87.png" alt="主界面-英文" class="lazyload"><figcaption class="image-caption">主界面-英文</figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%9B%BE3.png" alt="点击空白处" class="lazyload"><figcaption class="image-caption">点击空白处</figcaption></figure></p>
+
+<p>根据打印情况,确实是这样的,<code>NSUserDefaults</code>中的<code>AppleLanguages</code>数组中的<code>第一个元素值</code>跟系统语言相同,并且决定着当前应用的默认语言。</p>
+
+<p>这和我们猜测到的情况相同,那么换回英文系统,开始动刀!</p>
+
+<p>这里我们又添加一个<code>SettingViewController</code>,如下</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E8%AE%BE%E7%BD%AE%E7%95%8C%E9%9D%A2.png" alt="设置界面-中文" class="lazyload"><figcaption class="image-caption">设置界面-中文</figcaption></figure></p>
+
+<p>在这个<code>SettingViewController</code>中有两个按钮,上面是<code>中文设置按钮</code>,下面是<code>英文设置按钮</code>,我们分别在这两个按钮中添加如下方法</p>
+
+<pre><code class="language-objc">// SettingViewController.m
+// 切换为中文
+- (void)chineseClicked {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [userDefault objectForKey:@&quot;AppleLanguages&quot;];
+    NSMutableArray *arrM = [languages mutableCopy];
+    arrM[0] = @&quot;zh-Hans-US&quot;; // 强制重新更换一个新的数组,数组的第一个元素为中文
+    [userDefault setObject:arr forKey:@&quot;AppleLanguages&quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+// 切换为英文
+- (void)englishClicked {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [userDefault objectForKey:@&quot;AppleLanguages&quot;];
+    NSMutableArray *arrM = [languages mutableCopy];
+    arrM[0] = @&quot;en-US&quot;; // 强制重新更换一个新的数组,数组的第一个元素为英文
+    [userDefault setObject:arr forKey:@&quot;AppleLanguages&quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+</code></pre>
+
+<p>系统为英文情况下,运行app,并测试。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2%E6%AD%A3%E5%B8%B8.gif" alt="暴力切换" class="lazyload"><figcaption class="image-caption">暴力切换</figcaption></figure></p>
+
+<p>这时我们会惊奇得发现,语言可以随意切换并且<code>UserDefault</code>中的<code>AppleLanguages</code>数组被完全改变成我们自己想要的了,而且应用的默认语言也改变成了我们想要的中文!</p>
+
+<p>但是这种状态能不能维持还需要额外的检查,也就是说我们需要在各种场景下检测<code>AppleLanguages</code>又有没有被系统默认重置回去。</p>
+
+<p>经过测试发现,更换系统语言,是不会再次影响这个数组的值,除非你再次通过同样的方法进行替换或者直接卸载重装应用。但是这并不能保证其他的流程能否重置这个值,苹果官方也没有确定的说明。</p>
+
+<p>总结: 这种简单粗暴替换的方案原理上是可行的,但是没有trick的点,而且由于是直接动刀系统默认配置,这就可能造成一些未知的bug发生,不推荐使用。</p>
+
+<h3 id="方案二-替换系统宏">方案二: 替换系统宏</h3>
+
+<p>为什么要替换系统的宏呢?</p>
+
+<p>首先我们跳进<code>NSLocalizedString</code>的四个相关宏系统为其定义的地方,发现跳进了<code>NSBundle.h</code>文件,其定义如下:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%9B%BE7.png" alt="图8" class="lazyload"><figcaption class="image-caption">图8</figcaption></figure></p>
+
+<p>上面两个宏最终会调用指定<code>NSBundle.mainBundle</code>的<code>localizedStringForKey</code>方法,而下面的宏则可以指定bundle,指定文件。</p>
+
+<p>下面两种宏的使用都easy,因为你完全可以根据指定不同语言的<code>bundle</code>文件其加载多语言文案,但是如果在已有项目中大量使用了上面的两种宏,并且分散在各个文件中
+那就会非常头疼,因为你没有具体指定是哪个语言的文件,因为此时的文件系统中存在这样的结构:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%9B%BE8.png" alt="图9" class="lazyload"><figcaption class="image-caption">图9</figcaption></figure></p>
+
+<p>可以猜测到的是,如果不具体指定文件的话,那么系统默认会在<code>mainBundle</code>中根据方案一中的<code>UserDefault</code>的对应值去查找使用,那么应用语言还是会跟着系统走。
+所以我们需要在这个地方动点手脚,对系统宏进行处理,在不改变项目中已有代码的情况下,实现自由切换。由此,可以想到的解决思路就是<code>宏替换</code>。</p>
+
+<p>继续拿到<code>方案一</code>中的工程(系统为英文),开始我们的设计。就拿第一个宏<code>NSLocalizedString(key, comment)</code>举例,在主界面controller中,进行以下操作</p>
+
+<pre><code class="language-objc">// ViewController.m
+...
+#undef NSLocalizedString
+#define NSLocalizedString(key, comment) \
+[self localizedStringForKey:(key)]
+...
+- (NSString *)localizedStringForKey:(NSString *)key
+{
+    return  [[self customLanguageBundle] localizedStringForKey:(key) value:@&quot;&quot; table:nil];
+}
+
+- (NSBundle *)customLanguageBundle
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *currentLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@&quot;NEAppLanguage&quot;]; // 从存储中取值
+    NSString *path = [bundle pathForResource:currentLanguage ofType:@&quot;lproj&quot;];
+    if (path) {
+        bundle = [NSBundle bundleWithPath:path];
+    }
+    return bundle;
+}
+...
+// SettingViewController.m
+// 切换为中文
+- (void)chineseClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&quot;zh-Hans&quot; forKey:@&quot;NEAppLanguage&quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+// 切换为英文
+- (void)englishClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&quot;en&quot; forKey:@&quot;NEAppLanguage&quot;];
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+</code></pre>
+
+<p>上面的代码中,首先我们<code>undef</code>掉了系统的宏<code>NSLocalizedString</code>,紧接着我们又重新<code>define</code>了一个同名的宏,只不过这次让它去调用我们自定义的方法<code>localizedStringForKey</code>,
+在这个自定义方法里,我们首先去向存储查找当前用户设置的App语言,然后去<code>mainBundle</code>中查找有没有这个语言对应的<code>lproj</code>文件。如果存在,则使用该文件,否则交给系统(<code>mainBundle</code>)自己去管理决定。</p>
+
+<p>接着,启动App,测试该方案。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/xib%E4%B8%8D%E6%AD%A3%E5%B8%B8.gif" alt="xib不正常" class="lazyload"><figcaption class="image-caption">xib不正常</figcaption></figure></p>
+
+<p>纳尼!吃鲸!不应该全是正常显示的嘛!!!<code>为啥代码设置的文案,完全显示正常。而xib加载的国际化文案,则不会正常显示</code>。</p>
+
+<p>且慢,先解释下代码文案的加载过程。这里成功的关键是我们帮助原本不清楚具体使用哪个<code>lproj</code>文件的系统宏找到了具体的方向,让它不再靠猜寻路。</p>
+
+<p>那<code>xib</code>为什么会异常呢?经过一番细心调试,最终发现问题出现在&hellip;</p>
+
+<p><code>看黑板!划重点!</code></p>
+
+<p>之前自定义的宏调用的方法根本没有执行!<code>xib中的文案加载,根本不走系统宏!!!</code></p>
+
+<p>它们应该调用的是更偏底部的接口,也就是说替换系统宏对<code>Xib</code>和<code>Storyboard</code>根本无效,只会对代码调用有效。</p>
+
+<p>总结:这种方案通过替换系统宏实现,对于那些庞大且使用纯代码进行国际化处理的项目很实用,但是那些有多套Xib国际化方案的项目就失效了。</p>
+
+<p>看来我们需要一种更加全面的方法来解决这个问题!</p>
+
+<h3 id="方案3-利用runtime巧妙拦截">方案3: 利用runtime巧妙拦截</h3>
+
+<p>细心的你会发现,方案2中提到的四种宏最终都会统一调用<code>NSBundle.h</code>的一个方法</p>
+
+<pre><code class="language-objc">/* Method for retrieving localized strings. */
+- (NSString *)localizedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName;
+</code></pre>
+
+<p>调试发现,不仅代码调用会到这个地方,<code>xib</code>文件最终也会指向这个方法,看来此方法应该就是国际化调用顺序的最终去向。既然那样,为什么我们不能够在这个最终的方法中进行拦截,让<code>bundle</code>正确的去加载<code>lproj</code>文件呢?</p>
+
+<p>首先,我们先来看下这个方法各个参数的含义:</p>
+
+<ul>
+<li><code>key</code>: 需要本地化的字符串对应的键值</li>
+<li><code>value</code>: 默认值,如果本地化资源文件中没有找到对应的 key 则返回这个值</li>
+<li><code>tableName</code>: 指定在相应的lproj文件中的tableName.string文件中查找文字资源,如果传入<code>null</code>，则在<code>Localizable.strings</code>中查找</li>
+</ul>
+
+<p>这三个参数貌似并不是我们需要的东西,因为他们不能决定具体<code>lproj</code>到底是哪个?而此方法又是<code>NSBundle</code>的对象方法,事实上系统调用到这个地方的时候,其实已经做出了决定到底使用的是哪个<code>lproj</code>(其实就是该方法的调用者)。</p>
+
+<p>那么,如何巧妙的绕过这个坑,让此方法的调用者调用失效又重新指定调用呢?</p>
+
+<p>对,使用<code>Runtime</code>!</p>
+
+<p>我们可以这样做,自定义一个继承自<code>NSBundle</code>的子类,我们称它为<code>LanguageBundle</code>,在运行时利用<code>object_setClass</code>将<code>NSBundle</code>替换为<code>LanguageBundle</code>
+在这个<code>LanguageBundle</code>中重写上面的那个<code>localizedStringForKey</code>方法,然后在这个重写的方法里拦截系统的调用。这个<code>LanguageBundle</code>的作用如下:</p>
+
+<ul>
+<li>替换<code>NSBundle</code>,让原本是<code>localizedStringForKey</code>的调用者的<code>NSBundle</code>,换为了<code>LanguageBundle</code></li>
+<li><code>LanguageBundle</code>本身又是<code>NSBundle</code>的子类,继承了包括<code>localizedStringForKey</code>在内的所有属性和方法,那么该替换的侵害性可以不计</li>
+<li>在调用到<code>localizedStringForKey</code>的时候,可以对其实现高度定制,同时又可以让其父类<code>NSBundle</code>依旧执行该方法,只需<code>super</code>调用即可</li>
+</ul>
+
+<p>同样还是系统为英文的情况,具体代码如下:</p>
+
+<pre><code class="language-objc">// AppDelegate.m
+#import &lt;objc/runtime.h&gt;
+#import &quot;LanguageBundle.h&quot;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    object_setClass([NSBundle mainBundle], [LanguageBundle class]);
+    return YES;
+}
+
+...
+
+// LanguageBundle.m
+- (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *currentLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@&quot;NEAppLanguage&quot;]; // 从存储中取值
+    NSString *path = [bundle pathForResource:currentLanguage ofType:@&quot;lproj&quot;];
+    if (path) {
+        return [[NSBundle bundleWithPath:path] localizedStringForKey:key value:value table:tableName];
+    } else {
+        return [super localizedStringForKey:key value:value table:tableName];
+    }
+}
+
+// SettingViewController.m
+// 切换为中文
+- (void)chineseClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&quot;zh-Hans&quot; forKey:@&quot;NEAppLanguage&quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+// 切换为英文
+- (void)englishClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&quot;en&quot; forKey:@&quot;NEAppLanguage&quot;];
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+
+</code></pre>
+
+<p>再次运行App,按钮状态如下:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2%E6%AD%A3%E5%B8%B8.gif" alt="使用runtime" class="lazyload"><figcaption class="image-caption">使用runtime</figcaption></figure></p>
+
+<p>显示正常!</p>
+
+<p>又经过一番调试发现,无论是<code>代码</code>还是<code>Xib</code>,最终都会调用到<code>LanguageBundle</code>中重写的方法<code>localizedStringForKey</code>中去。第二种方案遇到的问题都完美解决!</p>
+
+<p>总结:这种方案比较trick,能适用各种场景,代码侵入性小且效果完美(对纯代码和Xib都会生效),非常推荐这种方案!</p>
+
+<h2 id="可能会遇到的坑">可能会遇到的坑</h2>
+
+<h3 id="1-各个ios版本中的地区代码差异">1、各个iOS版本中的地区代码差异</h3>
+
+<pre><code class="language-objc">iOS9之前:
+zh-Hans: 简体
+zh-Hant: 繁体
+
+iOS9之后:
+zh-Hans-CN: 简体（改变）
+zh-Hant-CN: 繁体（改变）
+</code></pre>
+
+<p>如上所示在<code>iOS9</code>之后,地区代码发生了改变例如简体中文在<code>iOS9</code>之前为<code>zh-Hans</code>,而iOS9之后为<code>zh-Hans-CN</code>,后面的<code>CN</code>为具体地区代码。
+所以在拿到<code>currentLanguage</code>返回是zh-Hans-CN,这时候会找不到对应的bundle文件,因为本地的文件夹名字还是zh-Hans，所以可以通过<code>NSString</code>的<code>hasPrefix:</code>方法,所以在拿到currentLanguage的时候先进行一步判断,再返回<code>zh-Hans</code>。</p>
+
+<h3 id="2-使用static初始化的nsstring">2、使用static初始化的NSString</h3>
+
+<p>如果你的项目里面有很多这样的<code>NSString</code>声明方式,就应该小心了,例如下面这段代码</p>
+
+<pre><code class="language-objc">// ViewController.m
+static NSString *buttonTitleText;
+...
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    buttonTitleText = NSLocalizedString(@&quot;邮箱大师&quot;, @&quot;&quot;);
+    [self.changeBtn setTitle:buttonTitleText forState:UIControlStateNormal];
+}
+</code></pre>
+
+<p>在这种初始化方式下,<code>buttonTitleText</code>只会初始化一次。因此无论如何切换语言,该变量依旧是第一次初始化的值,造成多语言切换效果失效。
+所以如果确实要保持统一的话,我比较推荐使用宏的形式。</p>
+
+<pre><code class="language-objc">#define buttonTitleText NSLocalizedString(@&quot;邮箱大师&quot;, @&quot;&quot;)
+</code></pre>
+
+<h2 id="不重启app的ui文案刷新机制">不重启App的UI文案刷新机制</h2>
+
+<p>需要知道的是,如果一个控件的文案已经被加到内存了,那么除非再重新设置该控件文案,否则它是不会再改变的。</p>
+
+<p>例如在一个controller中,这样设置</p>
+
+<pre><code class="language-objc">- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.changeBtn setTitle:NSLocalizedString(@&quot;邮箱大师&quot;, @&quot;&quot;)  forState:UIControlStateNormal];
+}
+</code></pre>
+
+<p>此时你再push到另一个controller中进行语言的切换。这时候你回到该界面,这个button的文案不会变化。原因就是该button的文案设置已经被加载到内存中去。</p>
+
+<p>那么该问题如何解决呢?</p>
+
+<h3 id="1-发送通知">1、发送通知</h3>
+
+<p>在多语言切换的位置<code>发送通知</code>,然后所有可能在内存中的controller注册监听这个通知,调用刷新方法,重新设置控件文案。例如:</p>
+
+<pre><code class="language-objc">// ViewController.m
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUI) name:@&quot;AppLanguageChangeSender&quot; object:nil];
+    [self.changeBtn setTitle:buttonTitleText forState:UIControlStateNormal];
+}
+
+- (void)refreshUI
+{
+    [self.changeBtn setTitle:buttonTitleText forState:UIControlStateNormal];
+}
+
+...
+
+// LanguageManager.m
+// 此类控制多语言切换
+- (void)languageChangeFinished
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@&quot;AppLanguageChangeSender&quot; object:nil];
+}
+</code></pre>
+
+<p>这样的话,需要在每个可能位于内存中的controller中都这样写,如果项目庞大的话,维护性非常差,不推荐这样做。</p>
+
+<h3 id="2-重启rootcontroller">2、重启rootController</h3>
+
+<p>还可以这样做,例如我上面各个方案中的刷新方式,<code>AppDelegate</code>中开放一个接口<code>- (void)resetMainVC</code>,在切换语言完成后调用该方法</p>
+
+<pre><code class="language-objc">// AppDelegate.m
+- (void)resetMainVC
+{
+    self.window.rootViewController = nil;
+    ViewController *mainVC = [[ViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+}
+
+// LanguageManager.m
+// 此类控制多语言切换
+- (void)languageChangeFinished
+{
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+</code></pre>
+
+<h2 id="总结">总结</h2>
+
+<p>如果要达到更好的效果,建议创建一个专门管理App语言切换的单例类,在语言切换完成后,UI文案的刷新机制也应该针对自己的项目合理的进行设计。本文只是起到一个抛砖引玉的作用,想要将该功能设计得更完美,还是需要多加完善的。</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>5559</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2fios-multi-language%2f&amp;text=iOS%e5%ba%94%e7%94%a8%e5%86%85%e5%a4%9a%e8%af%ad%e8%a8%80%e5%88%87%e6%8d%a2%e7%9a%84%e5%a5%87%e6%80%9d%e5%a6%99%e6%83%b3&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fios-multi-language%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fios-multi-language%2f&amp;title=iOS%e5%ba%94%e7%94%a8%e5%86%85%e5%a4%9a%e8%af%ad%e8%a8%80%e5%88%87%e6%8d%a2%e7%9a%84%e5%a5%87%e6%80%9d%e5%a6%99%e6%83%b3" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2fios-multi-language%2f&amp;title=iOS%e5%ba%94%e7%94%a8%e5%86%85%e5%a4%9a%e8%af%ad%e8%a8%80%e5%88%87%e6%8d%a2%e7%9a%84%e5%a5%87%e6%80%9d%e5%a6%99%e6%83%b3" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2fios-multi-language%2f&amp;appkey=&amp;title=iOS%e5%ba%94%e7%94%a8%e5%86%85%e5%a4%9a%e8%af%ad%e8%a8%80%e5%88%87%e6%8d%a2%e7%9a%84%e5%a5%87%e6%80%9d%e5%a6%99%e6%83%b3" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/xcodeproj-2/" class="prev" rel="prev" title="通过Xcodeproj深入探究Xcode工程文件 二"><i class="iconfont icon-dajiantou"></i>&nbsp;通过Xcodeproj深入探究Xcode工程文件 二</a>
+         
+        
+        <a href="https://example.com/learn-graphql-java/" class="next" rel="next" title="开始使用GraphQL Java和Spring Boot">开始使用GraphQL Java和Spring Boot&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

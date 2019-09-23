@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://example.com/ios-multi-language/" />
+  <link rel="next" href="https://example.com/kubead-in-centos7/" />
+  <link rel="canonical" href="https://example.com/learn-graphql-java/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           开始使用GraphQL Java和Spring Boot | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="开始使用GraphQL Java和Spring Boot | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="开始使用GraphQL Java和Spring Boot"/>
+<meta name="twitter:description" content="这是一篇为想要用Java搭建GraphQL服务器的小伙伴们准备的教程。需要你有一定的Spring Boot和Java开发相关知识，虽然我们简要"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "开始使用GraphQL Java和Spring Boot",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/learn-graphql-java\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  4667 ,
+  "url": "https:\/\/example.com\/learn-graphql-java\/",
+  "datePublished": "2019-03-12T00:00:00\x2b00:00",
+  "dateModified": "2019-03-12T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">开始使用GraphQL Java和Spring Boot</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2019-03-12 >12 March 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                10 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>这是一篇为想要用Java搭建GraphQL服务器的小伙伴们准备的教程。需要你有一定的Spring Boot和Java开发相关知识，虽然我们简要介绍了GraphQL，但是本教程的重点是用Java开发一个GraphQL服务器。</p>
+
+<h2 id="三分钟介绍graphql">三分钟介绍GraphQL</h2>
+
+<p>GraphQL是一门从服务器检索数据的查询语言。在某些场景下可以替换REST、SOAP和gRPC。让我们假设我们想要从一个在线商城的后端获取某一个本书的详情。</p>
+
+<p>你使用GraphQL往服务器发送如下查询去获取id为&rdquo;123&rdquo;的那本书的详情:</p>
+
+<pre><code class="language-json">{
+  bookById(id: &quot;book-1&quot;){
+    id
+    name
+    pageCount
+    author {
+      firstName
+      lastName
+    }
+  }
+}
+</code></pre>
+
+<p>这不是一段JSON(尽管它看起来非常像)，而是一条GraphQL查询。它基本上表示:</p>
+
+<ul>
+<li>查询某个特定id的书</li>
+<li>给我那本书的id、name、pageCount、author</li>
+<li>对于author我想知道firstName和lastName</li>
+</ul>
+
+<p>响应是一段普通JSON:</p>
+
+<pre><code class="language-json">{
+  &quot;bookById&quot;:
+  {
+    &quot;id&quot;:&quot;book-1&quot;,
+    &quot;name&quot;:&quot;Harry Potter and the Philosopher's Stone&quot;,
+    &quot;pageCount&quot;:223,
+    &quot;author&quot;: {
+      &quot;firstName&quot;:&quot;Joanne&quot;,
+      &quot;lastName&quot;:&quot;Rowling&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>静态类型是GraphQL最重要的特性之一:服务器明确地知道你想要查询的每个对象都是什么样子的并且任何client都可以&rdquo;内省&rdquo;于服务器并请求&rdquo;schema&rdquo;。schema描述的是查询可能是哪些情况并且你可以拿到哪些字段。(注意:当提及schema时，我们经常指的是&rdquo;GraphQL Schema&rdquo;，而不是像&rdquo;JSON Schema&rdquo;或者&rdquo;Database Schema&rdquo;)</p>
+
+<p>上面提及的查询的schema是这样描述的:</p>
+
+<pre><code class="language-js">type Query {
+  bookById(id: ID): Book
+}
+
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+}
+</code></pre>
+
+<p>这篇教程将关注于如何用Java实现一个有着这种schema的GraphQL服务器。</p>
+
+<p>我们仅仅触及了GraphQL的一些基本功能。更多内容可以去官网查看
+<a href="https://graphql.github.io/learn/" rel="nofollow noreferrer" target="_blank">https://graphql.github.io/learn/</a></p>
+
+<h2 id="graphql-java-预览">GraphQL Java 预览</h2>
+
+<p><a href="https://www.graphql-java.com/" rel="nofollow noreferrer" target="_blank">GraphQL Java</a>是GraphQL的Java(服务器)实现。GraphQL Java Github org中有几个Git仓库。其中最重要的一个是<a href="https://github.com/graphql-java/graphql-java" rel="nofollow noreferrer" target="_blank">GraphQL Java 引擎</a>，它是其他所有东西的基础。</p>
+
+<p>GraphQL Java引擎本身只关心执行查询。它不处理任何HTTP或JSON相关主题。因此，我们将使用<a href="https://github.com/graphql-java/graphql-java-spring" rel="nofollow noreferrer" target="_blank">GraphQL Java Spring Boot</a> adapter，它通过Spring Boot在HTTP上暴露API。</p>
+
+<p>创建GraphQL Java服务器的主要步骤如下:</p>
+
+<ol>
+<li>定义GraphQL Schema。</li>
+<li>决定如何获取需要查询的实际数据。</li>
+</ol>
+
+<h2 id="我们的示例api-获取图书详细信息">我们的示例API:获取图书详细信息</h2>
+
+<p>我们的示例应用程序将是一个简单的API，用于获取特定书籍的详细信息。这个API并不是很全面，但对于本教程来说已经足够了。</p>
+
+<h2 id="创建一个spring-boot应用程序">创建一个Spring Boot应用程序</h2>
+
+<p>创建Spring应用程序的最简单方法是使用<a href="https://start.spring.io/" rel="nofollow noreferrer" target="_blank">https://start.spring.io/</a>上的“Spring Initializr”。</p>
+
+<p>选择:</p>
+
+<ul>
+<li>Gradle Project</li>
+<li>Java</li>
+<li>Spring Boot 2.1.x</li>
+</ul>
+
+<p>对于我们使用的项目元数据:</p>
+
+<ul>
+<li>Group: <code>com.graphql-java.tutorial</code></li>
+<li>Artifact: <code>book-details</code></li>
+</ul>
+
+<p>至于dependency(依赖项)，我们只选择Web。</p>
+
+<p>点击<code>Generate Project</code>，你就可以使用Spring Boot app了。所有后面提到的文件和路径都是与这个Generate Project相关的。</p>
+
+<p>我们在<code>build.gradle</code>的<code>dependencies</code>部分为我们的项目添加了三个依赖项:</p>
+
+<p>前两个是GraphQL Java和GraphQL Java Spring，然后我们还添加了<a href="https://github.com/google/guava" rel="nofollow noreferrer" target="_blank">Google Guava</a>。Guava并不是必须的，但它会让我们的生活更容易一点。</p>
+
+<p>依赖项看起来是这样的:</p>
+
+<pre><code class="language-java">dependencies {
+    implementation 'com.graphql-java:graphql-java:11.0' // NEW
+    implementation 'com.graphql-java:graphql-java-spring-boot-starter-webmvc:1.0' // NEW
+    implementation 'com.google.guava:guava:26.0-jre' // NEW
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+</code></pre>
+
+<h2 id="schema">Schema</h2>
+
+<p>我们正在<code>src/main/resources</code>下创建一个新的文件<code>schema.graphqls</code>，它包含以下内容:</p>
+
+<pre><code class="language-js">type Query {
+  bookById(id: ID): Book
+}
+
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+}
+</code></pre>
+
+<p>此schema定义了一个顶层字段(在<code>Query</code>类型中):<code>bookById</code>，它返回特定图书的详细信息。</p>
+
+<p>它还定义了类型<code>Book</code>，它包含了:<code>id</code>、<code>name</code>、<code>pageCount</code>和<code>author</code>。<code>author</code>属于<code>Author</code>类型，在<code>Book</code>之后定义。</p>
+
+<blockquote>
+<p>上面显示的用于描述模式的特定于域的语言称为模式定义语言或SDL。更多细节可以在<a href="https://graphql.org/learn/schema/" rel="nofollow noreferrer" target="_blank">这里</a>找到。</p>
+</blockquote>
+
+<p>一旦我们有了这个文件，我们就需要通过读取文件并解析它，然后添加代码来为它获取数据，从而“让它活起来”。</p>
+
+<p>我们在<code>com.graphqljava.tutorial.bookdetails</code>包中创建了一个新的<code>GraphQLProvider</code>类。<code>init</code>方法将创建一个GraphQL实例:</p>
+
+<pre><code class="language-java">@Component
+public class GraphQLProvider {
+
+    private GraphQL graphQL;
+
+    @Bean
+    public GraphQL graphQL() {
+        return graphQL;
+    }
+
+    @PostConstruct
+    public void init() throws IOException {
+        URL url = Resources.getResource(&quot;schema.graphqls&quot;);
+        String sdl = Resources.toString(url, Charsets.UTF_8);
+        GraphQLSchema graphQLSchema = buildSchema(sdl);
+        this.graphQL = GraphQL.newGraphQL(graphQLSchema).build();
+    }
+
+    private GraphQLSchema buildSchema(String sdl) {
+      // TODO: we will create the schema here later
+    }
+}
+</code></pre>
+
+<p>我们使用<code>Guava</code>资源从类路径读取文件，然后创<code>GraphQLSchema</code>和<code>GraphQL</code>实例。这个<code>GraphQL</code>实例通过使用<code>@Bean</code>注解的<code>GraphQL()</code>方法作为Spring Bean暴露出去。GraphQL Java Spring适配器将使用该<code>GraphQL</code>实例，使我们的schema可以通过默认url<code>/GraphQL</code>进行HTTP访问。</p>
+
+<p>我们还需要做的是实现<code>buildSchema</code>方法，它创建<code>GraphQLSchema</code>实例，并连接代码来获取数据:</p>
+
+<pre><code class="language-java">@Autowired
+GraphQLDataFetchers graphQLDataFetchers;
+
+private GraphQLSchema buildSchema(String sdl) {
+    TypeDefinitionRegistry typeRegistry = new SchemaParser().parse(sdl);
+    RuntimeWiring runtimeWiring = buildWiring();
+    SchemaGenerator schemaGenerator = new SchemaGenerator();
+    return schemaGenerator.makeExecutableSchema(typeRegistry, runtimeWiring);
+}
+
+private RuntimeWiring buildWiring() {
+    return RuntimeWiring.newRuntimeWiring()
+        .type(newTypeWiring(&quot;Query&quot;)
+        .dataFetcher(&quot;bookById&quot;, graphQLDataFetchers.getBookByIdDataFetcher()))
+        .type(newTypeWiring(&quot;Book&quot;)
+        .dataFetcher(&quot;author&quot;, graphQLDataFetchers.getAuthorDataFetcher()))
+        .build();
+}
+</code></pre>
+
+<p><code>TypeDefinitionRegistry</code>是schema文件的解析版本。SchemaGenerator将<code>TypeDefinitionRegistry</code>与<code>RuntimeWiring</code>结合起来，实际生成<code>GraphQLSchema</code>。</p>
+
+<p><code>buildRuntimeWiring</code>使用<code>graphQLDataFetchers</code>bean来注册两个<code>Datafetcher</code>s:</p>
+
+<ul>
+<li>一个是检索具有特定ID的图书。</li>
+<li>一个是为特定的书找到作者。</li>
+</ul>
+
+<p>下一节将解释<code>DataFetcher</code>以及如何实现<code>GraphQLDataFetchers</code>bean。</p>
+
+<p>总的来说，创建<code>GraphQL</code>和<code>GraphQLSchema</code>实例的过程是这样的:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://www.graphql-java.com/images/graphql_creation.png" alt="explain" class="lazyload"><figcaption class="image-caption">explain</figcaption></figure></p>
+
+<h2 id="datafetchers">DataFetchers</h2>
+
+<p>GraphQL Java服务器最重要的概念可能是<code>Datafetcher</code>:在执行查询时，<code>Datafetcher</code>获取一个字段的数据。</p>
+
+<p>当GraphQL Java执行查询时，它为查询中遇到的每个字段调用适当的<code>Datafetcher</code>。<code>DataFetcher</code>是一个只有一个方法的接口，带有一个类型的参数<code>DataFetcherEnvironment</code>:</p>
+
+<pre><code class="language-java">public interface DataFetcher&lt;T&gt; {
+    T get(DataFetchingEnvironment dataFetchingEnvironment) throws Exception;
+}
+</code></pre>
+
+<p>重要提示:模式中的每个字段都有一个与之关联的<code>DataFetcher</code>。如果没有为特定字段指定任何<code>DataFetcher</code>，则使用默认的<code>PropertyDataFetcher</code>。我们稍后将更详细地讨论这个问题。</p>
+
+<p>我们正在创建一个新的类<code>GraphQLDataFetchers</code>，其中包含图书和作者的示例列表。</p>
+
+<p>完整的实现是这样的，我们将很快详细研究它:</p>
+
+<pre><code class="language-java">@Component
+public class GraphQLDataFetchers {
+
+    private static List&lt;Map&lt;String, String&gt;&gt; books = Arrays.asList(
+            ImmutableMap.of(&quot;id&quot;, &quot;book-1&quot;,
+                    &quot;name&quot;, &quot;Harry Potter and the Philosopher's Stone&quot;,
+                    &quot;pageCount&quot;, &quot;223&quot;,
+                    &quot;authorId&quot;, &quot;author-1&quot;),
+            ImmutableMap.of(&quot;id&quot;, &quot;book-2&quot;,
+                    &quot;name&quot;, &quot;Moby Dick&quot;,
+                    &quot;pageCount&quot;, &quot;635&quot;,
+                    &quot;authorId&quot;, &quot;author-2&quot;),
+            ImmutableMap.of(&quot;id&quot;, &quot;book-3&quot;,
+                    &quot;name&quot;, &quot;Interview with the vampire&quot;,
+                    &quot;pageCount&quot;, &quot;371&quot;,
+                    &quot;authorId&quot;, &quot;author-3&quot;)
+    );
+
+    private static List&lt;Map&lt;String, String&gt;&gt; authors = Arrays.asList(
+            ImmutableMap.of(&quot;id&quot;, &quot;author-1&quot;,
+                    &quot;firstName&quot;, &quot;Joanne&quot;,
+                    &quot;lastName&quot;, &quot;Rowling&quot;),
+            ImmutableMap.of(&quot;id&quot;, &quot;author-2&quot;,
+                    &quot;firstName&quot;, &quot;Herman&quot;,
+                    &quot;lastName&quot;, &quot;Melville&quot;),
+            ImmutableMap.of(&quot;id&quot;, &quot;author-3&quot;,
+                    &quot;firstName&quot;, &quot;Anne&quot;,
+                    &quot;lastName&quot;, &quot;Rice&quot;)
+    );
+
+    public DataFetcher getBookByIdDataFetcher() {
+        return dataFetchingEnvironment -&gt; {
+            String bookId = dataFetchingEnvironment.getArgument(&quot;id&quot;);
+            return books
+                    .stream()
+                    .filter(book -&gt; book.get(&quot;id&quot;).equals(bookId))
+                    .findFirst()
+                    .orElse(null);
+        };
+    }
+
+    public DataFetcher getAuthorDataFetcher() {
+        return dataFetchingEnvironment -&gt; {
+            Map&lt;String,String&gt; book = dataFetchingEnvironment.getSource();
+            String authorId = book.get(&quot;authorId&quot;);
+            return authors
+                    .stream()
+                    .filter(author -&gt; author.get(&quot;id&quot;).equals(authorId))
+                    .findFirst()
+                    .orElse(null);
+        };
+    }
+}
+</code></pre>
+
+<h3 id="数据源">数据源</h3>
+
+<p>我们从类中的静态列表中获取图书和作者。这只是为了本教程而做的。理解GraphQL并不指定数据来自何处是非常重要的。这就是GraphQL的强大之处:它可以来自内存中的静态列表、数据库或外部服务。</p>
+
+<h3 id="book-datafetcher">Book DataFetcher</h3>
+
+<p>我们的第一个方法<code>getBookByIdDataFetcher</code>返回一个<code>DataFetcher</code>实现，该实现接受一个<code>DataFetcherEnvironment</code>并返回一本书。在本例中，这意味着我们需要从<code>bookById</code>字段获取id参数，并找到具有此特定id的图书。</p>
+
+<p><code>String bookId = dataFetchingEnvironment.getArgument(&quot;id&quot;);</code>中的&rdquo;id&rdquo;为schema中<code>bookById</code>查询字段中的“id”:</p>
+
+<pre><code class="language-json">type Query {
+  bookById(id: ID): Book
+}
+...
+</code></pre>
+
+<h3 id="author-datafetcher">Author DataFetcher</h3>
+
+<p>第二个方法<code>getAuthorDataFetcher</code>返回一个<code>Datafetcher</code>，用于获取特定书籍的作者。与前面描述的book <code>DataFetcher</code>相比，我们没有参数，但是有一个book实例。来自父字段的<code>DataFetcher</code>的结果可以通过<code>getSource</code>获得。这是一个需要理解的重要概念:GraphQL中每个字段的<code>Datafetcher</code>都是以自顶向下的方式调用的，父字段的结果是子<code>Datafetcherenvironment</code>的<code>source</code>属性。</p>
+
+<p>然后，我们使用先前获取的图书获取authorId，并以查找特定图书的相同方式查找特定的作者。</p>
+
+<h3 id="default-datafetchers">Default DataFetchers</h3>
+
+<p>我们只实现了两个<code>Datafetcher</code>。如上所述，如果不指定一个，则使用默认的<code>PropertyDataFetcher</code>。在我们的例子中，它指的是<code>Book.id</code>、<code>Book.name</code>、<code>Book.pageCount</code>、<code>Author.id</code>、<code>Author.firstName</code>和<code>Author.lastName</code>都有一个默认的<code>PropertyDataFetcher</code>与之关联。</p>
+
+<p><code>PropertyDataFetcher</code>尝试以多种方式查找Java对象上的属性。以<code>java.util.Map</code>为例, 它只是按键查找属性。这对我们来说非常好，因为book和author映射的键与schema中指定的字段相同。例如，在我们为图书类型定义的schema中，字段<code>pageCount</code>和book <code>DataFetcher</code>返回一个带有键<code>pageCount</code>的<code>Map</code>。因为字段名与<code>Map</code>中的键相同(“pageCount”)，<code>PropertyDateFetcher</code>正常工作。</p>
+
+<p>让我们假设我们有一个不匹配，book <code>Map</code>有一个键是<code>totalPages</code>而不是<code>pageCount</code>。这将导致每本书的<code>pageCount</code>值为<code>null</code>，因为<code>PropertyDataFetcher</code>无法获取正确的值。为了解决这个问题，你必须为<code>Book.pageCount</code>注册一个新的<code>DataFetcher</code>。它看起来像这样:</p>
+
+<pre><code class="language-java">    // In the GraphQLProvider class
+    private RuntimeWiring buildWiring() {
+        return RuntimeWiring.newRuntimeWiring()
+                .type(newTypeWiring(&quot;Query&quot;)
+                        .dataFetcher(&quot;bookById&quot;, graphQLDataFetchers.getBookByIdDataFetcher()))
+                .type(newTypeWiring(&quot;Book&quot;)
+                        .dataFetcher(&quot;author&quot;, graphQLDataFetchers.getAuthorDataFetcher())
+                        // This line is new: we need to register the additional DataFetcher
+                        .dataFetcher(&quot;pageCount&quot;, graphQLDataFetchers.getPageCountDataFetcher()))
+                .build();
+    }
+
+    // In the GraphQLDataFetchers class
+    // Implement the DataFetcher
+    public DataFetcher getPageCountDataFetcher() {
+        return dataFetchingEnvironment -&gt; {
+            Map&lt;String,String&gt; book = dataFetchingEnvironment.getSource();
+            return book.get(&quot;totalPages&quot;);
+        };
+    }
+...
+</code></pre>
+
+<p>这个<code>DataFetcher</code>将通过在book <code>Map</code>中查找正确的键来解决这个问题。(同样:在我们的示例中不需要这个，因为我们没有命名不匹配)</p>
+
+<h2 id="试用api">试用API</h2>
+
+<p>这就是构建一个可工作的GraphQL API所需的全部内容。在启动Spring Boot应用程序之后，可以在<code>http://localhost:8080/graphql</code>上使用API。</p>
+
+<p>尝试和探索GraphQL API的最简单方法是使用<a href="https://github.com/prisma/graphql-playground" rel="nofollow noreferrer" target="_blank">GraphQL Playground</a>的工具。下载并运行它。</p>
+
+<p>启动之后，你将被要求输入一个URL，输入<code>http://localhost:8080/graphql</code>。</p>
+
+<p>之后，你可以查询我们的示例API，您应该会得到我们在开始时提到的结果。它应该是这样的:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://www.graphql-java.com/images/playground.png" alt="demo" class="lazyload"><figcaption class="image-caption">demo</figcaption></figure></p>
+
+<h2 id="完整的示例源代码和更多信息">完整的示例源代码和更多信息</h2>
+
+<p>完整的项目和完整的源代码可以在这里找到:<a href="https://github.com/graphql-java/tutorials/tree/master/book-details" rel="nofollow noreferrer" target="_blank">https://github.com/graphql-java/tutorials/tree/master/book-details</a></p>
+
+<p>有关GraphQL Java的更多信息可以在<a href="https://www.graphql-java.com/documentation/" rel="nofollow noreferrer" target="_blank">文档</a>中找到。</p>
+
+<p>对于任何问题, 我们也有<a href="https://spectrum.chat/graphql-java" rel="nofollow noreferrer" target="_blank">spectrum chat</a>接受讨论。</p>
+
+<p>对于直接的反馈，您也可以在我们的<a href="https://twitter.com/graphql_java" rel="nofollow noreferrer" target="_blank">GraphQL Java Twitter account</a>帐户上找到我们。</p>
+
+<blockquote>
+<p>原文链接:<a href="https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/" rel="nofollow noreferrer" target="_blank">Getting started with GraphQL Java and Spring Boot</a></p>
+
+<p>译文连接:<a href="http://www.tomorjm.com/year/03/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8GraphQL-Java%E5%92%8CSpring-Boot/" rel="nofollow noreferrer" target="_blank">开始使用GraphQL Java和Spring Boot</a></p>
+
+<p>翻译:<a href="http://www.tomorjm.com/" rel="nofollow noreferrer" target="_blank">TomorJM</a></p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>4667</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2flearn-graphql-java%2f&amp;text=%e5%bc%80%e5%a7%8b%e4%bd%bf%e7%94%a8GraphQL%20Java%e5%92%8cSpring%20Boot&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2flearn-graphql-java%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2flearn-graphql-java%2f&amp;title=%e5%bc%80%e5%a7%8b%e4%bd%bf%e7%94%a8GraphQL%20Java%e5%92%8cSpring%20Boot" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2flearn-graphql-java%2f&amp;title=%e5%bc%80%e5%a7%8b%e4%bd%bf%e7%94%a8GraphQL%20Java%e5%92%8cSpring%20Boot" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2flearn-graphql-java%2f&amp;appkey=&amp;title=%e5%bc%80%e5%a7%8b%e4%bd%bf%e7%94%a8GraphQL%20Java%e5%92%8cSpring%20Boot" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/ios-multi-language/" class="prev" rel="prev" title="iOS应用内多语言切换的奇思妙想"><i class="iconfont icon-dajiantou"></i>&nbsp;iOS应用内多语言切换的奇思妙想</a>
+         
+        
+        <a href="https://example.com/kubead-in-centos7/" class="next" rel="next" title="kubeadm在CentOS7下安装提示">kubeadm在CentOS7下安装提示&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

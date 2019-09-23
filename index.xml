@@ -1,0 +1,1886 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TomorJM - Love and Share. on TomorJM - Love and Share.</title>
+    <link>https://example.com/</link>
+    <description>Recent content in TomorJM - Love and Share. on TomorJM - Love and Share.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.com/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>图数据库初学者:为什么图形技术是未来?</title>
+      <link>https://example.com/why-graph-databases-are-the-future/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/why-graph-databases-are-the-future/</guid>
+      <description>
+
+&lt;p&gt;图形技术的世界已经发生了变化(而且仍在变化)，因此我们重新启动“图数据库初学者”系列，以反映图形技术世界的新内容——同时帮助新手跟上图形范式的发展速度。&lt;/p&gt;
+
+&lt;p&gt;你已经听说过图数据库技术，你想知道所有的热点是什么。&lt;/p&gt;
+
+&lt;p&gt;从愤世嫉俗者的角度来看很容易:它们只是另一种短暂的趋势——今天在这里，明天就走了——对吧?这难道不是所有科技术语的表达方式吗?&lt;/p&gt;
+
+&lt;p&gt;你可以怀疑，甚至质疑，但是把你的愤世嫉俗留在家里。相反，我邀请你们踏上一段探索新世界的冒险之旅。&lt;/p&gt;
+
+&lt;p&gt;图形范式远远超出了数据库和应用程序开发;这是一种对连接的可能性的重新想象。就像任何新的解决问题的框架一样，从不同的维度来处理挑战通常会在可能的解决方案中产生数量级的变化。&lt;/p&gt;
+
+&lt;p&gt;所有这些都说明:图形技术是一个正在兴起的潮流，你的开发团队和业务都不能错过。图数据库是未来的趋势，即使你只是一个初学者，开始使用它也不会太迟。就让我们一探究竟吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805202355.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在这个图数据库初学者博客系列中，我将带你了解图形技术的基础知识，假设你对这个领域的背景知识很少(或者没有)。本周，我们将介绍基本定义以及这些区别的重要性。&lt;/p&gt;
+
+&lt;h2 id=&#34;我们为什么要关心图数据库技术&#34;&gt;我们为什么要关心图数据库技术&lt;/h2&gt;
+
+&lt;p&gt;当你独自一人的时候，新技术可能会很有趣，或者用于个人项目，但当你在工作的时候，情况就完全不同了。&lt;/p&gt;
+
+&lt;p&gt;从专业角度来说，你必须在一个充满预算、时间表、企业标准和竞争对手的世界中运作。在这个世界上，对新技术的唯一测试就是它能更好地工作(而且比你现有的任何东西都好)。&lt;/p&gt;
+
+&lt;p&gt;图数据库符合这一要求，原因如下:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;性能:你的数据量在未来肯定会增加，但是以更快的速度增加的是数据之间的连接(或关系)。大数据肯定会变得更大，但互联数据将呈指数级增长。在传统数据库中，随着关系的数量和深度的增加，关系查询会逐渐停止。相反，即使数据逐年增长，图数据库的性能仍然保持不变。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;灵活性:使用图数据库，你的IT和数据架构团队以业务增长的速度快速适应变化，因为图形数据模型结构和模式会随着你的解决方案和行业的变化而变化。你的团队不必预先对你的领域进行详尽的建模(然后在某些执行人员要求更改之后对数据库进行详尽的重构和迁移);相反，你可以在不危及当前功能的情况下添加到现有结构中。使用图数据库模型，你是一个口述更改和负责;而RDBMS数据模型规定了它对你的要求，迫使你适应它的表格式的世界观。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;敏捷性:使用图形技术开发完全符合当今敏捷的、测试驱动的开发实践，允许图数据库支持的应用程序随着业务需求的变化而发展。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;你的敏捷团队现在有了一个数据库，可以满足你的日常需求。&lt;/p&gt;
+
+&lt;h2 id=&#34;什么是图数据库-一个非技术性的定义&#34;&gt;什么是图数据库(一个非技术性的定义)&lt;/h2&gt;
+
+&lt;p&gt;为了理解图数据库技术，你不需要理解图论中的神秘数学魔法。相反，它们比关系数据库(RDBMS)更易于理解。&lt;/p&gt;
+
+&lt;p&gt;图由两个元素组成:节点和关系。&lt;/p&gt;
+
+&lt;p&gt;每个节点表示一个实体(一个人、一个地方、一个东西、一个类别或其他数据块)，每个关系表示两个节点如何关联。例如，蛋糕和甜点的两个节点会有一种从蛋糕指向甜点的关系。&lt;/p&gt;
+
+&lt;p&gt;考虑另一个例子:Twitter是一个连接3.3亿月活跃用户的图数据库的完美例子。&lt;/p&gt;
+
+&lt;p&gt;在下面的图中，我们在一个图数据库中表示了一小部分Twitter用户。每个节点(标记为User)属于一个人，并与描述每个用户如何连接的关系相连接。正如我们在下面看到的，Peter和Emil互相关注，Emil和Johan也一样，但是尽管Johan关注Peter，Peter却没有反过来关注他。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805203639.png&#34; alt=&#34;用图数据库表示的Twitter用户&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你理解了这个例子，那么你已经掌握了构成图数据库的基本知识。&lt;/p&gt;
+
+&lt;h2 id=&#34;图数据库是如何工作的-用一个容易理解的方式解释&#34;&gt;图数据库是如何工作的(用一个容易理解的方式解释)&lt;/h2&gt;
+
+&lt;p&gt;与其他数据库管理系统(DBMS)不同的是，关系在图数据库中具有最高优先级。在图形世界中，连接的数据与单独的数据点同等重要(有时更加重要)。&lt;/p&gt;
+
+&lt;p&gt;这种连接优先的方法意味着关系和连接持久化在数据生命周期的每个环节:从理念,设计逻辑模型,实现在一个物理模型,使用查询语言和操作在一个可伸缩的持久性,可靠的数据库系统。&lt;/p&gt;
+
+&lt;p&gt;与其他数据库系统不同，这种方法意味着应用程序不必使用外键或额外处理(如MapReduce)来推断数据连接。&lt;/p&gt;
+
+&lt;p&gt;结果:与使用关系数据库或NoSQL存储生成的数据模型相比，你的数据模型更简单，但更有表现力。&lt;/p&gt;
+
+&lt;h3 id=&#34;什么使图数据库独一无二&#34;&gt;什么使图数据库独一无二&lt;/h3&gt;
+
+&lt;p&gt;很多数据库都有类似的特性，但是图数据库有一些特性使它们独一无二。下面是你需要了解的图数据库技术的两个最重要的特性:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;图的存储:一些图数据库使用原生图形存储，专门设计用于存储和管理图形。其他图形技术使用关系数据库、柱状数据库或面向对象数据库作为存储层。非原生存储通常比原生方法慢，因为所有的图形连接都必须转换成不同的数据模型。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;图形处理:原生图处理(又称无索引邻接)是处理图中数据的最有效方法，因为连接的节点在物理上相互指向数据库中。非原生图形处理引擎使用其他方法来处理创建、读取、更新或删除(CRUD)操作，这些操作没有针对处理连接数据进行优化。
+谈到当前的图数据库技术，Neo4j在图形存储和处理方面都是最原生的。如果你有兴趣了解更多关于原生图数据库与非原生图形技术的区别(以及为什么它很重要)，那么请阅读本初学者系列后面的原生和非原生图形技术。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;结论-图能处理的场景比你想象的要多-他们无处不在&#34;&gt;结论:图能处理的场景比你想象的要多(他们无处不在)&lt;/h2&gt;
+
+&lt;p&gt;现实世界是紧密相连的，而图数据库的目标是用一种直观的方式模拟那些有时一致、有时不稳定的关系。这就是图形范式与其他数据库模型的不同之处:它更真实地映射出人类大脑如何映射和处理周围的世界。&lt;/p&gt;
+
+&lt;p&gt;而且，一旦你开始在一个地方(例如，你的推荐引擎)看到相互关联的数据图，你也开始在其他地方看到它们(例如欺诈检测工作或主数据管理)。很快，你就会顿悟:图表无处不在。&lt;/p&gt;
+
+&lt;p&gt;毫无疑问，图形技术正在崛起。&lt;/p&gt;
+
+&lt;p&gt;你的竞争对手很有可能至少正在评估或研究图数据库的部署。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://neo4j.com/case-studies/walmart/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;沃尔玛(推荐引擎)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neo4j.com/case-studies/ebay/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;eBay(人工智能)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neo4j.com/case-studies/pitney-bowes/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pitney Bowes(主数据)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neo4j.com/blog/nasa-critical-data-knowledge-graph/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;美国国家航空航天局(知识图谱)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neo4j.com/case-studies/fortune-500-financial-services/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;其他财富500强金融服务客户(欺诈检测)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;学会利用今天的图数据库，你的企业将在未来保持竞争优势。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;原文链接:&lt;a href=&#34;https://neo4j.com/blog/why-graph-databases-are-the-future/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Graph Databases for Beginners: Why Graph Technology Is the Future&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;译文连接:&lt;a href=&#34;http://tomorjm.com/why-graph-databases-are-the-future/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;图数据库初学者:为什么图形技术是未来?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;翻译:&lt;a href=&#34;http://www.tomorjm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;TomorJM&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>图数据库初学者:数据建模的基础知识</title>
+      <link>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/graph-databases-for-beginners-the-basics-of-data-modeling/</guid>
+      <description>
+
+&lt;p&gt;我在生命中的六个月时间里，是一名数据库开发人员。&lt;/p&gt;
+
+&lt;p&gt;首先，我学到的第一件事是数据建模。我们的团队使用的是关系数据库（RDBMS），特别是MySQL（我们后来切换到Postgres）。像当时的许多后端开发人员一样，我们没有故意选择使用RDBMS，这只是默认选项（不再是这种情况）。&lt;/p&gt;
+
+&lt;p&gt;当然，这意味着我在数据建模方面的课程将遵循关系数据模型 - 这不是破坏结局 - 但它很糟糕。&lt;/p&gt;
+
+&lt;p&gt;这并不是说RDBMS模型总是坏的或它总是糟透了。但是，当它被用来作为每个项目和应用程序的数据模型，嗯，这将会有很多不匹配和合理的问题。&lt;/p&gt;
+
+&lt;p&gt;好消息是关系模型不一定是你的默认选项。&lt;/p&gt;
+
+&lt;p&gt;还存在其他非常棒的数据模型。今天，我们将仔细研究一个特别的-图形数据模型-并让你体验一次比我最初拥有的更好的数据建模体验。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805131525.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在这个为图数据库初学者准备的博客系列中，我将向你介绍图形技术的基础知识, 无论你在这个领域有很少经验甚至是没有都可以有所收获。在过去的几周里，我们已经阐述了&lt;a href=&#34;https://neo4j.com/blog/why-graph-databases-are-the-future/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;为什么图技术是未来&lt;/a&gt;和&lt;a href=&#34;https://neo4j.com/blog/why-graph-data-relationships-matter/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;为什么有联系的数据如此重要&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;本周，我们将讨论图形技术的数据建模基础知识。&lt;/p&gt;
+
+&lt;h2 id=&#34;到底什么是数据建模&#34;&gt;到底什么是数据建模?&lt;/h2&gt;
+
+&lt;p&gt;数据就像水。如果你不把它放在一个有用的容器里，它可能一点用处也没有。容器的形状，大小和功能取决于你的预期用途，但通常容器是必需的。&lt;/p&gt;
+
+&lt;p&gt;数据也是如此。在创建新的应用程序或数据解决方案时，你需要为该数据提供结构。该结构化过程称为&lt;code&gt;数据建模&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;通常数据建模仅为高级数据库管理员（DBA）或主要开发人员所涉及，数据建模有时被呈现为一种不为人所知的深奥艺术。你可能会非常崇拜数据建模专家。&lt;/p&gt;
+
+&lt;p&gt;虽然一些数据建模场景最好是让专业的数据专家处理，但通常情况下这并不会很难。事实上，数据建模既是技术问题，也是业务问题。&lt;/p&gt;
+
+&lt;p&gt;任何人都可以进行基本的数据建模，随着图形数据库技术的出现，将数据与相干模型相匹配比以往更容易。&lt;/p&gt;
+
+&lt;h2 id=&#34;数据建模过程简介&#34;&gt;数据建模过程简介&lt;/h2&gt;
+
+&lt;p&gt;数据建模是一个抽象过程。你从业务和用户需求出发。然后在建模过程中，你将这些需求映射到用于存储和组织数据的结构中。听起来很简单吧？&lt;/p&gt;
+
+&lt;p&gt;使用传统的数据库管理系统，建模远非简单。&lt;/p&gt;
+
+&lt;p&gt;在构思你的初始想法之后，关系数据库要求你创建逻辑模型，然后将该结构强制转换为表格式物理模型。当您拥有一个可用的数据库时，它看起来一点也不像您最初的白板草图(很难判断它是否满足了用户的需求)。&lt;/p&gt;
+
+&lt;p&gt;另一方面，为图形技术建模数据并不简单。想象一下你的白板结构是什么样的。可能是由箭头和线条连接的圆圈和方框的集合，对吗？&lt;/p&gt;
+
+&lt;p&gt;这里的关键是：你画的那个模型已经是一个图形了。从那幅图里构建一个图形数据库仅仅就是写几行代码这么简单了。&lt;/p&gt;
+
+&lt;h2 id=&#34;关系建模vs图形数据建模-匹配&#34;&gt;关系建模vs图形数据建模：匹配&lt;/h2&gt;
+
+&lt;p&gt;我们来看一个例子吧。&lt;/p&gt;
+
+&lt;p&gt;在这个数据中心管理域（如下图所示）中，几个数据中心使用像虚拟机或负载均衡器等架构的应用程序。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805131723.png&#34; alt=&#34;数据中心管理域初始“白板”形式的示例模型&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们希望创建一个管理这个数据中心基础架构并与之通信的应用程序，因此我们需要创建一个包含所有相关元素的数据模型。&lt;/p&gt;
+
+&lt;p&gt;现在，我们开始建立这层匹配吧。&lt;/p&gt;
+
+&lt;h3 id=&#34;关系数据模型&#34;&gt;关系数据模型&lt;/h3&gt;
+
+&lt;p&gt;如果我们使用关系数据库，业务负责人和系统架构师将归纳并创建一个类似于下面图片中的数据模型，该模型显示该领域的实体、它们之间的关系以及适用于该领域的任何规则。这将需要大量的反复思考，以及为大量可能造成异常或违反规则的情况做假设。&lt;/p&gt;
+
+&lt;p&gt;这将是一次漫长的过程。&lt;/p&gt;
+
+&lt;p&gt;从那开始，DBA童鞋将从这个初始白板草图创建一个逻辑模型，然后将其映射到你下面看到的表格和关系中去。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805131756.png&#34; alt=&#34;我们最初的“白板”数据模型的关系数据库版本。添加了几个JOIN表，这样不同的表就可以彼此通信。&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在上图中，我们不得不在系统中添加许多复杂结构使其适合关系模型。首先，无论你在哪里看到的外键都是一个增加复杂性的点。如果你不是一个经验丰富的系统管理员，当你听到“复杂性”时，我会让你知道你应该怎么想：好坑爹呀!!!&lt;/p&gt;
+
+&lt;p&gt;除此之外，一些新表已经加入到这个图中，例如AppDatabase和UserApp。这些新表称为JOIN表。&lt;/p&gt;
+
+&lt;p&gt;我不想带来坏消息，但是JOIN表会显著降低查询的速度。不幸的是，它们在关系数据模型中也是不可避免的。&lt;/p&gt;
+
+&lt;h3 id=&#34;图数据模型&#34;&gt;图数据模型&lt;/h3&gt;
+
+&lt;p&gt;现在让我们看一下如何使用图形数据建模方法构建相同的应用程序。最初，我们的工作是相同的 - 决策者制作数据模型的基本白板草图。但是这次的结果不同：他们早早出去享受几个小时愉快时光了😁。&lt;/p&gt;
+
+&lt;p&gt;为什么这样呢？因为使用图数据模型，他们不必为可能影响数据库的每个扩展、异常或危险做计划。今天的讨论只是一个起点，如果以后有什么事情发生，这个模型是可以适应的。不会大动干戈, 推到重来。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805132007.png&#34; alt=&#34;数据中心管理域的一个样本模型&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在最初的白板过程之后，一切看起来都不同。它们不是将初始白板模型更改为表格和表格之间的关联关系，而是根据业务和用户需求丰富白板模型。&lt;/p&gt;
+
+&lt;p&gt;没错：数据模型变得更好，而不是更糟。&lt;/p&gt;
+
+&lt;p&gt;在丰富模型之后，这是添加标签，属性和关系后数据模型的样子：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/img/20190805132040.png&#34; alt=&#34;经过丰加强的数据模型的样子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们丰富的图形数据模型，添加了标签，属性和关系。&lt;/p&gt;
+
+&lt;p&gt;正如你所看到的，丰富的数据模型与初始的白板草图没有太大的不同，但是更加有帮助了。事实上，这个数据模型现在可以加载到图形数据库（例如&lt;a href=&#34;https://neo4j.com/product/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Neo4j&lt;/a&gt;）中，因为使用图形技术，你在白板上绘制的草图就是你存储在数据库中的内容。&lt;/p&gt;
+
+&lt;h2 id=&#34;为什么数据建模不是一次性活动-无论你使用什么数据库&#34;&gt;为什么数据建模不是一次性活动（无论你使用什么数据库）&lt;/h2&gt;
+
+&lt;p&gt;很容易忽略关系数据库和图形数据库之间数据建模的主要差异。毕竟，数据建模只是在应用程序开发开始时必须完成的一项活动 - 是这样吗？并不是。&lt;/p&gt;
+
+&lt;p&gt;让我们回到故事时间:RDBMS数据建模对于文科毕业生来说是很粗糙的，但后来变得更糟了。&lt;/p&gt;
+
+&lt;p&gt;当我们还处于白板和头脑风暴阶段时，对我们的数据模型进行更改是很容易的。当然，要弄清楚哪些关系必须是一对一的，哪些关系必须是一对多的并不总是那么容易，但是执行这些更改非常容易。在白板阶段之后，就没那么容易了。&lt;/p&gt;
+
+&lt;p&gt;一旦我们将我们的白板模型插入Postgres，改变模型就会变得更加困难。模式迁移实际上并不是人们最喜欢的数据库活动。一旦数据库生效并投入生产，我对任何提议的更改的答案都是：fuggedaboutit(应该是&amp;rdquo;算了吧, 别想这回事儿了的意思&amp;rdquo;-译者注)。&lt;/p&gt;
+
+&lt;p&gt;但是, 他们仍然需要改变，因为用户的需求在不断变化。业务需求也在不断变化。那是因为改变是经常会发生的。&lt;/p&gt;
+
+&lt;p&gt;为什么有人会假设他们的数据模型不会发生变化呢?使用一个接受变化并为之做好准备的数据模型而不是固守现状，为不可避免的变化做好准备难道不是更好吗?&lt;/p&gt;
+
+&lt;h2 id=&#34;结论-你可以相信的改变&#34;&gt;结论：你可以相信的改变&lt;/h2&gt;
+
+&lt;p&gt;系统在变化，在入金的的开发世界中，它们经常变化。事实上，即使在开发中期，你的应用程序或解决方案也可能发生重大变化。在应用程序的生命周期中，数据模型不断地变化和发展，以满足不断变化的业务和用户需求。&lt;/p&gt;
+
+&lt;p&gt;关系型数据库——具有严格的模式和复杂的建模过程——不适合快速更改。你需要的是一个不牺牲性能的数据模型，它支持在保持数据完整性的同时进行不断的改进。&lt;/p&gt;
+
+&lt;p&gt;既然你已经了解了数据建模的基础知识，那么选择就很清楚了。&lt;/p&gt;
+
+&lt;p&gt;如果你正在创建一个具有易理解的、最少更改数据模型的应用程序，请坚持使用&amp;rdquo;可靠的&amp;rdquo;关系数据库。说真的，只要坚持已见成效的方法。&lt;/p&gt;
+
+&lt;p&gt;但也许你的道路正把你引向另一个地方。也许你正在创造一些新的东西。也许你正在开拓未知领域。也许你无法计划一个包含所有正确答案的数据库，因为你甚至不知道用户将会问什么问题。&lt;/p&gt;
+
+&lt;p&gt;如果这描述了你的下一个项目，那么你需要一个敏捷的数据模型。你需要一个随开发进展而发展的数据模型。你应该会需要一个图形数据模型。&lt;/p&gt;
+
+&lt;p&gt;未来是不确定的(你可以相信)。选择一个符合实际情况的数据模型。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;原文链接:&lt;a href=&#34;https://neo4j.com/blog/data-modeling-basics/?ref=blog&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Graph Databases for Beginners: The Basics of Data Modeling&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;译文连接:&lt;a href=&#34;http://tomorjm.com/graph-databases-for-beginners-the-basics-of-data-modeling/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;图数据库初学者:数据建模的基础知识&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;翻译:&lt;a href=&#34;http://www.tomorjm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;TomorJM&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>kubeadm在CentOS7下安装提示</title>
+      <link>https://example.com/kubead-in-centos7/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/kubead-in-centos7/</guid>
+      <description>
+
+&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+
+&lt;p&gt;使用Kubernetes的&lt;a href=&#34;https://kubernetes.io/zh/docs/setup/independent/install-kubeadm/#%e5%87%86%e5%a4%87%e5%bc%80%e5%a7%8b&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;kubeadm&lt;/a&gt;快速创建k8s集群&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CentOS 7&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;墙内的云主机安装:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+exclude=kube*
+EOF
+
+# 将 SELinux 设置为 permissive 模式(将其禁用)
+setenforce 0
+sed -i &#39;s/^SELINUX=enforcing$/SELINUX=permissive/&#39; /etc/selinux/config
+
+yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+
+systemctl enable kubelet &amp;amp;&amp;amp; systemctl start kubelet
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改安装源:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+exclude=kube*
+EOF
+
+# 将 SELinux 设置为 permissive 模式(将其禁用)
+setenforce 0
+sed -i &#39;s/^SELINUX=enforcing$/SELINUX=permissive/&#39; /etc/selinux/config
+
+yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+
+systemctl enable kubelet &amp;amp;&amp;amp; systemctl start kubelet
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;解决~&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>开始使用GraphQL Java和Spring Boot</title>
+      <link>https://example.com/learn-graphql-java/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/learn-graphql-java/</guid>
+      <description>
+
+&lt;p&gt;这是一篇为想要用Java搭建GraphQL服务器的小伙伴们准备的教程。需要你有一定的Spring Boot和Java开发相关知识，虽然我们简要介绍了GraphQL，但是本教程的重点是用Java开发一个GraphQL服务器。&lt;/p&gt;
+
+&lt;h2 id=&#34;三分钟介绍graphql&#34;&gt;三分钟介绍GraphQL&lt;/h2&gt;
+
+&lt;p&gt;GraphQL是一门从服务器检索数据的查询语言。在某些场景下可以替换REST、SOAP和gRPC。让我们假设我们想要从一个在线商城的后端获取某一个本书的详情。&lt;/p&gt;
+
+&lt;p&gt;你使用GraphQL往服务器发送如下查询去获取id为&amp;rdquo;123&amp;rdquo;的那本书的详情:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  bookById(id: &amp;quot;book-1&amp;quot;){
+    id
+    name
+    pageCount
+    author {
+      firstName
+      lastName
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这不是一段JSON(尽管它看起来非常像)，而是一条GraphQL查询。它基本上表示:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;查询某个特定id的书&lt;/li&gt;
+&lt;li&gt;给我那本书的id、name、pageCount、author&lt;/li&gt;
+&lt;li&gt;对于author我想知道firstName和lastName&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;响应是一段普通JSON:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;bookById&amp;quot;:
+  {
+    &amp;quot;id&amp;quot;:&amp;quot;book-1&amp;quot;,
+    &amp;quot;name&amp;quot;:&amp;quot;Harry Potter and the Philosopher&#39;s Stone&amp;quot;,
+    &amp;quot;pageCount&amp;quot;:223,
+    &amp;quot;author&amp;quot;: {
+      &amp;quot;firstName&amp;quot;:&amp;quot;Joanne&amp;quot;,
+      &amp;quot;lastName&amp;quot;:&amp;quot;Rowling&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;静态类型是GraphQL最重要的特性之一:服务器明确地知道你想要查询的每个对象都是什么样子的并且任何client都可以&amp;rdquo;内省&amp;rdquo;于服务器并请求&amp;rdquo;schema&amp;rdquo;。schema描述的是查询可能是哪些情况并且你可以拿到哪些字段。(注意:当提及schema时，我们经常指的是&amp;rdquo;GraphQL Schema&amp;rdquo;，而不是像&amp;rdquo;JSON Schema&amp;rdquo;或者&amp;rdquo;Database Schema&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;上面提及的查询的schema是这样描述的:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;type Query {
+  bookById(id: ID): Book
+}
+
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这篇教程将关注于如何用Java实现一个有着这种schema的GraphQL服务器。&lt;/p&gt;
+
+&lt;p&gt;我们仅仅触及了GraphQL的一些基本功能。更多内容可以去官网查看
+&lt;a href=&#34;https://graphql.github.io/learn/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://graphql.github.io/learn/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;graphql-java-预览&#34;&gt;GraphQL Java 预览&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.graphql-java.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GraphQL Java&lt;/a&gt;是GraphQL的Java(服务器)实现。GraphQL Java Github org中有几个Git仓库。其中最重要的一个是&lt;a href=&#34;https://github.com/graphql-java/graphql-java&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GraphQL Java 引擎&lt;/a&gt;，它是其他所有东西的基础。&lt;/p&gt;
+
+&lt;p&gt;GraphQL Java引擎本身只关心执行查询。它不处理任何HTTP或JSON相关主题。因此，我们将使用&lt;a href=&#34;https://github.com/graphql-java/graphql-java-spring&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GraphQL Java Spring Boot&lt;/a&gt; adapter，它通过Spring Boot在HTTP上暴露API。&lt;/p&gt;
+
+&lt;p&gt;创建GraphQL Java服务器的主要步骤如下:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;定义GraphQL Schema。&lt;/li&gt;
+&lt;li&gt;决定如何获取需要查询的实际数据。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;我们的示例api-获取图书详细信息&#34;&gt;我们的示例API:获取图书详细信息&lt;/h2&gt;
+
+&lt;p&gt;我们的示例应用程序将是一个简单的API，用于获取特定书籍的详细信息。这个API并不是很全面，但对于本教程来说已经足够了。&lt;/p&gt;
+
+&lt;h2 id=&#34;创建一个spring-boot应用程序&#34;&gt;创建一个Spring Boot应用程序&lt;/h2&gt;
+
+&lt;p&gt;创建Spring应用程序的最简单方法是使用&lt;a href=&#34;https://start.spring.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://start.spring.io/&lt;/a&gt;上的“Spring Initializr”。&lt;/p&gt;
+
+&lt;p&gt;选择:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gradle Project&lt;/li&gt;
+&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;Spring Boot 2.1.x&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于我们使用的项目元数据:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Group: &lt;code&gt;com.graphql-java.tutorial&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Artifact: &lt;code&gt;book-details&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;至于dependency(依赖项)，我们只选择Web。&lt;/p&gt;
+
+&lt;p&gt;点击&lt;code&gt;Generate Project&lt;/code&gt;，你就可以使用Spring Boot app了。所有后面提到的文件和路径都是与这个Generate Project相关的。&lt;/p&gt;
+
+&lt;p&gt;我们在&lt;code&gt;build.gradle&lt;/code&gt;的&lt;code&gt;dependencies&lt;/code&gt;部分为我们的项目添加了三个依赖项:&lt;/p&gt;
+
+&lt;p&gt;前两个是GraphQL Java和GraphQL Java Spring，然后我们还添加了&lt;a href=&#34;https://github.com/google/guava&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Google Guava&lt;/a&gt;。Guava并不是必须的，但它会让我们的生活更容易一点。&lt;/p&gt;
+
+&lt;p&gt;依赖项看起来是这样的:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;dependencies {
+    implementation &#39;com.graphql-java:graphql-java:11.0&#39; // NEW
+    implementation &#39;com.graphql-java:graphql-java-spring-boot-starter-webmvc:1.0&#39; // NEW
+    implementation &#39;com.google.guava:guava:26.0-jre&#39; // NEW
+    implementation &#39;org.springframework.boot:spring-boot-starter-web&#39;
+    testImplementation &#39;org.springframework.boot:spring-boot-starter-test&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;schema&#34;&gt;Schema&lt;/h2&gt;
+
+&lt;p&gt;我们正在&lt;code&gt;src/main/resources&lt;/code&gt;下创建一个新的文件&lt;code&gt;schema.graphqls&lt;/code&gt;，它包含以下内容:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;type Query {
+  bookById(id: ID): Book
+}
+
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此schema定义了一个顶层字段(在&lt;code&gt;Query&lt;/code&gt;类型中):&lt;code&gt;bookById&lt;/code&gt;，它返回特定图书的详细信息。&lt;/p&gt;
+
+&lt;p&gt;它还定义了类型&lt;code&gt;Book&lt;/code&gt;，它包含了:&lt;code&gt;id&lt;/code&gt;、&lt;code&gt;name&lt;/code&gt;、&lt;code&gt;pageCount&lt;/code&gt;和&lt;code&gt;author&lt;/code&gt;。&lt;code&gt;author&lt;/code&gt;属于&lt;code&gt;Author&lt;/code&gt;类型，在&lt;code&gt;Book&lt;/code&gt;之后定义。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面显示的用于描述模式的特定于域的语言称为模式定义语言或SDL。更多细节可以在&lt;a href=&#34;https://graphql.org/learn/schema/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;找到。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;一旦我们有了这个文件，我们就需要通过读取文件并解析它，然后添加代码来为它获取数据，从而“让它活起来”。&lt;/p&gt;
+
+&lt;p&gt;我们在&lt;code&gt;com.graphqljava.tutorial.bookdetails&lt;/code&gt;包中创建了一个新的&lt;code&gt;GraphQLProvider&lt;/code&gt;类。&lt;code&gt;init&lt;/code&gt;方法将创建一个GraphQL实例:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Component
+public class GraphQLProvider {
+
+    private GraphQL graphQL;
+
+    @Bean
+    public GraphQL graphQL() {
+        return graphQL;
+    }
+
+    @PostConstruct
+    public void init() throws IOException {
+        URL url = Resources.getResource(&amp;quot;schema.graphqls&amp;quot;);
+        String sdl = Resources.toString(url, Charsets.UTF_8);
+        GraphQLSchema graphQLSchema = buildSchema(sdl);
+        this.graphQL = GraphQL.newGraphQL(graphQLSchema).build();
+    }
+
+    private GraphQLSchema buildSchema(String sdl) {
+      // TODO: we will create the schema here later
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们使用&lt;code&gt;Guava&lt;/code&gt;资源从类路径读取文件，然后创&lt;code&gt;GraphQLSchema&lt;/code&gt;和&lt;code&gt;GraphQL&lt;/code&gt;实例。这个&lt;code&gt;GraphQL&lt;/code&gt;实例通过使用&lt;code&gt;@Bean&lt;/code&gt;注解的&lt;code&gt;GraphQL()&lt;/code&gt;方法作为Spring Bean暴露出去。GraphQL Java Spring适配器将使用该&lt;code&gt;GraphQL&lt;/code&gt;实例，使我们的schema可以通过默认url&lt;code&gt;/GraphQL&lt;/code&gt;进行HTTP访问。&lt;/p&gt;
+
+&lt;p&gt;我们还需要做的是实现&lt;code&gt;buildSchema&lt;/code&gt;方法，它创建&lt;code&gt;GraphQLSchema&lt;/code&gt;实例，并连接代码来获取数据:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Autowired
+GraphQLDataFetchers graphQLDataFetchers;
+
+private GraphQLSchema buildSchema(String sdl) {
+    TypeDefinitionRegistry typeRegistry = new SchemaParser().parse(sdl);
+    RuntimeWiring runtimeWiring = buildWiring();
+    SchemaGenerator schemaGenerator = new SchemaGenerator();
+    return schemaGenerator.makeExecutableSchema(typeRegistry, runtimeWiring);
+}
+
+private RuntimeWiring buildWiring() {
+    return RuntimeWiring.newRuntimeWiring()
+        .type(newTypeWiring(&amp;quot;Query&amp;quot;)
+        .dataFetcher(&amp;quot;bookById&amp;quot;, graphQLDataFetchers.getBookByIdDataFetcher()))
+        .type(newTypeWiring(&amp;quot;Book&amp;quot;)
+        .dataFetcher(&amp;quot;author&amp;quot;, graphQLDataFetchers.getAuthorDataFetcher()))
+        .build();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;TypeDefinitionRegistry&lt;/code&gt;是schema文件的解析版本。SchemaGenerator将&lt;code&gt;TypeDefinitionRegistry&lt;/code&gt;与&lt;code&gt;RuntimeWiring&lt;/code&gt;结合起来，实际生成&lt;code&gt;GraphQLSchema&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;buildRuntimeWiring&lt;/code&gt;使用&lt;code&gt;graphQLDataFetchers&lt;/code&gt;bean来注册两个&lt;code&gt;Datafetcher&lt;/code&gt;s:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一个是检索具有特定ID的图书。&lt;/li&gt;
+&lt;li&gt;一个是为特定的书找到作者。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下一节将解释&lt;code&gt;DataFetcher&lt;/code&gt;以及如何实现&lt;code&gt;GraphQLDataFetchers&lt;/code&gt;bean。&lt;/p&gt;
+
+&lt;p&gt;总的来说，创建&lt;code&gt;GraphQL&lt;/code&gt;和&lt;code&gt;GraphQLSchema&lt;/code&gt;实例的过程是这样的:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.graphql-java.com/images/graphql_creation.png&#34; alt=&#34;explain&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;datafetchers&#34;&gt;DataFetchers&lt;/h2&gt;
+
+&lt;p&gt;GraphQL Java服务器最重要的概念可能是&lt;code&gt;Datafetcher&lt;/code&gt;:在执行查询时，&lt;code&gt;Datafetcher&lt;/code&gt;获取一个字段的数据。&lt;/p&gt;
+
+&lt;p&gt;当GraphQL Java执行查询时，它为查询中遇到的每个字段调用适当的&lt;code&gt;Datafetcher&lt;/code&gt;。&lt;code&gt;DataFetcher&lt;/code&gt;是一个只有一个方法的接口，带有一个类型的参数&lt;code&gt;DataFetcherEnvironment&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface DataFetcher&amp;lt;T&amp;gt; {
+    T get(DataFetchingEnvironment dataFetchingEnvironment) throws Exception;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;重要提示:模式中的每个字段都有一个与之关联的&lt;code&gt;DataFetcher&lt;/code&gt;。如果没有为特定字段指定任何&lt;code&gt;DataFetcher&lt;/code&gt;，则使用默认的&lt;code&gt;PropertyDataFetcher&lt;/code&gt;。我们稍后将更详细地讨论这个问题。&lt;/p&gt;
+
+&lt;p&gt;我们正在创建一个新的类&lt;code&gt;GraphQLDataFetchers&lt;/code&gt;，其中包含图书和作者的示例列表。&lt;/p&gt;
+
+&lt;p&gt;完整的实现是这样的，我们将很快详细研究它:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Component
+public class GraphQLDataFetchers {
+
+    private static List&amp;lt;Map&amp;lt;String, String&amp;gt;&amp;gt; books = Arrays.asList(
+            ImmutableMap.of(&amp;quot;id&amp;quot;, &amp;quot;book-1&amp;quot;,
+                    &amp;quot;name&amp;quot;, &amp;quot;Harry Potter and the Philosopher&#39;s Stone&amp;quot;,
+                    &amp;quot;pageCount&amp;quot;, &amp;quot;223&amp;quot;,
+                    &amp;quot;authorId&amp;quot;, &amp;quot;author-1&amp;quot;),
+            ImmutableMap.of(&amp;quot;id&amp;quot;, &amp;quot;book-2&amp;quot;,
+                    &amp;quot;name&amp;quot;, &amp;quot;Moby Dick&amp;quot;,
+                    &amp;quot;pageCount&amp;quot;, &amp;quot;635&amp;quot;,
+                    &amp;quot;authorId&amp;quot;, &amp;quot;author-2&amp;quot;),
+            ImmutableMap.of(&amp;quot;id&amp;quot;, &amp;quot;book-3&amp;quot;,
+                    &amp;quot;name&amp;quot;, &amp;quot;Interview with the vampire&amp;quot;,
+                    &amp;quot;pageCount&amp;quot;, &amp;quot;371&amp;quot;,
+                    &amp;quot;authorId&amp;quot;, &amp;quot;author-3&amp;quot;)
+    );
+
+    private static List&amp;lt;Map&amp;lt;String, String&amp;gt;&amp;gt; authors = Arrays.asList(
+            ImmutableMap.of(&amp;quot;id&amp;quot;, &amp;quot;author-1&amp;quot;,
+                    &amp;quot;firstName&amp;quot;, &amp;quot;Joanne&amp;quot;,
+                    &amp;quot;lastName&amp;quot;, &amp;quot;Rowling&amp;quot;),
+            ImmutableMap.of(&amp;quot;id&amp;quot;, &amp;quot;author-2&amp;quot;,
+                    &amp;quot;firstName&amp;quot;, &amp;quot;Herman&amp;quot;,
+                    &amp;quot;lastName&amp;quot;, &amp;quot;Melville&amp;quot;),
+            ImmutableMap.of(&amp;quot;id&amp;quot;, &amp;quot;author-3&amp;quot;,
+                    &amp;quot;firstName&amp;quot;, &amp;quot;Anne&amp;quot;,
+                    &amp;quot;lastName&amp;quot;, &amp;quot;Rice&amp;quot;)
+    );
+
+    public DataFetcher getBookByIdDataFetcher() {
+        return dataFetchingEnvironment -&amp;gt; {
+            String bookId = dataFetchingEnvironment.getArgument(&amp;quot;id&amp;quot;);
+            return books
+                    .stream()
+                    .filter(book -&amp;gt; book.get(&amp;quot;id&amp;quot;).equals(bookId))
+                    .findFirst()
+                    .orElse(null);
+        };
+    }
+
+    public DataFetcher getAuthorDataFetcher() {
+        return dataFetchingEnvironment -&amp;gt; {
+            Map&amp;lt;String,String&amp;gt; book = dataFetchingEnvironment.getSource();
+            String authorId = book.get(&amp;quot;authorId&amp;quot;);
+            return authors
+                    .stream()
+                    .filter(author -&amp;gt; author.get(&amp;quot;id&amp;quot;).equals(authorId))
+                    .findFirst()
+                    .orElse(null);
+        };
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;数据源&#34;&gt;数据源&lt;/h3&gt;
+
+&lt;p&gt;我们从类中的静态列表中获取图书和作者。这只是为了本教程而做的。理解GraphQL并不指定数据来自何处是非常重要的。这就是GraphQL的强大之处:它可以来自内存中的静态列表、数据库或外部服务。&lt;/p&gt;
+
+&lt;h3 id=&#34;book-datafetcher&#34;&gt;Book DataFetcher&lt;/h3&gt;
+
+&lt;p&gt;我们的第一个方法&lt;code&gt;getBookByIdDataFetcher&lt;/code&gt;返回一个&lt;code&gt;DataFetcher&lt;/code&gt;实现，该实现接受一个&lt;code&gt;DataFetcherEnvironment&lt;/code&gt;并返回一本书。在本例中，这意味着我们需要从&lt;code&gt;bookById&lt;/code&gt;字段获取id参数，并找到具有此特定id的图书。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;String bookId = dataFetchingEnvironment.getArgument(&amp;quot;id&amp;quot;);&lt;/code&gt;中的&amp;rdquo;id&amp;rdquo;为schema中&lt;code&gt;bookById&lt;/code&gt;查询字段中的“id”:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;type Query {
+  bookById(id: ID): Book
+}
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;author-datafetcher&#34;&gt;Author DataFetcher&lt;/h3&gt;
+
+&lt;p&gt;第二个方法&lt;code&gt;getAuthorDataFetcher&lt;/code&gt;返回一个&lt;code&gt;Datafetcher&lt;/code&gt;，用于获取特定书籍的作者。与前面描述的book &lt;code&gt;DataFetcher&lt;/code&gt;相比，我们没有参数，但是有一个book实例。来自父字段的&lt;code&gt;DataFetcher&lt;/code&gt;的结果可以通过&lt;code&gt;getSource&lt;/code&gt;获得。这是一个需要理解的重要概念:GraphQL中每个字段的&lt;code&gt;Datafetcher&lt;/code&gt;都是以自顶向下的方式调用的，父字段的结果是子&lt;code&gt;Datafetcherenvironment&lt;/code&gt;的&lt;code&gt;source&lt;/code&gt;属性。&lt;/p&gt;
+
+&lt;p&gt;然后，我们使用先前获取的图书获取authorId，并以查找特定图书的相同方式查找特定的作者。&lt;/p&gt;
+
+&lt;h3 id=&#34;default-datafetchers&#34;&gt;Default DataFetchers&lt;/h3&gt;
+
+&lt;p&gt;我们只实现了两个&lt;code&gt;Datafetcher&lt;/code&gt;。如上所述，如果不指定一个，则使用默认的&lt;code&gt;PropertyDataFetcher&lt;/code&gt;。在我们的例子中，它指的是&lt;code&gt;Book.id&lt;/code&gt;、&lt;code&gt;Book.name&lt;/code&gt;、&lt;code&gt;Book.pageCount&lt;/code&gt;、&lt;code&gt;Author.id&lt;/code&gt;、&lt;code&gt;Author.firstName&lt;/code&gt;和&lt;code&gt;Author.lastName&lt;/code&gt;都有一个默认的&lt;code&gt;PropertyDataFetcher&lt;/code&gt;与之关联。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;PropertyDataFetcher&lt;/code&gt;尝试以多种方式查找Java对象上的属性。以&lt;code&gt;java.util.Map&lt;/code&gt;为例, 它只是按键查找属性。这对我们来说非常好，因为book和author映射的键与schema中指定的字段相同。例如，在我们为图书类型定义的schema中，字段&lt;code&gt;pageCount&lt;/code&gt;和book &lt;code&gt;DataFetcher&lt;/code&gt;返回一个带有键&lt;code&gt;pageCount&lt;/code&gt;的&lt;code&gt;Map&lt;/code&gt;。因为字段名与&lt;code&gt;Map&lt;/code&gt;中的键相同(“pageCount”)，&lt;code&gt;PropertyDateFetcher&lt;/code&gt;正常工作。&lt;/p&gt;
+
+&lt;p&gt;让我们假设我们有一个不匹配，book &lt;code&gt;Map&lt;/code&gt;有一个键是&lt;code&gt;totalPages&lt;/code&gt;而不是&lt;code&gt;pageCount&lt;/code&gt;。这将导致每本书的&lt;code&gt;pageCount&lt;/code&gt;值为&lt;code&gt;null&lt;/code&gt;，因为&lt;code&gt;PropertyDataFetcher&lt;/code&gt;无法获取正确的值。为了解决这个问题，你必须为&lt;code&gt;Book.pageCount&lt;/code&gt;注册一个新的&lt;code&gt;DataFetcher&lt;/code&gt;。它看起来像这样:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    // In the GraphQLProvider class
+    private RuntimeWiring buildWiring() {
+        return RuntimeWiring.newRuntimeWiring()
+                .type(newTypeWiring(&amp;quot;Query&amp;quot;)
+                        .dataFetcher(&amp;quot;bookById&amp;quot;, graphQLDataFetchers.getBookByIdDataFetcher()))
+                .type(newTypeWiring(&amp;quot;Book&amp;quot;)
+                        .dataFetcher(&amp;quot;author&amp;quot;, graphQLDataFetchers.getAuthorDataFetcher())
+                        // This line is new: we need to register the additional DataFetcher
+                        .dataFetcher(&amp;quot;pageCount&amp;quot;, graphQLDataFetchers.getPageCountDataFetcher()))
+                .build();
+    }
+
+    // In the GraphQLDataFetchers class
+    // Implement the DataFetcher
+    public DataFetcher getPageCountDataFetcher() {
+        return dataFetchingEnvironment -&amp;gt; {
+            Map&amp;lt;String,String&amp;gt; book = dataFetchingEnvironment.getSource();
+            return book.get(&amp;quot;totalPages&amp;quot;);
+        };
+    }
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这个&lt;code&gt;DataFetcher&lt;/code&gt;将通过在book &lt;code&gt;Map&lt;/code&gt;中查找正确的键来解决这个问题。(同样:在我们的示例中不需要这个，因为我们没有命名不匹配)&lt;/p&gt;
+
+&lt;h2 id=&#34;试用api&#34;&gt;试用API&lt;/h2&gt;
+
+&lt;p&gt;这就是构建一个可工作的GraphQL API所需的全部内容。在启动Spring Boot应用程序之后，可以在&lt;code&gt;http://localhost:8080/graphql&lt;/code&gt;上使用API。&lt;/p&gt;
+
+&lt;p&gt;尝试和探索GraphQL API的最简单方法是使用&lt;a href=&#34;https://github.com/prisma/graphql-playground&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GraphQL Playground&lt;/a&gt;的工具。下载并运行它。&lt;/p&gt;
+
+&lt;p&gt;启动之后，你将被要求输入一个URL，输入&lt;code&gt;http://localhost:8080/graphql&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;之后，你可以查询我们的示例API，您应该会得到我们在开始时提到的结果。它应该是这样的:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.graphql-java.com/images/playground.png&#34; alt=&#34;demo&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;完整的示例源代码和更多信息&#34;&gt;完整的示例源代码和更多信息&lt;/h2&gt;
+
+&lt;p&gt;完整的项目和完整的源代码可以在这里找到:&lt;a href=&#34;https://github.com/graphql-java/tutorials/tree/master/book-details&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/graphql-java/tutorials/tree/master/book-details&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;有关GraphQL Java的更多信息可以在&lt;a href=&#34;https://www.graphql-java.com/documentation/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;文档&lt;/a&gt;中找到。&lt;/p&gt;
+
+&lt;p&gt;对于任何问题, 我们也有&lt;a href=&#34;https://spectrum.chat/graphql-java&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;spectrum chat&lt;/a&gt;接受讨论。&lt;/p&gt;
+
+&lt;p&gt;对于直接的反馈，您也可以在我们的&lt;a href=&#34;https://twitter.com/graphql_java&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GraphQL Java Twitter account&lt;/a&gt;帐户上找到我们。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;原文链接:&lt;a href=&#34;https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Getting started with GraphQL Java and Spring Boot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;译文连接:&lt;a href=&#34;http://www.tomorjm.com/year/03/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8GraphQL-Java%E5%92%8CSpring-Boot/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;开始使用GraphQL Java和Spring Boot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;翻译:&lt;a href=&#34;http://www.tomorjm.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;TomorJM&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOS应用内多语言切换的奇思妙想</title>
+      <link>https://example.com/ios-multi-language/</link>
+      <pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/ios-multi-language/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;如今,许多应用也变得更加人性化,考虑到国际友人的需要,添加了国际化多语言的处理。同时也有许多应用如网易邮箱大师、支付宝、微信等为了满足部分用户的需求,添加了应用内多语言切换的功能,使得用户可以不通过设置系统语言随心所欲得切换应用内语言。那么这种不重启App就随意切换应用语言的功能是如何实现的呢?本文将对
+这一问题进行探讨。&lt;/p&gt;
+
+&lt;h2 id=&#34;系统实现多语言的过程&#34;&gt;系统实现多语言的过程&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOS系统首先搜索用户的语言偏好设置(设置-通用-语言与地区)&lt;/li&gt;
+&lt;li&gt;检测你的应用是否支持用户的语言，先用偏好设置(NSUserdefault)的第一个语言，检测应用是否包含该语言对应的文件夹(后缀是.lproj，文件名部分，英语为en，中文简体为zh-Hans)如果存在，那就是该语言，否则用偏好设置第二个语言来匹配。重复该过程。&lt;/li&gt;
+&lt;li&gt;一旦系统为应用确定了语言，对应的&lt;code&gt;.lproj&lt;/code&gt;文件夹就会用作本地化资源&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;探究过程&#34;&gt;探究过程&lt;/h2&gt;
+
+&lt;p&gt;大多数App自定义的国际化文件使用&lt;code&gt;localizable.string&lt;/code&gt;,并且在代码里使用&lt;code&gt;NSLocalizedString(key, comment)&lt;/code&gt;进行国际化文案处理,那么国际化的文字则完全根据系统语言执行。这个时候如果需要实现应用内的国际化多语言切换,就需要特殊处理。&lt;/p&gt;
+
+&lt;h3 id=&#34;方案一-暴力修改nsuserdefault中的值&#34;&gt;方案一: 暴力修改NSUserDefault中的值&lt;/h3&gt;
+
+&lt;p&gt;再愁一眼上面说到的系统国际化多语言的实现过程,既然iOS系统默认会选择&lt;code&gt;NSUserdefault&lt;/code&gt;对应数组中的第一个元素作为语言的选择,那么我尝试将该数组中的元素调整下位置,看下是否可行?&lt;/p&gt;
+
+&lt;p&gt;我们先在demo中提前做一下基本的多语言本地化的处理(准备工作)。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%9B%BE1.png&#34; alt=&#34;代码国际化资源&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/xib%E5%9B%BD%E9%99%85%E5%8C%96.png&#34; alt=&#34;xib国际化资源&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;界面上所有的国际化文案(代码和xib)已经就位,那么开始整起。&lt;/p&gt;
+
+&lt;p&gt;主界面如图:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E4%B8%BB%E7%95%8C%E9%9D%A2%E4%B8%AD%E6%96%87.png&#34; alt=&#34;主界面-中文&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;首先主界面上有两个&lt;code&gt;button&lt;/code&gt;,上面的&lt;code&gt;button&lt;/code&gt;是代码进行初始化的(如下),所以相应国际化文案的加载位于&lt;code&gt;Localizable.strings&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;//  ViewController.m
+[self.changeBtn setTitle:NSLocalizedString(@&amp;quot;邮箱大师&amp;quot;, @&amp;quot;&amp;quot;) forState:UIControlStateNormal];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;下面的&lt;code&gt;button&lt;/code&gt;跟随&lt;code&gt;黄色view&lt;/code&gt;在&lt;code&gt;xib&lt;/code&gt;中进行初始化(如下),所以相应国际化文案的加载位于&lt;code&gt;TestView.strings&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;/* Class = &amp;quot;UIButton&amp;quot;; normalTitle = &amp;quot;Button&amp;quot;; ObjectID = &amp;quot;Sic-kz-b1y&amp;quot;; */
+&amp;quot;Sic-kz-b1y.normalTitle&amp;quot; = &amp;quot;邮箱大师_xib&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;下面的讨论我们重点关心这两个&lt;code&gt;button&lt;/code&gt;的国际化文案变化。&lt;/p&gt;
+
+&lt;p&gt;在&lt;code&gt;- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent*)event&lt;/code&gt;中添加了以下内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// Viewcontroller.m
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent*)event
+{
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [userDefault objectForKey:@&amp;quot;AppleLanguages&amp;quot;];
+    NSString *current = [languages objectAtIndex:0];
+    NSLog(@&amp;quot;支持的语言:%@,当前语言:%@&amp;quot;,languages,current);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;点击空白处,打印如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%9B%BE5.png&#34; alt=&#34;中文点击空白处&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这个时候我们将系统切换为英文,重新启动App
+主界面文案和点击空白处打印如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E4%B8%BB%E7%95%8C%E9%9D%A2%E8%8B%B1%E6%96%87.png&#34; alt=&#34;主界面-英文&#34; /&gt;
+&lt;img src=&#34;http://qn.tomorjm.com/%E5%9B%BE3.png&#34; alt=&#34;点击空白处&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根据打印情况,确实是这样的,&lt;code&gt;NSUserDefaults&lt;/code&gt;中的&lt;code&gt;AppleLanguages&lt;/code&gt;数组中的&lt;code&gt;第一个元素值&lt;/code&gt;跟系统语言相同,并且决定着当前应用的默认语言。&lt;/p&gt;
+
+&lt;p&gt;这和我们猜测到的情况相同,那么换回英文系统,开始动刀!&lt;/p&gt;
+
+&lt;p&gt;这里我们又添加一个&lt;code&gt;SettingViewController&lt;/code&gt;,如下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E8%AE%BE%E7%BD%AE%E7%95%8C%E9%9D%A2.png&#34; alt=&#34;设置界面-中文&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在这个&lt;code&gt;SettingViewController&lt;/code&gt;中有两个按钮,上面是&lt;code&gt;中文设置按钮&lt;/code&gt;,下面是&lt;code&gt;英文设置按钮&lt;/code&gt;,我们分别在这两个按钮中添加如下方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// SettingViewController.m
+// 切换为中文
+- (void)chineseClicked {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [userDefault objectForKey:@&amp;quot;AppleLanguages&amp;quot;];
+    NSMutableArray *arrM = [languages mutableCopy];
+    arrM[0] = @&amp;quot;zh-Hans-US&amp;quot;; // 强制重新更换一个新的数组,数组的第一个元素为中文
+    [userDefault setObject:arr forKey:@&amp;quot;AppleLanguages&amp;quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+// 切换为英文
+- (void)englishClicked {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [userDefault objectForKey:@&amp;quot;AppleLanguages&amp;quot;];
+    NSMutableArray *arrM = [languages mutableCopy];
+    arrM[0] = @&amp;quot;en-US&amp;quot;; // 强制重新更换一个新的数组,数组的第一个元素为英文
+    [userDefault setObject:arr forKey:@&amp;quot;AppleLanguages&amp;quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;系统为英文情况下,运行app,并测试。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2%E6%AD%A3%E5%B8%B8.gif&#34; alt=&#34;暴力切换&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这时我们会惊奇得发现,语言可以随意切换并且&lt;code&gt;UserDefault&lt;/code&gt;中的&lt;code&gt;AppleLanguages&lt;/code&gt;数组被完全改变成我们自己想要的了,而且应用的默认语言也改变成了我们想要的中文!&lt;/p&gt;
+
+&lt;p&gt;但是这种状态能不能维持还需要额外的检查,也就是说我们需要在各种场景下检测&lt;code&gt;AppleLanguages&lt;/code&gt;又有没有被系统默认重置回去。&lt;/p&gt;
+
+&lt;p&gt;经过测试发现,更换系统语言,是不会再次影响这个数组的值,除非你再次通过同样的方法进行替换或者直接卸载重装应用。但是这并不能保证其他的流程能否重置这个值,苹果官方也没有确定的说明。&lt;/p&gt;
+
+&lt;p&gt;总结: 这种简单粗暴替换的方案原理上是可行的,但是没有trick的点,而且由于是直接动刀系统默认配置,这就可能造成一些未知的bug发生,不推荐使用。&lt;/p&gt;
+
+&lt;h3 id=&#34;方案二-替换系统宏&#34;&gt;方案二: 替换系统宏&lt;/h3&gt;
+
+&lt;p&gt;为什么要替换系统的宏呢?&lt;/p&gt;
+
+&lt;p&gt;首先我们跳进&lt;code&gt;NSLocalizedString&lt;/code&gt;的四个相关宏系统为其定义的地方,发现跳进了&lt;code&gt;NSBundle.h&lt;/code&gt;文件,其定义如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%9B%BE7.png&#34; alt=&#34;图8&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上面两个宏最终会调用指定&lt;code&gt;NSBundle.mainBundle&lt;/code&gt;的&lt;code&gt;localizedStringForKey&lt;/code&gt;方法,而下面的宏则可以指定bundle,指定文件。&lt;/p&gt;
+
+&lt;p&gt;下面两种宏的使用都easy,因为你完全可以根据指定不同语言的&lt;code&gt;bundle&lt;/code&gt;文件其加载多语言文案,但是如果在已有项目中大量使用了上面的两种宏,并且分散在各个文件中
+那就会非常头疼,因为你没有具体指定是哪个语言的文件,因为此时的文件系统中存在这样的结构:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%9B%BE8.png&#34; alt=&#34;图9&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以猜测到的是,如果不具体指定文件的话,那么系统默认会在&lt;code&gt;mainBundle&lt;/code&gt;中根据方案一中的&lt;code&gt;UserDefault&lt;/code&gt;的对应值去查找使用,那么应用语言还是会跟着系统走。
+所以我们需要在这个地方动点手脚,对系统宏进行处理,在不改变项目中已有代码的情况下,实现自由切换。由此,可以想到的解决思路就是&lt;code&gt;宏替换&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;继续拿到&lt;code&gt;方案一&lt;/code&gt;中的工程(系统为英文),开始我们的设计。就拿第一个宏&lt;code&gt;NSLocalizedString(key, comment)&lt;/code&gt;举例,在主界面controller中,进行以下操作&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// ViewController.m
+...
+#undef NSLocalizedString
+#define NSLocalizedString(key, comment) \
+[self localizedStringForKey:(key)]
+...
+- (NSString *)localizedStringForKey:(NSString *)key
+{
+    return  [[self customLanguageBundle] localizedStringForKey:(key) value:@&amp;quot;&amp;quot; table:nil];
+}
+
+- (NSBundle *)customLanguageBundle
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *currentLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@&amp;quot;NEAppLanguage&amp;quot;]; // 从存储中取值
+    NSString *path = [bundle pathForResource:currentLanguage ofType:@&amp;quot;lproj&amp;quot;];
+    if (path) {
+        bundle = [NSBundle bundleWithPath:path];
+    }
+    return bundle;
+}
+...
+// SettingViewController.m
+// 切换为中文
+- (void)chineseClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&amp;quot;zh-Hans&amp;quot; forKey:@&amp;quot;NEAppLanguage&amp;quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+// 切换为英文
+- (void)englishClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&amp;quot;en&amp;quot; forKey:@&amp;quot;NEAppLanguage&amp;quot;];
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的代码中,首先我们&lt;code&gt;undef&lt;/code&gt;掉了系统的宏&lt;code&gt;NSLocalizedString&lt;/code&gt;,紧接着我们又重新&lt;code&gt;define&lt;/code&gt;了一个同名的宏,只不过这次让它去调用我们自定义的方法&lt;code&gt;localizedStringForKey&lt;/code&gt;,
+在这个自定义方法里,我们首先去向存储查找当前用户设置的App语言,然后去&lt;code&gt;mainBundle&lt;/code&gt;中查找有没有这个语言对应的&lt;code&gt;lproj&lt;/code&gt;文件。如果存在,则使用该文件,否则交给系统(&lt;code&gt;mainBundle&lt;/code&gt;)自己去管理决定。&lt;/p&gt;
+
+&lt;p&gt;接着,启动App,测试该方案。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/xib%E4%B8%8D%E6%AD%A3%E5%B8%B8.gif&#34; alt=&#34;xib不正常&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;纳尼!吃鲸!不应该全是正常显示的嘛!!!&lt;code&gt;为啥代码设置的文案,完全显示正常。而xib加载的国际化文案,则不会正常显示&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;且慢,先解释下代码文案的加载过程。这里成功的关键是我们帮助原本不清楚具体使用哪个&lt;code&gt;lproj&lt;/code&gt;文件的系统宏找到了具体的方向,让它不再靠猜寻路。&lt;/p&gt;
+
+&lt;p&gt;那&lt;code&gt;xib&lt;/code&gt;为什么会异常呢?经过一番细心调试,最终发现问题出现在&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;看黑板!划重点!&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;之前自定义的宏调用的方法根本没有执行!&lt;code&gt;xib中的文案加载,根本不走系统宏!!!&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;它们应该调用的是更偏底部的接口,也就是说替换系统宏对&lt;code&gt;Xib&lt;/code&gt;和&lt;code&gt;Storyboard&lt;/code&gt;根本无效,只会对代码调用有效。&lt;/p&gt;
+
+&lt;p&gt;总结:这种方案通过替换系统宏实现,对于那些庞大且使用纯代码进行国际化处理的项目很实用,但是那些有多套Xib国际化方案的项目就失效了。&lt;/p&gt;
+
+&lt;p&gt;看来我们需要一种更加全面的方法来解决这个问题!&lt;/p&gt;
+
+&lt;h3 id=&#34;方案3-利用runtime巧妙拦截&#34;&gt;方案3: 利用runtime巧妙拦截&lt;/h3&gt;
+
+&lt;p&gt;细心的你会发现,方案2中提到的四种宏最终都会统一调用&lt;code&gt;NSBundle.h&lt;/code&gt;的一个方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;/* Method for retrieving localized strings. */
+- (NSString *)localizedStringForKey:(NSString *)key value:(nullable NSString *)value table:(nullable NSString *)tableName;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;调试发现,不仅代码调用会到这个地方,&lt;code&gt;xib&lt;/code&gt;文件最终也会指向这个方法,看来此方法应该就是国际化调用顺序的最终去向。既然那样,为什么我们不能够在这个最终的方法中进行拦截,让&lt;code&gt;bundle&lt;/code&gt;正确的去加载&lt;code&gt;lproj&lt;/code&gt;文件呢?&lt;/p&gt;
+
+&lt;p&gt;首先,我们先来看下这个方法各个参数的含义:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;key&lt;/code&gt;: 需要本地化的字符串对应的键值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;value&lt;/code&gt;: 默认值,如果本地化资源文件中没有找到对应的 key 则返回这个值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tableName&lt;/code&gt;: 指定在相应的lproj文件中的tableName.string文件中查找文字资源,如果传入&lt;code&gt;null&lt;/code&gt;，则在&lt;code&gt;Localizable.strings&lt;/code&gt;中查找&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这三个参数貌似并不是我们需要的东西,因为他们不能决定具体&lt;code&gt;lproj&lt;/code&gt;到底是哪个?而此方法又是&lt;code&gt;NSBundle&lt;/code&gt;的对象方法,事实上系统调用到这个地方的时候,其实已经做出了决定到底使用的是哪个&lt;code&gt;lproj&lt;/code&gt;(其实就是该方法的调用者)。&lt;/p&gt;
+
+&lt;p&gt;那么,如何巧妙的绕过这个坑,让此方法的调用者调用失效又重新指定调用呢?&lt;/p&gt;
+
+&lt;p&gt;对,使用&lt;code&gt;Runtime&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;我们可以这样做,自定义一个继承自&lt;code&gt;NSBundle&lt;/code&gt;的子类,我们称它为&lt;code&gt;LanguageBundle&lt;/code&gt;,在运行时利用&lt;code&gt;object_setClass&lt;/code&gt;将&lt;code&gt;NSBundle&lt;/code&gt;替换为&lt;code&gt;LanguageBundle&lt;/code&gt;
+在这个&lt;code&gt;LanguageBundle&lt;/code&gt;中重写上面的那个&lt;code&gt;localizedStringForKey&lt;/code&gt;方法,然后在这个重写的方法里拦截系统的调用。这个&lt;code&gt;LanguageBundle&lt;/code&gt;的作用如下:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;替换&lt;code&gt;NSBundle&lt;/code&gt;,让原本是&lt;code&gt;localizedStringForKey&lt;/code&gt;的调用者的&lt;code&gt;NSBundle&lt;/code&gt;,换为了&lt;code&gt;LanguageBundle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LanguageBundle&lt;/code&gt;本身又是&lt;code&gt;NSBundle&lt;/code&gt;的子类,继承了包括&lt;code&gt;localizedStringForKey&lt;/code&gt;在内的所有属性和方法,那么该替换的侵害性可以不计&lt;/li&gt;
+&lt;li&gt;在调用到&lt;code&gt;localizedStringForKey&lt;/code&gt;的时候,可以对其实现高度定制,同时又可以让其父类&lt;code&gt;NSBundle&lt;/code&gt;依旧执行该方法,只需&lt;code&gt;super&lt;/code&gt;调用即可&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同样还是系统为英文的情况,具体代码如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// AppDelegate.m
+#import &amp;lt;objc/runtime.h&amp;gt;
+#import &amp;quot;LanguageBundle.h&amp;quot;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    object_setClass([NSBundle mainBundle], [LanguageBundle class]);
+    return YES;
+}
+
+...
+
+// LanguageBundle.m
+- (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value table:(NSString *)tableName{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *currentLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@&amp;quot;NEAppLanguage&amp;quot;]; // 从存储中取值
+    NSString *path = [bundle pathForResource:currentLanguage ofType:@&amp;quot;lproj&amp;quot;];
+    if (path) {
+        return [[NSBundle bundleWithPath:path] localizedStringForKey:key value:value table:tableName];
+    } else {
+        return [super localizedStringForKey:key value:value table:tableName];
+    }
+}
+
+// SettingViewController.m
+// 切换为中文
+- (void)chineseClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&amp;quot;zh-Hans&amp;quot; forKey:@&amp;quot;NEAppLanguage&amp;quot;];
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+// 切换为英文
+- (void)englishClicked {
+    [[NSUserDefaults standardUserDefaults] setObject:@&amp;quot;en&amp;quot; forKey:@&amp;quot;NEAppLanguage&amp;quot;];
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    // 重置rootViewController,达到重启app的目的
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再次运行App,按钮状态如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2%E6%AD%A3%E5%B8%B8.gif&#34; alt=&#34;使用runtime&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;显示正常!&lt;/p&gt;
+
+&lt;p&gt;又经过一番调试发现,无论是&lt;code&gt;代码&lt;/code&gt;还是&lt;code&gt;Xib&lt;/code&gt;,最终都会调用到&lt;code&gt;LanguageBundle&lt;/code&gt;中重写的方法&lt;code&gt;localizedStringForKey&lt;/code&gt;中去。第二种方案遇到的问题都完美解决!&lt;/p&gt;
+
+&lt;p&gt;总结:这种方案比较trick,能适用各种场景,代码侵入性小且效果完美(对纯代码和Xib都会生效),非常推荐这种方案!&lt;/p&gt;
+
+&lt;h2 id=&#34;可能会遇到的坑&#34;&gt;可能会遇到的坑&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-各个ios版本中的地区代码差异&#34;&gt;1、各个iOS版本中的地区代码差异&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;iOS9之前:
+zh-Hans: 简体
+zh-Hant: 繁体
+
+iOS9之后:
+zh-Hans-CN: 简体（改变）
+zh-Hant-CN: 繁体（改变）
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如上所示在&lt;code&gt;iOS9&lt;/code&gt;之后,地区代码发生了改变例如简体中文在&lt;code&gt;iOS9&lt;/code&gt;之前为&lt;code&gt;zh-Hans&lt;/code&gt;,而iOS9之后为&lt;code&gt;zh-Hans-CN&lt;/code&gt;,后面的&lt;code&gt;CN&lt;/code&gt;为具体地区代码。
+所以在拿到&lt;code&gt;currentLanguage&lt;/code&gt;返回是zh-Hans-CN,这时候会找不到对应的bundle文件,因为本地的文件夹名字还是zh-Hans，所以可以通过&lt;code&gt;NSString&lt;/code&gt;的&lt;code&gt;hasPrefix:&lt;/code&gt;方法,所以在拿到currentLanguage的时候先进行一步判断,再返回&lt;code&gt;zh-Hans&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-使用static初始化的nsstring&#34;&gt;2、使用static初始化的NSString&lt;/h3&gt;
+
+&lt;p&gt;如果你的项目里面有很多这样的&lt;code&gt;NSString&lt;/code&gt;声明方式,就应该小心了,例如下面这段代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// ViewController.m
+static NSString *buttonTitleText;
+...
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    buttonTitleText = NSLocalizedString(@&amp;quot;邮箱大师&amp;quot;, @&amp;quot;&amp;quot;);
+    [self.changeBtn setTitle:buttonTitleText forState:UIControlStateNormal];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在这种初始化方式下,&lt;code&gt;buttonTitleText&lt;/code&gt;只会初始化一次。因此无论如何切换语言,该变量依旧是第一次初始化的值,造成多语言切换效果失效。
+所以如果确实要保持统一的话,我比较推荐使用宏的形式。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;#define buttonTitleText NSLocalizedString(@&amp;quot;邮箱大师&amp;quot;, @&amp;quot;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;不重启app的ui文案刷新机制&#34;&gt;不重启App的UI文案刷新机制&lt;/h2&gt;
+
+&lt;p&gt;需要知道的是,如果一个控件的文案已经被加到内存了,那么除非再重新设置该控件文案,否则它是不会再改变的。&lt;/p&gt;
+
+&lt;p&gt;例如在一个controller中,这样设置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.changeBtn setTitle:NSLocalizedString(@&amp;quot;邮箱大师&amp;quot;, @&amp;quot;&amp;quot;)  forState:UIControlStateNormal];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此时你再push到另一个controller中进行语言的切换。这时候你回到该界面,这个button的文案不会变化。原因就是该button的文案设置已经被加载到内存中去。&lt;/p&gt;
+
+&lt;p&gt;那么该问题如何解决呢?&lt;/p&gt;
+
+&lt;h3 id=&#34;1-发送通知&#34;&gt;1、发送通知&lt;/h3&gt;
+
+&lt;p&gt;在多语言切换的位置&lt;code&gt;发送通知&lt;/code&gt;,然后所有可能在内存中的controller注册监听这个通知,调用刷新方法,重新设置控件文案。例如:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// ViewController.m
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUI) name:@&amp;quot;AppLanguageChangeSender&amp;quot; object:nil];
+    [self.changeBtn setTitle:buttonTitleText forState:UIControlStateNormal];
+}
+
+- (void)refreshUI
+{
+    [self.changeBtn setTitle:buttonTitleText forState:UIControlStateNormal];
+}
+
+...
+
+// LanguageManager.m
+// 此类控制多语言切换
+- (void)languageChangeFinished
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@&amp;quot;AppLanguageChangeSender&amp;quot; object:nil];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样的话,需要在每个可能位于内存中的controller中都这样写,如果项目庞大的话,维护性非常差,不推荐这样做。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-重启rootcontroller&#34;&gt;2、重启rootController&lt;/h3&gt;
+
+&lt;p&gt;还可以这样做,例如我上面各个方案中的刷新方式,&lt;code&gt;AppDelegate&lt;/code&gt;中开放一个接口&lt;code&gt;- (void)resetMainVC&lt;/code&gt;,在切换语言完成后调用该方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// AppDelegate.m
+- (void)resetMainVC
+{
+    self.window.rootViewController = nil;
+    ViewController *mainVC = [[ViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+}
+
+// LanguageManager.m
+// 此类控制多语言切换
+- (void)languageChangeFinished
+{
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate resetMainVC];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+
+&lt;p&gt;如果要达到更好的效果,建议创建一个专门管理App语言切换的单例类,在语言切换完成后,UI文案的刷新机制也应该针对自己的项目合理的进行设计。本文只是起到一个抛砖引玉的作用,想要将该功能设计得更完美,还是需要多加完善的。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>通过Xcodeproj深入探究Xcode工程文件 二</title>
+      <link>https://example.com/xcodeproj-2/</link>
+      <pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/xcodeproj-2/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;上文介绍了Xcode的配置文件&lt;code&gt;project.pbxproj&lt;/code&gt;里面的内容并且提到了Cocoapods正是利用&lt;a href=&#34;https://github.com/CocoaPods/Xcodeproj&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Xcodeproj&lt;/a&gt;这个组件实现修改该文件达到改变Xcode工程结构的效果。本文将着重介绍&lt;code&gt;Xcodeproj&lt;/code&gt;这个组件,通过本文你将会了解这个组件的内容、原理和使用该组件的应用场景。&lt;/p&gt;
+
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Xcodeproj&lt;/code&gt;作为&lt;code&gt;Cocoapods&lt;/code&gt;的组件之一,它能够允许你用Ruby语言创建或者修改Xcode工程,脚本化枯燥的管理任务和构造友好的Xcode库,它同时支持&lt;code&gt;Xcode workspaces (.xcworkspace)&lt;/code&gt;、&lt;code&gt;configuration files (.xcconfig)&lt;/code&gt;和&lt;code&gt;Xcode Scheme files (.xcscheme)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;它的API文档在&lt;a href=&#34;http://www.rubydoc.info/gems/xcodeproj&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Xcodeproj&lt;/code&gt;通过&lt;code&gt;RubyGems&lt;/code&gt;安装,打开终端键入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;gem install xcodeproj
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;结束后,输入&lt;code&gt;gem list&lt;/code&gt;查看&lt;code&gt;Xcodeproj&lt;/code&gt;是否完成安装,正常情况下你会在list中看到&lt;code&gt;xcodeproj (1.2.0, 1.1.0, 0.28.2)&lt;/code&gt;这一行。&lt;/p&gt;
+
+&lt;h2 id=&#34;内容&#34;&gt;内容&lt;/h2&gt;
+
+&lt;p&gt;让我们来大体瞅一眼&lt;code&gt;Xcodeproj&lt;/code&gt;的内容(Class List),如图1&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%A4%A7%E4%BD%93_1.png&#34; alt=&#34;图1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;看到库里面的各个类,是不是有点小激动?没错,就是上篇文章介绍过的&lt;code&gt;project.pbxproj&lt;/code&gt;里面的各个元素,连名字都是一样!单独看下&lt;code&gt;PBXProject&lt;/code&gt;中的各个Attributes(图2),再拿上文中&lt;code&gt;project.pbxproj(图3)&lt;/code&gt;里的进行对比&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/project_2.png&#34; alt=&#34;图2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/project_3.jpeg&#34; alt=&#34;图3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;你会发现Xcode配置文件中元素每个属性都能在这个库同名类中找到对应的属性。值得注意的是,&lt;code&gt;Xcodeproj&lt;/code&gt;中所有的类都继承于&lt;code&gt;AbstractObject&lt;/code&gt;,这个类是个基类,里面有&lt;code&gt;isa&lt;/code&gt;,&lt;code&gt;uuid&lt;/code&gt;,&lt;code&gt;project&lt;/code&gt;,其中&lt;code&gt;uuid&lt;/code&gt;就是唯一标识符,还有其他一些基本的method。这个唯一标识符的生成过程在&lt;code&gt;uuid_generator.rb&lt;/code&gt;这个类中,笔者水平有限,仅能看出&lt;code&gt;uuid&lt;/code&gt;的生成算法加入了&lt;code&gt;文件路径的MD5&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;实战&#34;&gt;实战&lt;/h2&gt;
+
+&lt;p&gt;下面你们可以通过下面这三个实战例子感受下&lt;code&gt;Xcodeproj&lt;/code&gt;的强大,代码如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;require &#39;xcodeproj&#39;
+project_path = `.......`    # 工程的全路径
+project = Xcodeproj::Project.open(project_path)
+
+ # 1、显示所有的target
+project.targets.each do |target|
+  puts target.name
+end
+
+# 2、显示第一个target的所有Compile Sources
+target = project.targets.first
+files = target.source_build_phase.files.to_a.map do |pbx_build_file|
+    pbx_build_file.file_ref.real_path.to_s
+end.select do |path|
+  path.end_with?(&amp;quot;.m&amp;quot;, &amp;quot;.mm&amp;quot;, &amp;quot;.swift&amp;quot;)
+end.select do |path|
+  puts path
+end
+
+# 3、创建一个target 并添加文件
+app_target = project.new_target(:application, &#39;demo&#39;, :ios, &#39;6.0&#39;)
+header_ref = project.main_group.new_file(&#39;./Class.h&#39;)
+implm_ref = project.main_group.new_file(&#39;./Class.m&#39;)
+app_target.add_file_references([implm_ref])
+project.save()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;大家可以写个ruby脚本依次将三个实例执行下,注意观察终端输出和Xcode目录结构的变化。&lt;/p&gt;
+
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+
+&lt;p&gt;如果你已经执行了上线的操作,那么一定好奇,这个库是怎么操作&lt;code&gt;project.pbxproj&lt;/code&gt;文件的?首先需要知道的是,在这个库操作&lt;code&gt;project.pbxproj&lt;/code&gt;之前,需要把Xcode工程的全路径给它,那我们就从&lt;code&gt;Project&lt;/code&gt;入手,它对应的是上篇文章中提到的根元素,从&lt;code&gt;open&lt;/code&gt;开始,注意我代码中的注释!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;# File &#39;lib/xcodeproj/project.rb&#39;, line 96
+def self.open(path)
+  path = Pathname.pwd + path
+  unless Pathname.new(path).exist?
+    raise &amp;quot;[Xcodeproj] Unable to open `#{path}` because it doesn&#39;t exist.&amp;quot;
+  end
+  project = new(path, true)
+  project.send(:initialize_from_file)  # 执行这个方法之前会判断path的正确性
+  project
+end
+
+# File &#39;lib/xcodeproj/project.rb&#39;, line 96
+def initialize_from_file
+  pbxproj_path = path + &#39;project.pbxproj&#39;  # 拿到包内容中的配置文件,这个地方操作的是根元素
+  plist = Plist.read_from_path(pbxproj_path.to_s)
+  root_object.remove_referrer(self) if root_object
+  @root_object     = new_from_plist(plist[&#39;rootObject&#39;], plist[&#39;objects&#39;], self)  # new_from_plist方法拿到rootObject,正式开始操作
+  @archive_version = plist[&#39;archiveVersion&#39;]
+  @object_version  = plist[&#39;objectVersion&#39;]
+  @classes         = plist[&#39;classes&#39;]
+  @dirty           = false
+
+  ......
+end
+
+# File &#39;lib/xcodeproj/project.rb&#39;, line 252
+def new_from_plist(uuid, objects_by_uuid_plist, root_object = false)
+  attributes = objects_by_uuid_plist[uuid]
+  if attributes
+    klass = Object.const_get(attributes[&#39;isa&#39;])
+    object = klass.new(self, uuid)
+    objects_by_uuid[uuid] = object
+    object.add_referrer(self) if root_object
+    object.configure_with_plist(objects_by_uuid_plist) # 分析plist
+    object
+  end
+end
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;到了这里,从根元素进入,分析objects属性内的所有元素,&lt;code&gt;configure_with_plist&lt;/code&gt;中使用objects的uuid去分析包装相应元素,将其装变为库中的对应类的对象,同时&lt;code&gt;isa&lt;/code&gt;也被复制过去。
+最终,&lt;code&gt;project.pbxproj&lt;/code&gt;中的所有元素对应的信息,都转化为Ruby对象,然后增删改查等操作都变为对象操作,使用起来非常方便。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用场景&#34;&gt;使用场景&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;你可以做一个Ruby脚本,放在打包测试流程中去,用来分析项目中不同target中缺少的文件和资源。&lt;/li&gt;
+&lt;li&gt;将一些繁琐的配置操作写成一个脚本,省时省力&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果还有好的idea,欢迎补充~&lt;/p&gt;
+
+&lt;h2 id=&#34;相关链接&#34;&gt;相关链接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://tomorjm.com/xcodeproj-1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;通过Xcodeproj深入探究Xcode工程文件 一&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://tomorjm.com/xcodeproj-2/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;通过Xcodeproj深入探究Xcode工程文件 二&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>通过Xcodeproj深入探究Xcode工程文件 一</title>
+      <link>https://example.com/xcodeproj-1/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/xcodeproj-1/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;你是否好奇Cocoapods是如何修改掉Xcode工程的结构?你也是否曾被Xcode工程的配置文件里面杂乱的内容搞得摸不清头脑?你又是否知道Xcodeproj这个神奇的Ruby库?下面我将通过这个系列来解除你的困惑。&lt;/p&gt;
+
+&lt;h2 id=&#34;cocoapods是如何修改xcode工程结构的&#34;&gt;Cocoapods是如何修改Xcode工程结构的&lt;/h2&gt;
+
+&lt;p&gt;我们知道Cocoapods是用ruby创作的一套第三方库,它很方便的可以删除、添加、更新第三方库?当你执行修改完&lt;code&gt;PodFile&lt;/code&gt;执行&lt;code&gt;pod update&lt;/code&gt;的时候,你会惊讶的发现Xcode工程被神奇的修改掉了。那么它是如何做到的呢?细心的你会发现,每个Xcode工程都有一个&lt;code&gt;project.pbxproj&lt;/code&gt;文件,这个文件记录着该工程的文件结构。Cocoapods正是通过它的组件&lt;a href=&#34;https://github.com/CocoaPods/Xcodeproj&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Xcodeproj&lt;/a&gt;来对工程结构进行修改。&lt;/p&gt;
+
+&lt;h2 id=&#34;project-pbxproj这个文件里面的内容到底是什么含义&#34;&gt;project.pbxproj这个文件里面的内容到底是什么含义&lt;/h2&gt;
+
+&lt;p&gt;如果你使用过&lt;code&gt;SVN&lt;/code&gt;或者&lt;code&gt;Git&lt;/code&gt;进行团队协作开发肯定会不可避免的遇到在合并代码的时候往往由于有过添加和删除文件的操作导致Xcode工程报错打不开,这时候一般的解决思路是打开&lt;code&gt;project.pbxproj&lt;/code&gt;文件,&lt;code&gt;Command+F&lt;/code&gt;键入&lt;code&gt;======&lt;/code&gt;或者&lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&lt;/code&gt;来找到冲突的地方,将冲突的内容删除。然而有些人并不知道为何要这样解决甚至不知道里面的内容是何意思?下面的内容或许对你有些许帮助。&lt;/p&gt;
+
+&lt;h3 id=&#34;project-pbxproj介绍&#34;&gt;project.pbxproj介绍&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;project.pbxproj&lt;/code&gt;采用的是老式风格的plist文件(old ASCII plist),这最早是Next公司采用的一种文件格式,它跟&lt;code&gt;XML&lt;/code&gt;格式很多地方类似,但是又有些许的不同。为了更方便理解,我建议你新建一个工程或者在以后的工程上打开&lt;code&gt;project.pbxproj&lt;/code&gt;,在实例的基础上便于直观感受,更有助于
+加深理解。&lt;/p&gt;
+
+&lt;p&gt;首先我要介绍它里面的众多元素,例如&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;根节点
+PBXBuildFile
+PBXBuildPhase
+PBXAppleScriptBuildPhase
+PBXCopyFilesBuildPhase
+PBXFrameworksBuildPhase
+PBXHeadersBuildPhase
+PBXResourcesBuildPhase
+PBXShellScriptBuildPhase
+PBXSourcesBuildPhase
+PBXContainerItemProxy
+PBXFileElement
+PBXFileReference
+PBXGroup
+PBXVariantGroup
+PBXTarget
+PBXAggregateTarget
+PBXLegacyTarget
+PBXNativeTarget
+PBXProject
+PBXTargetDependency
+XCBuildConfiguration
+XCConfigurationList
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在&lt;code&gt;万物皆对象&lt;/code&gt;的概念下,你尚可将他们理解为一个个&lt;code&gt;类&lt;/code&gt;,它们里面的各个子元素就是一个个&lt;code&gt;对象&lt;/code&gt;。最外层的每个元素如&lt;code&gt;PBXBuildFile&lt;/code&gt;被称为一个个
+&lt;code&gt;Section&lt;/code&gt;,为方便理解,文章后面的内容我都将这些元素称为类,将元素的实例成为对象。&lt;/p&gt;
+
+&lt;h3 id=&#34;project-pbxproj的整体结构-根节点&#34;&gt;project.pbxproj的整体结构(根节点)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = { };
+    objectVersion = 45;
+    objects = {...};
+    rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果你已经打开了一个&lt;code&gt;project.pbxproj&lt;/code&gt;,你就会很容易看到这种结构,只不过&lt;code&gt;objects&lt;/code&gt;里面的各种类属于第二层结构,&lt;code&gt;rootObject&lt;/code&gt;位于文件的最后一行。&lt;/p&gt;
+
+&lt;h3 id=&#34;唯一标识码&#34;&gt;唯一标识码&lt;/h3&gt;
+
+&lt;p&gt;细心的你会看到,上面的根节点里面的&lt;code&gt;rootObject&lt;/code&gt;后面是一串&lt;code&gt;24位的16进制数&lt;/code&gt;,它就是每个对象的唯一标识码,它可以唯一标识文件的每个对象,也就是说
+每个元素的标识码都是不同的。Xcode生成唯一标识码的算法可能引入了日期、序列和其它一些预定义的值，但是并没有确切的文档说明具体的生成过程。值得注意的是,该唯一标识码不仅在所在的工程中唯一,而且还是跨工程唯一。&lt;/p&gt;
+
+&lt;h3 id=&#34;pbxbuildfile&#34;&gt;PBXBuildFile&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;PBXBuildFile&lt;/code&gt;是文件类，被&lt;code&gt;PBXBuildPhase&lt;/code&gt;等作为文件包含或被引用的资源。此时我已经新建了一个名为&lt;code&gt;Xcode工程Demo&lt;/code&gt;的工程,此时的工程结构是这样,如图1所示。而此时的&lt;code&gt;project.pbxproj&lt;/code&gt;中&lt;code&gt;PBXBuildFile&lt;/code&gt;的结构如图2所示。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%A4%A7%E4%BD%93_1.png&#34; alt=&#34;图1&#34; /&gt;
+&lt;img src=&#34;http://qn.tomorjm.com/PBXBuildFile_2.jpeg&#34; alt=&#34;图2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以清楚的看到每个&lt;code&gt;PBXBuildFile&lt;/code&gt;对象都是由以下的结构组成&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;4D05CA6B1193055000125045 /* xxx.c in Sources */ = {
+    isa = PBXBuildFile;
+    fileRef = 4D05CA411193055000125045 /* xxx.c */;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E8%B5%84%E6%BA%90_3.jpeg&#34; alt=&#34;图3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中&lt;code&gt;isa&lt;/code&gt;跟Objc中的对象的isa指针一样,指向的是它的类,而&lt;code&gt;fileRef&lt;/code&gt;则指向的是一个&lt;code&gt;PBXFileReference&lt;/code&gt;对象,这个类将在下面介绍。
+细心的你又会发现,为什么图1和图2中的文件个数不一致,却和图3中编译时的文件和资源统一。前者的差异是由于&lt;code&gt;PBXFileReference&lt;/code&gt;所致,通过后者我们可以大胆猜测,&lt;code&gt;PBXBuildFile&lt;/code&gt;中的对象是编译时候需要确认的文件和资源的集合,如果不信的话可以拖几张图片资源扔进工程中
+,经过验证结果和预测的情况一致。&lt;/p&gt;
+
+&lt;h3 id=&#34;pbxfilereference&#34;&gt;PBXFileReference&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;PBXFileReference&lt;/code&gt;用于跟踪项目引用的每一个外部文件，比如源代码文件、资源文件、库文件、生成目标文件等。具体表现如图4。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/filereference_4.jpeg&#34; alt=&#34;图4&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;它的结构如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;87293F901153D870007AFD45 /* objc.mm */ = {
+    isa = PBXFileReference;
+    fileEncoding = 4;
+    lastKnownFileType = sourcecode.cpp.objcpp;
+    name = monobjc.mm;
+    path = sources/monobjc.mm;
+    sourceTree = &amp;quot;&amp;quot;;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;里面的每个key的含义,对照着实际工程,大家不妨自行揣测。
+我们再将&lt;code&gt;PBXBuildFile&lt;/code&gt;和&lt;code&gt;PBXFileReference&lt;/code&gt;放一起进行对比,如图5。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E4%B8%80%E8%B5%B75.jpeg&#34; alt=&#34;图5&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;AppDelegate.swift&lt;/code&gt;对象通过&lt;code&gt;fileRef&lt;/code&gt;指向标识符为&lt;code&gt;F3E1481A1DA50A180059397C&lt;/code&gt;的&lt;code&gt;PBXFileReference&lt;/code&gt;对象,通过这个引用,一个&lt;code&gt;PBXBuildFile&lt;/code&gt;
+对象就可以查到自己的具体信息,如&lt;code&gt;fileType&lt;/code&gt;、&lt;code&gt;name&lt;/code&gt;和&lt;code&gt;path&lt;/code&gt;等信息。&lt;/p&gt;
+
+&lt;h3 id=&#34;pbxgroup&#34;&gt;PBXGroup&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;PBXGroup&lt;/code&gt;用于组文件，或者嵌套组。让我们来看下实例,如图6&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%88%86%E7%BB%84_6.jpeg&#34; alt=&#34;图6&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;怡然是通过唯一标识符组装,每个&lt;code&gt;PBXGroup&lt;/code&gt;对象都有一个&lt;code&gt;children&lt;/code&gt;属性,里面可以是任何一种类的对象。但是这时候的&lt;code&gt;PBXGroup&lt;/code&gt;指的是Xcode里面组织的分组结构,和实际文件系统中的结构并不相同。
+指的注意的是,&lt;code&gt;children&lt;/code&gt;中的每个文件对象都属于&lt;code&gt;PBXFileReference&lt;/code&gt;类,而不是&lt;code&gt;PBXBuildFile&lt;/code&gt;类&lt;/p&gt;
+
+&lt;h3 id=&#34;pbxnativetarget&#34;&gt;PBXNativeTarget&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;PBXNativeTarget&lt;/code&gt;就是工程中的target,如果工程中有多个target,都会在这个section中有所体现。
+实例中如图7所示&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/target_7.jpeg&#34; alt=&#34;图7&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我们都知道每个target都有&lt;code&gt;Compile Sources&lt;/code&gt;、&lt;code&gt;Copy Bundle Resources&lt;/code&gt;、&lt;code&gt;Link Binary With Libiaries&lt;/code&gt;这三个需要在编译时确定的内容。
+而在&lt;code&gt;PBXNativeTarget&lt;/code&gt;中通过&lt;code&gt;buildPhases&lt;/code&gt;属性可以找到对应的内容。&lt;/p&gt;
+
+&lt;h3 id=&#34;pbxsourcesbuildphase和pbxresourcesbuildphase&#34;&gt;PBXSourcesBuildPhase和PBXResourcesBuildPhase&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;PBXSourcesBuildPhase&lt;/code&gt;用于构建阶段中编译源文件,&lt;code&gt;PBXResourcesBuildPhase&lt;/code&gt;用于构建阶段需要复制的资源文件,如图8&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/build_8.jpeg&#34; alt=&#34;图8&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;需要注意的是,&lt;code&gt;PBXSourcesBuildPhase&lt;/code&gt;这个section中放着所有的target的同类对象,&lt;code&gt;PBXResourcesBuildPhase&lt;/code&gt;也是一样。&lt;/p&gt;
+
+&lt;h3 id=&#34;pbxproject&#34;&gt;PBXProject&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;PBXProject&lt;/code&gt;标识着整个工程,由根元素的&lt;code&gt;rootObject&lt;/code&gt;引入。如图9所示&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/project_9.jpeg&#34; alt=&#34;图9&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;该对象记录着&lt;code&gt;targets&lt;/code&gt;、&lt;code&gt;mainGroup&lt;/code&gt;等重要信息,甚至每个target在创建时候的Xcode版本都会记录在其中。&lt;/p&gt;
+
+&lt;h3 id=&#34;其他元素&#34;&gt;其他元素&lt;/h3&gt;
+
+&lt;p&gt;还有其他很多重要的元素,如记录工程配置信息的&lt;code&gt;XCConfigurationList&lt;/code&gt;和&lt;code&gt;XCBuildConfiguration&lt;/code&gt;等,大家可以自行研究研究。&lt;/p&gt;
+
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+
+&lt;p&gt;通过上面的内容,我画了一张图总结一下,如图10&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E6%80%BB%E7%BB%93_10.jpeg&#34; alt=&#34;图10&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;由此看来,以前看到就头疼的&lt;code&gt;project.pbxproj&lt;/code&gt;配置文件的内容并没有想象中的复杂,也可以看出Xcode文件组织的严密和周整。&lt;/p&gt;
+
+&lt;p&gt;大家自己研究的时候,不妨可以动手改改项目中的内容,再去观察配置文件的变化,这样既可以有更深的理解,或许有新发现也说不定奥。&lt;/p&gt;
+
+&lt;p&gt;下篇文章,我将带大家用Xcodeproj这个库来,通过几行代码修改&lt;code&gt;project.pbxproj&lt;/code&gt;中的内容以达到通过脚本去修改Xcode工程和分析工程的目的。&lt;/p&gt;
+
+&lt;p&gt;作者水平有限,有哪些地方有错误,欢迎指正!&lt;/p&gt;
+
+&lt;h2 id=&#34;相关链接&#34;&gt;相关链接&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://tomorjm.com/xcodeproj-1/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;通过Xcodeproj深入探究Xcode工程文件 一&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://tomorjm.com/xcodeproj-2/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;通过Xcodeproj深入探究Xcode工程文件 二&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用强大的消息转发机制实现多代理</title>
+      <link>https://example.com/ios-target-delegate/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/ios-target-delegate/</guid>
+      <description>
+
+&lt;p&gt;传统的代理模式只能实现一对多的代理,即每个对象同一时刻只能有一个代理,这就可能导致在某些使用场景下失效,如果对象A在处理某些事情的情况下要将结果同时通知给B和C该怎么办?这时候代理就没法用了,而通知机制虽然能够解决,但它是APP生命周期的管理,如果项目中大量使用通知,必然会不好维护且也不够优雅。这时候可以考虑使用OC强大的运行时机制,利用消息转发实现多代理。&lt;/p&gt;
+
+&lt;p&gt;PS: 如果还有不了解消息转发的童鞋可以先看看这篇文章:&lt;a href=&#34;http://www.cocoachina.com/ios/20150604/12013.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;初步了解消息转发&lt;/a&gt;
+,我就不继续复制粘贴造轮子了。&lt;/p&gt;
+
+&lt;h2 id=&#34;先看效果&#34;&gt;先看效果&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-27%2014.10.40.png&#34; alt=&#34;图1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;图中GreenView为一个scrollview,OrangeView和BlueView为普通的UIView,他们都是ViewController的属性,现在我要实现的目标是,当
+滚动scrollview的时候它的代理(OrangeVIew,BlueView和ViewController)都会同时实现各自的代理方法&lt;code&gt;scrollViewWillBeginDragging&lt;/code&gt;和&lt;code&gt;scrollViewWillEndDragging&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+
+&lt;p&gt;经过上面提供链接里面的内容我们可以大体了解到消息转发具体是怎么回事,过程如下图:
+&lt;img src=&#34;http://qn.tomorjm.com/%E6%B6%88%E6%81%AF%E8%BD%AC%E5%8F%91%E7%A4%BA%E6%84%8F%E5%9B%BE.png&#34; alt=&#34;消息转发示意图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;因此我们可以利用图示消息转发的过程实现多代理。&lt;/p&gt;
+
+&lt;h3 id=&#34;首先&#34;&gt;首先&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;    _myScrolView.contentSize = self.view.bounds.size;
+    NSArray *array = @[self,self.orange,self.blue];
+    _delegateTargets = [[DelegateShareManager alloc] init];
+    _delegateTargets.delegateTargets = array;
+    _myScrolView.delegate = (id)_delegateTargets;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们需要一个代理分发者,我们叫他&lt;code&gt;DelegateShareManager&lt;/code&gt;,他的作用是管理scrollview的所有代理者,&lt;code&gt;_delegateTargets&lt;/code&gt;是他的一个实例,在这里个实例内部有一个array拥有着那些代理们。最后让&lt;code&gt;_myScrolView.delegate = (id)_delegateTargets&lt;/code&gt;,这样原本的scrollview的单一代理就可以通过
+这种方式变为多个代理。&lt;/p&gt;
+
+&lt;h3 id=&#34;然后&#34;&gt;然后&lt;/h3&gt;
+
+&lt;p&gt;在&lt;code&gt;DelegateShareManager&lt;/code&gt;内部通过下面代码将scrollview的需要唤起的代理信息发送出去&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (void)setDelegateTargets:(NSArray *)delegateTargets{
+    self.weakTargets = [NSPointerArray weakObjectsPointerArray];
+    for (id delegate in delegateTargets) {
+        [self.weakTargets addPointer:(__bridge void*)delegate];
+    }
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+    return nil;
+}
+
+
+- (BOOL)respondsToSelector:(SEL)aSelector{
+    if ([super respondsToSelector:aSelector]) {
+        return YES;
+    }
+    for (id target in self.weakTargets) {
+        if ([target respondsToSelector:aSelector]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
+    NSMethodSignature *sig = [super methodSignatureForSelector:aSelector];
+    if (!sig) {
+        for (id target in self.weakTargets) {
+            if ((sig = [target methodSignatureForSelector:aSelector])) {
+                break;
+            }
+        }
+    }
+    return sig;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation{
+    for (id target in self.weakTargets) {
+        if ([target respondsToSelector:anInvocation.selector]) {
+            [anInvocation invokeWithTarget:target];
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面代码可以理解为,通过查找weakTargets里面的单一代理元素(如orangeView),将消息转发出去&lt;/p&gt;
+
+&lt;h3 id=&#34;最后&#34;&gt;最后&lt;/h3&gt;
+
+&lt;p&gt;在OrangeView,ViewController和BlueView里面分别具体实现代理方法&lt;code&gt;scrollViewWillBeginDragging&lt;/code&gt;和&lt;code&gt;scrollViewWillEndDragging&lt;/code&gt;即能实现多代理效果。&lt;/p&gt;
+
+&lt;h3 id=&#34;演示&#34;&gt;演示&lt;/h3&gt;
+
+&lt;p&gt;拖动绿色的scrollview,可以看到控制台输出&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-27%2014.45.42.png&#34; alt=&#34;控制台输出&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;这里有个小demo:&lt;a href=&#34;https://github.com/tomorOoO/MultipleDelegateDemo&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;链接&lt;/a&gt;,如果觉得对你有帮助,给个star吧&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>一个波纹阴影点击和长按效果的TableViewCell</title>
+      <link>https://example.com/shadow-click-tableviewcell/</link>
+      <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/shadow-click-tableviewcell/</guid>
+      <description>
+
+&lt;p&gt;在推酷安卓客户端看到的这种效果,发现iOS端没有这种点击的动效,就随手研究了下。&lt;/p&gt;
+
+&lt;h2 id=&#34;先看效果&#34;&gt;先看效果&lt;/h2&gt;
+
+&lt;p&gt;分为三种效果:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;单击&lt;/li&gt;
+&lt;li&gt;单击长按并滑动手指&lt;/li&gt;
+&lt;li&gt;单击长按滑动tableview&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/demo.gif&#34; alt=&#34;demo&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+
+&lt;h3 id=&#34;思路一&#34;&gt;思路一&lt;/h3&gt;
+
+&lt;h4 id=&#34;过程&#34;&gt;过程&lt;/h4&gt;
+
+&lt;p&gt;在tableviewcell的contentview里面添加两个手势,一个&lt;code&gt;UITapGestureRecognizer&lt;/code&gt;和一个&lt;code&gt;UILongPressGestureRecognizer&lt;/code&gt;来获取当前点击是单击还是长按操作,方便的是如果是长按操作,那么在一个方法里面就可以捕捉整个长按的过程:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;/**
+ *  处理长按手势
+ *
+ *  @param longPressGestureRecognizer 长按手势
+ */
+- (void)handleLongPressGestures:(UILongPressGestureRecognizer *)longPressGestureRecognizer
+{
+    if (longPressGestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        //长按开始.......
+        //开始慢速动画
+    }
+    if((longPressGestureRecognizer.state == UIGestureRecognizerStateEnded || longPressGestureRecognizer.state == UIGestureRecognizerStateCancelled))
+    {
+      //长按结束和取消.....
+      //如果动画结束,直接移除layer
+      //如果动画没有结束,继续加速动画
+    }
+    if (longPressGestureRecognizer.state == UIGestureRecognizerStateChanged) {
+       //长按状态改变,手指滑动.....
+       //用[longPressGestureRecognizer locationInView:self]返回的CGPoint判断手指是在移到cell外部,加速动画至结束后移除
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里配合着给layer添加的animation的delegate使用,来判断动画是否在进行或者结束。&lt;/p&gt;
+
+&lt;h4 id=&#34;问题&#34;&gt;问题&lt;/h4&gt;
+
+&lt;p&gt;我先是在view上做效果,效果完成后改用自定义的cell调试,这时候发现了问题:
+使用了自定义cell的tableview的&lt;code&gt;didSelectRowAtIndexPath&lt;/code&gt;这个代理方法不会调用。研究发现原来是我添加的两个手势和系统的select手势操作发生了冲突。导致那两个手势把系统手势拦截了下来,该方法不执行。那么该怎么解决这个问题呢?
+我发现了这个方法:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+        //假如自定义添加了两个手势,那么该方法会调用三次,其中包括一次系统手势
+        //gestureRecognizer 返回的手势
+        // touch 接受的touch点击
+        //返回值代表是否拦截事件
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在这个方法里面就可以做判断,如果是系统手势,就不拦截。如果是自定义手势,则拦截。&lt;/p&gt;
+
+&lt;h3 id=&#34;思路二&#34;&gt;思路二&lt;/h3&gt;
+
+&lt;p&gt;利用系统提供的&lt;code&gt;touchesBegan&lt;/code&gt;,&lt;code&gt;touchesMoved&lt;/code&gt;,&lt;code&gt;touchesEnded&lt;/code&gt;,&lt;code&gt;touchesCancelled&lt;/code&gt;四个方法进行逻辑判断提供动画效果。
+因为我要在&lt;code&gt;touchesBegan&lt;/code&gt;这个方法里面判断是单击还是长按,来分别做快速和慢速动画,所以这里用了个小技巧,就是用&lt;code&gt;延迟0.1秒&lt;/code&gt;和&lt;code&gt;touchCancelledOrEnded&lt;/code&gt;做动画。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objc&#34;&gt;-(void)touchesBegan:(NSSet&amp;lt;UITouch *&amp;gt; *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    _touchCancelledOrEnded = NO;
+        excute_block_after(0.1f, ^{
+            [self creatAnimation];
+    });
+}
+- (void)touchesEnded:(NSSet&amp;lt;UITouch *&amp;gt; *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    _touchCancelledOrEnded = YES;
+}
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
+    _touchCancelledOrEnded = YES;
+}
+
+- (void)creatAnimation
+{
+    if(_touchCancelledOrEnded == YES)
+    {
+        //快速动画
+    }else
+    {
+        //快速动画
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;具体过程请看代码。&lt;/p&gt;
+
+&lt;h2 id=&#34;待解决的问题&#34;&gt;待解决的问题&lt;/h2&gt;
+
+&lt;p&gt;事实上,这个效果目前还不够完善。比如说在&lt;code&gt;didSelectRowAtIndexPath&lt;/code&gt;这个tableview代理里面填写代码在点击cell的时候跳转到另一个控制器。上面的演示demo也可以看出,单击的时候由于控制器之间的跳转太快,导致阴影动画看不清楚。最理想的状态是:在自定义cell内部拦截这个select事件,等到cell的动画结束后,再通知tableview的&lt;code&gt;didSelectRowAtIndexPath&lt;/code&gt;方法执行响应的控制器跳转代码。为了方便其他人使用,我应该在cell内部完成整个拦截和通知过程。
+我曾在stackoverflow上查找相关问题无果后,问了这个问题,希望有人知道的话,能给我一个思路,我将非常感激您并完善它。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;GitHub地址:&lt;a href=&#34;https://github.com/tomorOoO/XMRippleShadowCell&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;点击这里&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>再见,科比!永别,青春!</title>
+      <link>https://example.com/kobe-say-goodbye/</link>
+      <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/kobe-say-goodbye/</guid>
+      <description>
+
+&lt;p&gt;今天是2016年4月14日,这一天是本赛季NBA常规赛最后一场比赛,也就意味着科比也就退役了。&lt;/p&gt;
+
+&lt;p&gt;不关注NBA许久了,高三后到现在的大三快要结束这期间也没看几场比赛。所以在这之前我根本没有意识到今天是科比的最后一场比赛。上午十点多还在上课,看到朋友圈里面科比退役最后一场比赛的消息,我才意识到如此。&lt;/p&gt;
+
+&lt;p&gt;由于中午错过了球赛,来到图书馆,刚才补了下比赛后的新闻和比赛视频,看到比赛结尾科比发言感谢球迷的时候,眼睛湿了,他的话让我太有感触,也让我想起了曾经对于NBA,对于湖人,对于科比,对于篮球的热爱。&lt;/p&gt;
+
+&lt;h2 id=&#34;回忆&#34;&gt;回忆&lt;/h2&gt;
+
+&lt;p&gt;还记得我最爱篮球,对科比最疯狂的时候。初中8、9年级,房间里面挂满了科比的广告,周末的NBA比赛场场不落,周二周三中午中央电视台转播的比赛也是边吃饭边看,甚至有时候饭都不顾的吃。我印象最深的是初三那年,家里搬家,跟爸妈在外面租房子住,电视也没有,中午放学回来就跑到邻居家去看NBA,跟我妈说饭做好了去叫我回来吃。去学校的路上就跟同伴一起讨论哪个球星厉害,哪场比赛怎么怎么样,当时大家都有自己喜欢的偶像,不管会不会打篮球,都会喜欢争论一番。甚至激烈的时候会因为谁说某个球星的坏话就跟他闹矛盾。当然谁说科比的不是,我也会不舒服,甚至记恨着他。&lt;/p&gt;
+
+&lt;p&gt;初中那会,每逢周末,必跟同学去打打篮球,有时候甚至要跑老远去打,也结识了许多小伙伴。那种球场上的友谊,会使我们私下里的关系更铁。最开心的莫过于小区里新建了一个球场,干干净净的,一道周末就会有许多同龄的甚至更大的学生来打球,天黑黑的才散开。那时候的快乐,好怀念。&lt;/p&gt;
+
+&lt;p&gt;最喜欢的球星,当然是科比,最喜欢的球队,当然是湖人。Los Angeles Lakers!Los Angeles Lakers!Los Angeles Lakers!还时不时模仿着播音员的口气,读着队名。在家里,模仿科比的后仰投篮的姿势,到处跳呀跳,我妈还说我&amp;rdquo;你怎么不跳到天花板上&amp;rdquo;,哈哈。闲着就上网搜有关于他的一切视频,纪录片。模仿科比走路的姿势,学着他下沉着肩,结果使自己变驼背。哈哈,后来才知道人家是因为身体壮才看起来沉着肩,其实科比是挺着腰板呢。在我的影响下,我妈也喜欢上了科比,也陪着我看看球赛,哈哈,那种感觉真棒。&lt;/p&gt;
+
+&lt;h2 id=&#34;感动&#34;&gt;感动&lt;/h2&gt;
+
+&lt;p&gt;在最后一场比赛里,科比拿到了60分,在最后关键时刻,又一次带领球队取得了胜利,在湖人效力的20年里,他一次又一次的重复着这样的画面。在这个联盟,在这个球队打拼的整整20年里,他的奇迹时刻,上演了太多太多。记得看他夺冠的那一刻,我真的哭了,我也不知道什么原因,看到他站到台上把篮球高高抛到空中庆祝的时候,我的内心真的无比激动。或许,我是知道原因的。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What I’m doing right now, I’m chasing perfection &amp;mdash;Kobe Byrant&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;憧憬&#34;&gt;憧憬&lt;/h2&gt;
+
+&lt;p&gt;对科比,有着太多太多的回忆与感情。作为偶像,他带给了我许许多多的崇拜与敬仰,更多的是源源不断的激励鼓舞。希望他的这份勇气与毅力能一直鼓舞着我,也能像他一样功成名就。他对篮球的执着,甚至是偏执也让我坚信这个世界上没有东西是不能靠努力得到的。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;再见了科比,再见了凌晨4点的洛杉矶。奋斗吧少年,努力去追寻你的梦!&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2016年伊始</title>
+      <link>https://example.com/beginning-of-2016/</link>
+      <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/beginning-of-2016/</guid>
+      <description>
+
+&lt;p&gt;时间过得好快好快。&lt;/p&gt;
+
+&lt;h2 id=&#34;计划&#34;&gt;计划&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;转眼间大三下学期了,也到了2016年,感觉在学校的时间过得越来越快了,转眼间两个周又飘过,现在后悔的是两年多前刚踏入大学校门的时候为什么没有给自己定好一个计划,一个切实可行并能持之以恒的计划!不过又感到庆幸的是我及早的意识到了自己应该做点事情,不让学生生涯带着遗憾结束。&lt;/li&gt;
+&lt;li&gt;考研?实习?还是继续钻研喜欢的技术。有时候我挺羡慕那些勇于做自我的人,可以抛开一切去追求自己的追求。但是,循规蹈矩,这个词却不一定是个坏词,我想人生有那么多选择和机遇,你怎么就知道你现在的决定就一定是正确亦或是错误的呢?&lt;/li&gt;
+&lt;li&gt;这学期不再打算出去实习了,好好呆在学校里,做做自己的技术,好好上课,好好学习。那些曾经被我以为完全可以不学完全是浪费时间的课程现在看来是那么的重要。教育,永远不是一朝一夕的事情。各种各样的课程可能觉得对未来的职业没什么作用,可是它不是在潜移默化的影响着你的思维和你的生活方式么!&lt;/li&gt;
+&lt;li&gt;关于面试。趁着春招的这股劲儿,我尝试性的投了下网易,阿里的实习岗位。努力把简历做好,把想说的话整理清楚,让面试官认识到我。结果?尽自己最大,毕竟那里是我最向往的地方!!!&lt;/li&gt;
+&lt;li&gt;关于产品。iOS方向搞了有大半年了,从最初的一窍不通,坑队友到现在对开发流程已经了如指掌。项目做了不少,公司实习也经历过,但是仔细想一想,也没什么厉害的。现在,我缺少的是对某一方面深入的探究,寒假的时候喜欢上了动画,就尝试的做了下相关的研究,也蛮有趣的。但是经过这么多的折腾,我觉得是时候自己从无到有认认真真做一款自己的APP了,计划已排上日程,现在正在着手开发,慢慢来,用用心,自己第一个产品上架的那天,我想也不会太遥远。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;金钱观&#34;&gt;金钱观&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;这一生我不想追求大富大贵,仅仅是想与自己爱的人简简单单,快快乐乐的生活。钱多与少无所谓,够花就行。目前,作为一个学生,我不想太依赖父母,我是一个成年人,也是能靠自己双手吃饭的成年人。很庆幸的是在上学期我做到了这一点。我的家庭不算富裕,也不是穷的叮当响。我父母辛劳了一辈子,现在还在给我攒钱说是留着我在外地生活的话买房子。说实话,我真的感到很羞愧。所以,我要努力努力努力,争取在离开学校之后,真正成为一个能够独立的人。未来,在组成我的家庭时候,也能够担当起家庭的责任。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>有趣的滚轮按钮</title>
+      <link>https://example.com/funny-roll/</link>
+      <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/funny-roll/</guid>
+      <description>
+
+&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E6%BB%9A%E8%BD%AE%E5%8A%A0%E8%BD%BDdemo.gif&#34; alt=&#34;效果图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;学习了CA和CG两个框架后一发不可收拾,学习各种动画制作的效果,以后也会持续更新。&lt;/p&gt;
+
+&lt;h3 id=&#34;这个效果的思路如下&#34;&gt;这个效果的思路如下&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;重写一个类JMMagicCircleBtn继承自UIButton,然后这个btn上面添加三个子控件:一个用于显示背景颜色并做动画效果的(UIView)bgView,一个用于显示文字内容的(UIbutton)frontShowBtn,一个旋转的圆圈。层次结构如图:
+&lt;img src=&#34;http://qn.tomorjm.com/%E6%BB%9A%E8%BD%AE%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86%E5%9B%BE.jpeg&#34; alt=&#34;层次结构&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;一定要注意,让自定义的btn.maskToBounds = NO,这样bgView在做图层变换的时候即使超出父视图也会显示。此时当点击自定义btn的时候,第一步先让bgView的bounds放大并将layer.cornerRadius变为最终的圆的半径,第二步隐藏frontShowBtn,显示spinner,并将bounds的长宽变为圆的直径。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;执行完某些操作并将按钮恢复的操作是前面操作的逆步骤,详情见代码。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;我已将该按钮进行了封装,可以直接使用了,代码在&lt;a href=&#34;https://github.com/tormorOoO/JMMagicCircleBtn&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;,欢迎Star!!!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>简单的卡片转场效果</title>
+      <link>https://example.com/trans-annimation/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/trans-annimation/</guid>
+      <description>
+
+&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%8D%A1%E7%89%87%E5%88%87%E6%8D%A2demo.gif&#34; alt=&#34;卡片转场.gif&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;网上自定义controller转场相关基本知识的教程有很多-这里就不一一介绍了-大家自行google-这里解释下这个动画的思路&#34;&gt;网上自定义Controller转场相关基本知识的教程有很多,这里就不一一介绍了,大家自行Google。这里解释下这个动画的思路&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modal的时候,利用VC2的view.layer.anchorPoint (锚点) 绕其作正圆弧动画到VC1.view的位置。
+值得注意的是一个view的anchorPoint设置必须在view的frame设置之前,否则会出现意想不到的情况,因此设置一个控制器view的anchorPoint得在loadView方法里面。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%8D%A1%E7%89%87%E5%88%87%E6%8D%A2%E5%8E%9F%E7%90%86.png&#34; alt=&#34;原理&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;dismiss的时候给VC2.view添加一个手势,通过判断手势移动的距离计算view的移动,当手势停下的时候根据view.transform这个结构体里的某个参数(原理上任意参数都可以)判断view是回到原来位置还是掉下去。并且在自定义的dismissTransition里面判断再次判断这个参数来决定往左还是往右掉下去。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qn.tomorjm.com/%E5%8D%A1%E7%89%87%E5%88%87%E6%8D%A2%E4%BB%A3%E7%A0%81.png&#34; alt=&#34;核心代码&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;具体代码点&lt;a href=&#34;https://github.com/tormorOoO/JMCardTransition&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://example.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/about/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Name: JaimeZhang&lt;/li&gt;
+&lt;li&gt;Location: Hangzhou,China&lt;/li&gt;
+&lt;li&gt;Company: Netease.Inc&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>List</title>
+      <link>https://example.com/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/list/</guid>
+      <description>
+
+&lt;p&gt;这个空间记录着我在学习、生活、探索中遇到或看到的喜欢的&lt;strong&gt;Everything&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;音乐&#34;&gt;音乐&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://music.163.com/#/user/home?id=37659898&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;我的网易云音乐空间&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://music.163.com/#/song?id=1329665676&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Line Of Sight (Reprise) (feat. WYNNE &amp;amp; Mansionair)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://music.163.com/#/song?id=1329664864&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;It’s Only (feat. Zyra) (ODESZA VIP Remix)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://music.163.com/#/song?id=22793210&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;孤独&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;视频&#34;&gt;视频&lt;/h2&gt;
+
+&lt;p&gt;一直以来我特别喜欢看那些&lt;strong&gt;真正高质量&lt;/strong&gt;的视频或者Vlog。&lt;/p&gt;
+
+&lt;p&gt;从这些视频中我可以有新的生活和学习的视野,也会有新的人生感悟。简直都是宝藏!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注:以下部分频道或视频都是在Youtube上的,需要翻墙观看~&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;sam-kolder-https-www-youtube-com-user-koldstudios&#34;&gt;&lt;a href=&#34;https://www.youtube.com/user/koldstudios&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Sam Kolder&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;一位非常厉害的Vlog Youtuber,拥有高超的视频剪辑技巧和无人机飞行技巧,各种炫酷且别出心裁的转场切换,看他的作品简直会惊叹-这TM才是生活呀!&lt;/p&gt;
+
+&lt;h3 id=&#34;回形针paperclip-https-www-youtube-com-channel-ucugj-ykqqhl4fszwumgpiug&#34;&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCUGJ-yKqQHl4FSZwUmGpiUg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;回形针PaperClip&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;宗旨:你的当代生活说明书&lt;/p&gt;
+
+&lt;p&gt;这个频道的视频基本都是&lt;code&gt;科学普及&lt;/code&gt;为主,视频制作精良,质量非常之高,能将很多复杂的知识和结构用图形化的视频或流程表达出来。每个视频的主题来自于生活或科技中的方方面面,极为推荐。&lt;/p&gt;
+
+&lt;h3 id=&#34;李自然说-https-www-youtube-com-channel-ucglul1wdodxutxpazeszhsw&#34;&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCgLUl1WDoDXUtxPaZeSZHsw&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;李自然说&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Up主李自然是一位非常厉害的创业者,频道的每个视频都是他对一个公司、人、现象等的独立的见解和思考。每期视频都非常有深度,你可以学习到一些商业现象背后的逻辑和对生命人生的态度,Up主的积极和学习态度我非常赞同。&lt;/p&gt;
+
+&lt;h3 id=&#34;信誓旦旦-https-space-bilibili-com-32786875&#34;&gt;&lt;a href=&#34;https://space.bilibili.com/32786875&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;信誓旦旦&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;很早之前就关注的一个Up主,蛋蛋是个法国人在中国读过书,又去了洛杉矶,到处探险。视频大多都是一些有趣的生活经历,能把生活玩的整儿有趣和刺激也是没谁了。&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=red&gt;Life is Fantastic!&lt;/font&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;帅soserious-https-www-youtube-com-channel-ucfd-9jafbuujwdzjisowv1w&#34;&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCFd-9jAfbuUjwDZjisOwv1w&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;帅soserious&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;一位健身博主,经历非常励志&lt;/p&gt;
+
+&lt;h3 id=&#34;视频大拍档-https-space-bilibili-com-110974&#34;&gt;&lt;a href=&#34;https://space.bilibili.com/110974&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;视频大拍档&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;视频剪辑、技巧教学频道,非常崇拜创始人特里(程序员+摄影师)&lt;/p&gt;
+
+&lt;h3 id=&#34;李老鼠说车-https-space-bilibili-com-24738601&#34;&gt;&lt;a href=&#34;https://space.bilibili.com/24738601&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;李老鼠说车&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;一档汽车节目,每期视频都充满着搞笑的视频hhh,狗哥牛批!小鑫牛批!老鼠牛批!你们真是奥斯卡影帝!&lt;/p&gt;
+
+&lt;h3 id=&#34;喜欢的作品&#34;&gt;喜欢的作品&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/12o3Zgupu_8&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QJbpJQscn9E&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/jp0bF9Qu2Jw&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/uVrQOcQbFSs&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RsehMAgqDW4&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://example.com/xcodeproj-1/" />
+  <link rel="next" href="https://example.com/ios-multi-language/" />
+  <link rel="canonical" href="https://example.com/xcodeproj-2/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           通过Xcodeproj深入探究Xcode工程文件 二 | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="通过Xcodeproj深入探究Xcode工程文件 二 | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="通过Xcodeproj深入探究Xcode工程文件 二"/>
+<meta name="twitter:description" content="前言 上文介绍了Xcode的配置文件project.pbxproj里面的内容并且提到了Cocoapods正是利用Xcodeproj这个组件实现"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "通过Xcodeproj深入探究Xcode工程文件 二",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/xcodeproj-2\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  1622 ,
+  "url": "https:\/\/example.com\/xcodeproj-2\/",
+  "datePublished": "2016-10-06T00:00:00\x2b00:00",
+  "dateModified": "2016-10-06T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">通过Xcodeproj深入探究Xcode工程文件 二</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-10-06 >6 October 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                4 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>上文介绍了Xcode的配置文件<code>project.pbxproj</code>里面的内容并且提到了Cocoapods正是利用<a href="https://github.com/CocoaPods/Xcodeproj" rel="nofollow noreferrer" target="_blank">Xcodeproj</a>这个组件实现修改该文件达到改变Xcode工程结构的效果。本文将着重介绍<code>Xcodeproj</code>这个组件,通过本文你将会了解这个组件的内容、原理和使用该组件的应用场景。</p>
+
+<h2 id="介绍">介绍</h2>
+
+<p><code>Xcodeproj</code>作为<code>Cocoapods</code>的组件之一,它能够允许你用Ruby语言创建或者修改Xcode工程,脚本化枯燥的管理任务和构造友好的Xcode库,它同时支持<code>Xcode workspaces (.xcworkspace)</code>、<code>configuration files (.xcconfig)</code>和<code>Xcode Scheme files (.xcscheme)</code>。</p>
+
+<p>它的API文档在<a href="http://www.rubydoc.info/gems/xcodeproj" rel="nofollow noreferrer" target="_blank">这里</a></p>
+
+<h2 id="安装">安装</h2>
+
+<p><code>Xcodeproj</code>通过<code>RubyGems</code>安装,打开终端键入</p>
+
+<pre><code class="language-c">gem install xcodeproj
+</code></pre>
+
+<p>结束后,输入<code>gem list</code>查看<code>Xcodeproj</code>是否完成安装,正常情况下你会在list中看到<code>xcodeproj (1.2.0, 1.1.0, 0.28.2)</code>这一行。</p>
+
+<h2 id="内容">内容</h2>
+
+<p>让我们来大体瞅一眼<code>Xcodeproj</code>的内容(Class List),如图1</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%A4%A7%E4%BD%93_1.png" alt="图1" class="lazyload"><figcaption class="image-caption">图1</figcaption></figure></p>
+
+<p>看到库里面的各个类,是不是有点小激动?没错,就是上篇文章介绍过的<code>project.pbxproj</code>里面的各个元素,连名字都是一样!单独看下<code>PBXProject</code>中的各个Attributes(图2),再拿上文中<code>project.pbxproj(图3)</code>里的进行对比</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/project_2.png" alt="图2" class="lazyload"><figcaption class="image-caption">图2</figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/project_3.jpeg" alt="图3" class="lazyload"><figcaption class="image-caption">图3</figcaption></figure></p>
+
+<p>你会发现Xcode配置文件中元素每个属性都能在这个库同名类中找到对应的属性。值得注意的是,<code>Xcodeproj</code>中所有的类都继承于<code>AbstractObject</code>,这个类是个基类,里面有<code>isa</code>,<code>uuid</code>,<code>project</code>,其中<code>uuid</code>就是唯一标识符,还有其他一些基本的method。这个唯一标识符的生成过程在<code>uuid_generator.rb</code>这个类中,笔者水平有限,仅能看出<code>uuid</code>的生成算法加入了<code>文件路径的MD5</code>。</p>
+
+<h2 id="实战">实战</h2>
+
+<p>下面你们可以通过下面这三个实战例子感受下<code>Xcodeproj</code>的强大,代码如下:</p>
+
+<pre><code class="language-ruby">require 'xcodeproj'
+project_path = `.......`    # 工程的全路径
+project = Xcodeproj::Project.open(project_path)
+
+ # 1、显示所有的target
+project.targets.each do |target|
+  puts target.name
+end
+
+# 2、显示第一个target的所有Compile Sources
+target = project.targets.first
+files = target.source_build_phase.files.to_a.map do |pbx_build_file|
+    pbx_build_file.file_ref.real_path.to_s
+end.select do |path|
+  path.end_with?(&quot;.m&quot;, &quot;.mm&quot;, &quot;.swift&quot;)
+end.select do |path|
+  puts path
+end
+
+# 3、创建一个target 并添加文件
+app_target = project.new_target(:application, 'demo', :ios, '6.0')
+header_ref = project.main_group.new_file('./Class.h')
+implm_ref = project.main_group.new_file('./Class.m')
+app_target.add_file_references([implm_ref])
+project.save()
+</code></pre>
+
+<p>大家可以写个ruby脚本依次将三个实例执行下,注意观察终端输出和Xcode目录结构的变化。</p>
+
+<h2 id="原理">原理</h2>
+
+<p>如果你已经执行了上线的操作,那么一定好奇,这个库是怎么操作<code>project.pbxproj</code>文件的?首先需要知道的是,在这个库操作<code>project.pbxproj</code>之前,需要把Xcode工程的全路径给它,那我们就从<code>Project</code>入手,它对应的是上篇文章中提到的根元素,从<code>open</code>开始,注意我代码中的注释!</p>
+
+<pre><code class="language-ruby"># File 'lib/xcodeproj/project.rb', line 96
+def self.open(path)
+  path = Pathname.pwd + path
+  unless Pathname.new(path).exist?
+    raise &quot;[Xcodeproj] Unable to open `#{path}` because it doesn't exist.&quot;
+  end
+  project = new(path, true)
+  project.send(:initialize_from_file)  # 执行这个方法之前会判断path的正确性
+  project
+end
+
+# File 'lib/xcodeproj/project.rb', line 96
+def initialize_from_file
+  pbxproj_path = path + 'project.pbxproj'  # 拿到包内容中的配置文件,这个地方操作的是根元素
+  plist = Plist.read_from_path(pbxproj_path.to_s)
+  root_object.remove_referrer(self) if root_object
+  @root_object     = new_from_plist(plist['rootObject'], plist['objects'], self)  # new_from_plist方法拿到rootObject,正式开始操作
+  @archive_version = plist['archiveVersion']
+  @object_version  = plist['objectVersion']
+  @classes         = plist['classes']
+  @dirty           = false
+
+  ......
+end
+
+# File 'lib/xcodeproj/project.rb', line 252
+def new_from_plist(uuid, objects_by_uuid_plist, root_object = false)
+  attributes = objects_by_uuid_plist[uuid]
+  if attributes
+    klass = Object.const_get(attributes['isa'])
+    object = klass.new(self, uuid)
+    objects_by_uuid[uuid] = object
+    object.add_referrer(self) if root_object
+    object.configure_with_plist(objects_by_uuid_plist) # 分析plist
+    object
+  end
+end
+
+</code></pre>
+
+<p>到了这里,从根元素进入,分析objects属性内的所有元素,<code>configure_with_plist</code>中使用objects的uuid去分析包装相应元素,将其装变为库中的对应类的对象,同时<code>isa</code>也被复制过去。
+最终,<code>project.pbxproj</code>中的所有元素对应的信息,都转化为Ruby对象,然后增删改查等操作都变为对象操作,使用起来非常方便。</p>
+
+<h2 id="使用场景">使用场景</h2>
+
+<ul>
+<li>你可以做一个Ruby脚本,放在打包测试流程中去,用来分析项目中不同target中缺少的文件和资源。</li>
+<li>将一些繁琐的配置操作写成一个脚本,省时省力</li>
+</ul>
+
+<p>如果还有好的idea,欢迎补充~</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+<li><p><a href="http://tomorjm.com/xcodeproj-1/" rel="nofollow noreferrer" target="_blank">通过Xcodeproj深入探究Xcode工程文件 一</a></p></li>
+
+<li><p><a href="http://tomorjm.com/xcodeproj-2/" rel="nofollow noreferrer" target="_blank">通过Xcodeproj深入探究Xcode工程文件 二</a></p></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>1622</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2fxcodeproj-2%2f&amp;text=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%ba%8c&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fxcodeproj-2%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fxcodeproj-2%2f&amp;title=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%ba%8c" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2fxcodeproj-2%2f&amp;title=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%ba%8c" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2fxcodeproj-2%2f&amp;appkey=&amp;title=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%ba%8c" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/xcodeproj-1/" class="prev" rel="prev" title="通过Xcodeproj深入探究Xcode工程文件 一"><i class="iconfont icon-dajiantou"></i>&nbsp;通过Xcodeproj深入探究Xcode工程文件 一</a>
+         
+        
+        <a href="https://example.com/ios-multi-language/" class="next" rel="next" title="iOS应用内多语言切换的奇思妙想">iOS应用内多语言切换的奇思妙想&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

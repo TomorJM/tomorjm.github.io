@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://example.com/ios-target-delegate/" />
+  <link rel="next" href="https://example.com/xcodeproj-2/" />
+  <link rel="canonical" href="https://example.com/xcodeproj-1/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           通过Xcodeproj深入探究Xcode工程文件 一 | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="通过Xcodeproj深入探究Xcode工程文件 一 | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="通过Xcodeproj深入探究Xcode工程文件 一"/>
+<meta name="twitter:description" content="前言 你是否好奇Cocoapods是如何修改掉Xcode工程的结构?你也是否曾被Xcode工程的配置文件里面杂乱的内容搞得摸不清头脑?你又是否"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "通过Xcodeproj深入探究Xcode工程文件 一",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/xcodeproj-1\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  3008 ,
+  "url": "https:\/\/example.com\/xcodeproj-1\/",
+  "datePublished": "2016-10-05T00:00:00\x2b00:00",
+  "dateModified": "2016-10-05T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">通过Xcodeproj深入探究Xcode工程文件 一</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-10-05 >5 October 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                7 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>你是否好奇Cocoapods是如何修改掉Xcode工程的结构?你也是否曾被Xcode工程的配置文件里面杂乱的内容搞得摸不清头脑?你又是否知道Xcodeproj这个神奇的Ruby库?下面我将通过这个系列来解除你的困惑。</p>
+
+<h2 id="cocoapods是如何修改xcode工程结构的">Cocoapods是如何修改Xcode工程结构的</h2>
+
+<p>我们知道Cocoapods是用ruby创作的一套第三方库,它很方便的可以删除、添加、更新第三方库?当你执行修改完<code>PodFile</code>执行<code>pod update</code>的时候,你会惊讶的发现Xcode工程被神奇的修改掉了。那么它是如何做到的呢?细心的你会发现,每个Xcode工程都有一个<code>project.pbxproj</code>文件,这个文件记录着该工程的文件结构。Cocoapods正是通过它的组件<a href="https://github.com/CocoaPods/Xcodeproj" rel="nofollow noreferrer" target="_blank">Xcodeproj</a>来对工程结构进行修改。</p>
+
+<h2 id="project-pbxproj这个文件里面的内容到底是什么含义">project.pbxproj这个文件里面的内容到底是什么含义</h2>
+
+<p>如果你使用过<code>SVN</code>或者<code>Git</code>进行团队协作开发肯定会不可避免的遇到在合并代码的时候往往由于有过添加和删除文件的操作导致Xcode工程报错打不开,这时候一般的解决思路是打开<code>project.pbxproj</code>文件,<code>Command+F</code>键入<code>======</code>或者<code>&lt;&lt;&lt;&lt;&lt;</code>来找到冲突的地方,将冲突的内容删除。然而有些人并不知道为何要这样解决甚至不知道里面的内容是何意思?下面的内容或许对你有些许帮助。</p>
+
+<h3 id="project-pbxproj介绍">project.pbxproj介绍</h3>
+
+<p><code>project.pbxproj</code>采用的是老式风格的plist文件(old ASCII plist),这最早是Next公司采用的一种文件格式,它跟<code>XML</code>格式很多地方类似,但是又有些许的不同。为了更方便理解,我建议你新建一个工程或者在以后的工程上打开<code>project.pbxproj</code>,在实例的基础上便于直观感受,更有助于
+加深理解。</p>
+
+<p>首先我要介绍它里面的众多元素,例如</p>
+
+<pre><code class="language-json">根节点
+PBXBuildFile
+PBXBuildPhase
+PBXAppleScriptBuildPhase
+PBXCopyFilesBuildPhase
+PBXFrameworksBuildPhase
+PBXHeadersBuildPhase
+PBXResourcesBuildPhase
+PBXShellScriptBuildPhase
+PBXSourcesBuildPhase
+PBXContainerItemProxy
+PBXFileElement
+PBXFileReference
+PBXGroup
+PBXVariantGroup
+PBXTarget
+PBXAggregateTarget
+PBXLegacyTarget
+PBXNativeTarget
+PBXProject
+PBXTargetDependency
+XCBuildConfiguration
+XCConfigurationList
+</code></pre>
+
+<p>在<code>万物皆对象</code>的概念下,你尚可将他们理解为一个个<code>类</code>,它们里面的各个子元素就是一个个<code>对象</code>。最外层的每个元素如<code>PBXBuildFile</code>被称为一个个
+<code>Section</code>,为方便理解,文章后面的内容我都将这些元素称为类,将元素的实例成为对象。</p>
+
+<h3 id="project-pbxproj的整体结构-根节点">project.pbxproj的整体结构(根节点)</h3>
+
+<pre><code class="language-objc">// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = { };
+    objectVersion = 45;
+    objects = {...};
+    rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
+
+</code></pre>
+
+<p>如果你已经打开了一个<code>project.pbxproj</code>,你就会很容易看到这种结构,只不过<code>objects</code>里面的各种类属于第二层结构,<code>rootObject</code>位于文件的最后一行。</p>
+
+<h3 id="唯一标识码">唯一标识码</h3>
+
+<p>细心的你会看到,上面的根节点里面的<code>rootObject</code>后面是一串<code>24位的16进制数</code>,它就是每个对象的唯一标识码,它可以唯一标识文件的每个对象,也就是说
+每个元素的标识码都是不同的。Xcode生成唯一标识码的算法可能引入了日期、序列和其它一些预定义的值，但是并没有确切的文档说明具体的生成过程。值得注意的是,该唯一标识码不仅在所在的工程中唯一,而且还是跨工程唯一。</p>
+
+<h3 id="pbxbuildfile">PBXBuildFile</h3>
+
+<p><code>PBXBuildFile</code>是文件类，被<code>PBXBuildPhase</code>等作为文件包含或被引用的资源。此时我已经新建了一个名为<code>Xcode工程Demo</code>的工程,此时的工程结构是这样,如图1所示。而此时的<code>project.pbxproj</code>中<code>PBXBuildFile</code>的结构如图2所示。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%A4%A7%E4%BD%93_1.png" alt="图1" class="lazyload"><figcaption class="image-caption">图1</figcaption></figure>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/PBXBuildFile_2.jpeg" alt="图2" class="lazyload"><figcaption class="image-caption">图2</figcaption></figure></p>
+
+<p>可以清楚的看到每个<code>PBXBuildFile</code>对象都是由以下的结构组成</p>
+
+<pre><code class="language-objc">4D05CA6B1193055000125045 /* xxx.c in Sources */ = {
+    isa = PBXBuildFile;
+    fileRef = 4D05CA411193055000125045 /* xxx.c */;
+};
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E8%B5%84%E6%BA%90_3.jpeg" alt="图3" class="lazyload"><figcaption class="image-caption">图3</figcaption></figure></p>
+
+<p>其中<code>isa</code>跟Objc中的对象的isa指针一样,指向的是它的类,而<code>fileRef</code>则指向的是一个<code>PBXFileReference</code>对象,这个类将在下面介绍。
+细心的你又会发现,为什么图1和图2中的文件个数不一致,却和图3中编译时的文件和资源统一。前者的差异是由于<code>PBXFileReference</code>所致,通过后者我们可以大胆猜测,<code>PBXBuildFile</code>中的对象是编译时候需要确认的文件和资源的集合,如果不信的话可以拖几张图片资源扔进工程中
+,经过验证结果和预测的情况一致。</p>
+
+<h3 id="pbxfilereference">PBXFileReference</h3>
+
+<p><code>PBXFileReference</code>用于跟踪项目引用的每一个外部文件，比如源代码文件、资源文件、库文件、生成目标文件等。具体表现如图4。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/filereference_4.jpeg" alt="图4" class="lazyload"><figcaption class="image-caption">图4</figcaption></figure></p>
+
+<p>它的结构如下:</p>
+
+<pre><code class="language-objc">87293F901153D870007AFD45 /* objc.mm */ = {
+    isa = PBXFileReference;
+    fileEncoding = 4;
+    lastKnownFileType = sourcecode.cpp.objcpp;
+    name = monobjc.mm;
+    path = sources/monobjc.mm;
+    sourceTree = &quot;&quot;;
+};
+</code></pre>
+
+<p>里面的每个key的含义,对照着实际工程,大家不妨自行揣测。
+我们再将<code>PBXBuildFile</code>和<code>PBXFileReference</code>放一起进行对比,如图5。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E4%B8%80%E8%B5%B75.jpeg" alt="图5" class="lazyload"><figcaption class="image-caption">图5</figcaption></figure></p>
+
+<p><code>AppDelegate.swift</code>对象通过<code>fileRef</code>指向标识符为<code>F3E1481A1DA50A180059397C</code>的<code>PBXFileReference</code>对象,通过这个引用,一个<code>PBXBuildFile</code>
+对象就可以查到自己的具体信息,如<code>fileType</code>、<code>name</code>和<code>path</code>等信息。</p>
+
+<h3 id="pbxgroup">PBXGroup</h3>
+
+<p><code>PBXGroup</code>用于组文件，或者嵌套组。让我们来看下实例,如图6</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%88%86%E7%BB%84_6.jpeg" alt="图6" class="lazyload"><figcaption class="image-caption">图6</figcaption></figure></p>
+
+<p>怡然是通过唯一标识符组装,每个<code>PBXGroup</code>对象都有一个<code>children</code>属性,里面可以是任何一种类的对象。但是这时候的<code>PBXGroup</code>指的是Xcode里面组织的分组结构,和实际文件系统中的结构并不相同。
+指的注意的是,<code>children</code>中的每个文件对象都属于<code>PBXFileReference</code>类,而不是<code>PBXBuildFile</code>类</p>
+
+<h3 id="pbxnativetarget">PBXNativeTarget</h3>
+
+<p><code>PBXNativeTarget</code>就是工程中的target,如果工程中有多个target,都会在这个section中有所体现。
+实例中如图7所示</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/target_7.jpeg" alt="图7" class="lazyload"><figcaption class="image-caption">图7</figcaption></figure></p>
+
+<p>我们都知道每个target都有<code>Compile Sources</code>、<code>Copy Bundle Resources</code>、<code>Link Binary With Libiaries</code>这三个需要在编译时确定的内容。
+而在<code>PBXNativeTarget</code>中通过<code>buildPhases</code>属性可以找到对应的内容。</p>
+
+<h3 id="pbxsourcesbuildphase和pbxresourcesbuildphase">PBXSourcesBuildPhase和PBXResourcesBuildPhase</h3>
+
+<p><code>PBXSourcesBuildPhase</code>用于构建阶段中编译源文件,<code>PBXResourcesBuildPhase</code>用于构建阶段需要复制的资源文件,如图8</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/build_8.jpeg" alt="图8" class="lazyload"><figcaption class="image-caption">图8</figcaption></figure></p>
+
+<p>需要注意的是,<code>PBXSourcesBuildPhase</code>这个section中放着所有的target的同类对象,<code>PBXResourcesBuildPhase</code>也是一样。</p>
+
+<h3 id="pbxproject">PBXProject</h3>
+
+<p><code>PBXProject</code>标识着整个工程,由根元素的<code>rootObject</code>引入。如图9所示</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/project_9.jpeg" alt="图9" class="lazyload"><figcaption class="image-caption">图9</figcaption></figure></p>
+
+<p>该对象记录着<code>targets</code>、<code>mainGroup</code>等重要信息,甚至每个target在创建时候的Xcode版本都会记录在其中。</p>
+
+<h3 id="其他元素">其他元素</h3>
+
+<p>还有其他很多重要的元素,如记录工程配置信息的<code>XCConfigurationList</code>和<code>XCBuildConfiguration</code>等,大家可以自行研究研究。</p>
+
+<h2 id="总结">总结</h2>
+
+<p>通过上面的内容,我画了一张图总结一下,如图10</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E6%80%BB%E7%BB%93_10.jpeg" alt="图10" class="lazyload"><figcaption class="image-caption">图10</figcaption></figure></p>
+
+<p>由此看来,以前看到就头疼的<code>project.pbxproj</code>配置文件的内容并没有想象中的复杂,也可以看出Xcode文件组织的严密和周整。</p>
+
+<p>大家自己研究的时候,不妨可以动手改改项目中的内容,再去观察配置文件的变化,这样既可以有更深的理解,或许有新发现也说不定奥。</p>
+
+<p>下篇文章,我将带大家用Xcodeproj这个库来,通过几行代码修改<code>project.pbxproj</code>中的内容以达到通过脚本去修改Xcode工程和分析工程的目的。</p>
+
+<p>作者水平有限,有哪些地方有错误,欢迎指正!</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+<li><p><a href="http://tomorjm.com/xcodeproj-1/" rel="nofollow noreferrer" target="_blank">通过Xcodeproj深入探究Xcode工程文件 一</a></p></li>
+
+<li><p><a href="http://tomorjm.com/xcodeproj-2/" rel="nofollow noreferrer" target="_blank">通过Xcodeproj深入探究Xcode工程文件 二</a></p></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>3008</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2fxcodeproj-1%2f&amp;text=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%b8%80&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fxcodeproj-1%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fxcodeproj-1%2f&amp;title=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%b8%80" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2fxcodeproj-1%2f&amp;title=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%b8%80" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2fxcodeproj-1%2f&amp;appkey=&amp;title=%e9%80%9a%e8%bf%87Xcodeproj%e6%b7%b1%e5%85%a5%e6%8e%a2%e7%a9%b6Xcode%e5%b7%a5%e7%a8%8b%e6%96%87%e4%bb%b6%20%e4%b8%80" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/ios-target-delegate/" class="prev" rel="prev" title="使用强大的消息转发机制实现多代理"><i class="iconfont icon-dajiantou"></i>&nbsp;使用强大的消息转发机制实现多代理</a>
+         
+        
+        <a href="https://example.com/xcodeproj-2/" class="next" rel="next" title="通过Xcodeproj深入探究Xcode工程文件 二">通过Xcodeproj深入探究Xcode工程文件 二&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  
+  <link rel="next" href="https://example.com/funny-roll/" />
+  <link rel="canonical" href="https://example.com/trans-annimation/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           简单的卡片转场效果 | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="简单的卡片转场效果 | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="简单的卡片转场效果"/>
+<meta name="twitter:description" content="效果 网上自定义Controller转场相关基本知识的教程有很多,这里就不一一介绍了,大家自行Google。这里解释下这个动画的思路 modal"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "简单的卡片转场效果",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/trans-annimation\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  393 ,
+  "url": "https:\/\/example.com\/trans-annimation\/",
+  "datePublished": "2016-01-14T00:00:00\x2b00:00",
+  "dateModified": "2016-01-14T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">简单的卡片转场效果</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-01-14 >14 January 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                1 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="效果">效果</h2>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%8D%A1%E7%89%87%E5%88%87%E6%8D%A2demo.gif" alt="卡片转场.gif" class="lazyload"><figcaption class="image-caption">卡片转场.gif</figcaption></figure></p>
+
+<h2 id="网上自定义controller转场相关基本知识的教程有很多-这里就不一一介绍了-大家自行google-这里解释下这个动画的思路">网上自定义Controller转场相关基本知识的教程有很多,这里就不一一介绍了,大家自行Google。这里解释下这个动画的思路</h2>
+
+<ul>
+<li>modal的时候,利用VC2的view.layer.anchorPoint (锚点) 绕其作正圆弧动画到VC1.view的位置。
+值得注意的是一个view的anchorPoint设置必须在view的frame设置之前,否则会出现意想不到的情况,因此设置一个控制器view的anchorPoint得在loadView方法里面。</li>
+</ul>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%8D%A1%E7%89%87%E5%88%87%E6%8D%A2%E5%8E%9F%E7%90%86.png" alt="原理" class="lazyload"><figcaption class="image-caption">原理</figcaption></figure></p>
+
+<ul>
+<li>dismiss的时候给VC2.view添加一个手势,通过判断手势移动的距离计算view的移动,当手势停下的时候根据view.transform这个结构体里的某个参数(原理上任意参数都可以)判断view是回到原来位置还是掉下去。并且在自定义的dismissTransition里面判断再次判断这个参数来决定往左还是往右掉下去。</li>
+</ul>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%8D%A1%E7%89%87%E5%88%87%E6%8D%A2%E4%BB%A3%E7%A0%81.png" alt="核心代码" class="lazyload"><figcaption class="image-caption">核心代码</figcaption></figure></p>
+
+<blockquote>
+<p>具体代码点<a href="https://github.com/tormorOoO/JMCardTransition" rel="nofollow noreferrer" target="_blank">这里</a></p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>393</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2ftrans-annimation%2f&amp;text=%e7%ae%80%e5%8d%95%e7%9a%84%e5%8d%a1%e7%89%87%e8%bd%ac%e5%9c%ba%e6%95%88%e6%9e%9c&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2ftrans-annimation%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2ftrans-annimation%2f&amp;title=%e7%ae%80%e5%8d%95%e7%9a%84%e5%8d%a1%e7%89%87%e8%bd%ac%e5%9c%ba%e6%95%88%e6%9e%9c" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2ftrans-annimation%2f&amp;title=%e7%ae%80%e5%8d%95%e7%9a%84%e5%8d%a1%e7%89%87%e8%bd%ac%e5%9c%ba%e6%95%88%e6%9e%9c" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2ftrans-annimation%2f&amp;appkey=&amp;title=%e7%ae%80%e5%8d%95%e7%9a%84%e5%8d%a1%e7%89%87%e8%bd%ac%e5%9c%ba%e6%95%88%e6%9e%9c" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://example.com/funny-roll/" class="next" rel="next" title="有趣的滚轮按钮">有趣的滚轮按钮&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

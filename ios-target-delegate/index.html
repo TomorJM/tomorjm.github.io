@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="https://example.com/shadow-click-tableviewcell/" />
+  <link rel="next" href="https://example.com/xcodeproj-1/" />
+  <link rel="canonical" href="https://example.com/ios-target-delegate/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           使用强大的消息转发机制实现多代理 | TomorJM - Love and Share.
+       
+  </title>
+  <meta name="title" content="使用强大的消息转发机制实现多代理 | TomorJM - Love and Share.">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用强大的消息转发机制实现多代理"/>
+<meta name="twitter:description" content="传统的代理模式只能实现一对多的代理,即每个对象同一时刻只能有一个代理,这就可能导致在某些使用场景下失效,如果对象A在处理某些事情的情况下要将"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "使用强大的消息转发机制实现多代理",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/example.com\/ios-target-delegate\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/example.com\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  1099 ,
+  "url": "https:\/\/example.com\/ios-target-delegate\/",
+  "datePublished": "2016-08-02T00:00:00\x2b00:00",
+  "dateModified": "2016-08-02T00:00:00\x2b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/example.com\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+        <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://example.com">TomorJM - Love and Share.</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://example.com">TomorJM - Love and Share.</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/list/" title="">📖</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">使用强大的消息转发机制实现多代理</h1>
+        <div class="post-meta">
+            Written by <a href="https://example.com" rel="author">JaimeZhang</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-08-02 >2 August 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://example.com/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                3 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>传统的代理模式只能实现一对多的代理,即每个对象同一时刻只能有一个代理,这就可能导致在某些使用场景下失效,如果对象A在处理某些事情的情况下要将结果同时通知给B和C该怎么办?这时候代理就没法用了,而通知机制虽然能够解决,但它是APP生命周期的管理,如果项目中大量使用通知,必然会不好维护且也不够优雅。这时候可以考虑使用OC强大的运行时机制,利用消息转发实现多代理。</p>
+
+<p>PS: 如果还有不了解消息转发的童鞋可以先看看这篇文章:<a href="http://www.cocoachina.com/ios/20150604/12013.html" rel="nofollow noreferrer" target="_blank">初步了解消息转发</a>
+,我就不继续复制粘贴造轮子了。</p>
+
+<h2 id="先看效果">先看效果</h2>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-27%2014.10.40.png" alt="图1" class="lazyload"><figcaption class="image-caption">图1</figcaption></figure></p>
+
+<p>图中GreenView为一个scrollview,OrangeView和BlueView为普通的UIView,他们都是ViewController的属性,现在我要实现的目标是,当
+滚动scrollview的时候它的代理(OrangeVIew,BlueView和ViewController)都会同时实现各自的代理方法<code>scrollViewWillBeginDragging</code>和<code>scrollViewWillEndDragging</code>。</p>
+
+<h2 id="思路">思路</h2>
+
+<p>经过上面提供链接里面的内容我们可以大体了解到消息转发具体是怎么回事,过程如下图:
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E6%B6%88%E6%81%AF%E8%BD%AC%E5%8F%91%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="消息转发示意图" class="lazyload"><figcaption class="image-caption">消息转发示意图</figcaption></figure></p>
+
+<p>因此我们可以利用图示消息转发的过程实现多代理。</p>
+
+<h3 id="首先">首先</h3>
+
+<pre><code class="language-objc">    _myScrolView.contentSize = self.view.bounds.size;
+    NSArray *array = @[self,self.orange,self.blue];
+    _delegateTargets = [[DelegateShareManager alloc] init];
+    _delegateTargets.delegateTargets = array;
+    _myScrolView.delegate = (id)_delegateTargets;
+</code></pre>
+
+<p>我们需要一个代理分发者,我们叫他<code>DelegateShareManager</code>,他的作用是管理scrollview的所有代理者,<code>_delegateTargets</code>是他的一个实例,在这里个实例内部有一个array拥有着那些代理们。最后让<code>_myScrolView.delegate = (id)_delegateTargets</code>,这样原本的scrollview的单一代理就可以通过
+这种方式变为多个代理。</p>
+
+<h3 id="然后">然后</h3>
+
+<p>在<code>DelegateShareManager</code>内部通过下面代码将scrollview的需要唤起的代理信息发送出去</p>
+
+<pre><code class="language-objc">- (void)setDelegateTargets:(NSArray *)delegateTargets{
+    self.weakTargets = [NSPointerArray weakObjectsPointerArray];
+    for (id delegate in delegateTargets) {
+        [self.weakTargets addPointer:(__bridge void*)delegate];
+    }
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+    return nil;
+}
+
+
+- (BOOL)respondsToSelector:(SEL)aSelector{
+    if ([super respondsToSelector:aSelector]) {
+        return YES;
+    }
+    for (id target in self.weakTargets) {
+        if ([target respondsToSelector:aSelector]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
+    NSMethodSignature *sig = [super methodSignatureForSelector:aSelector];
+    if (!sig) {
+        for (id target in self.weakTargets) {
+            if ((sig = [target methodSignatureForSelector:aSelector])) {
+                break;
+            }
+        }
+    }
+    return sig;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation{
+    for (id target in self.weakTargets) {
+        if ([target respondsToSelector:anInvocation.selector]) {
+            [anInvocation invokeWithTarget:target];
+        }
+    }
+}
+</code></pre>
+
+<p>上面代码可以理解为,通过查找weakTargets里面的单一代理元素(如orangeView),将消息转发出去</p>
+
+<h3 id="最后">最后</h3>
+
+<p>在OrangeView,ViewController和BlueView里面分别具体实现代理方法<code>scrollViewWillBeginDragging</code>和<code>scrollViewWillEndDragging</code>即能实现多代理效果。</p>
+
+<h3 id="演示">演示</h3>
+
+<p>拖动绿色的scrollview,可以看到控制台输出</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://qn.tomorjm.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-27%2014.45.42.png" alt="控制台输出" class="lazyload"><figcaption class="image-caption">控制台输出</figcaption></figure></p>
+
+<h2 id="demo">Demo</h2>
+
+<p>这里有个小demo:<a href="https://github.com/tomorOoO/MultipleDelegateDemo" rel="nofollow noreferrer" target="_blank">链接</a>,如果觉得对你有帮助,给个star吧</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>JaimeZhang </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>1099</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=https%3a%2f%2fexample.com%2fios-target-delegate%2f&amp;text=%e4%bd%bf%e7%94%a8%e5%bc%ba%e5%a4%a7%e7%9a%84%e6%b6%88%e6%81%af%e8%bd%ac%e5%8f%91%e6%9c%ba%e5%88%b6%e5%ae%9e%e7%8e%b0%e5%a4%9a%e4%bb%a3%e7%90%86&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fios-target-delegate%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fios-target-delegate%2f&amp;title=%e4%bd%bf%e7%94%a8%e5%bc%ba%e5%a4%a7%e7%9a%84%e6%b6%88%e6%81%af%e8%bd%ac%e5%8f%91%e6%9c%ba%e5%88%b6%e5%ae%9e%e7%8e%b0%e5%a4%9a%e4%bb%a3%e7%90%86" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+        <a href="//www.douban.com/recommend/?url=https%3a%2f%2fexample.com%2fios-target-delegate%2f&amp;title=%e4%bd%bf%e7%94%a8%e5%bc%ba%e5%a4%a7%e7%9a%84%e6%b6%88%e6%81%af%e8%bd%ac%e5%8f%91%e6%9c%ba%e5%88%b6%e5%ae%9e%e7%8e%b0%e5%a4%9a%e4%bb%a3%e7%90%86" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-douban"></i>
+          </a>
+          
+
+          
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fexample.com%2fios-target-delegate%2f&amp;appkey=&amp;title=%e4%bd%bf%e7%94%a8%e5%bc%ba%e5%a4%a7%e7%9a%84%e6%b6%88%e6%81%af%e8%bd%ac%e5%8f%91%e6%9c%ba%e5%88%b6%e5%ae%9e%e7%8e%b0%e5%a4%9a%e4%bb%a3%e7%90%86" target="_blank" title="Share on Douban ">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+          
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="https://example.com">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://example.com/shadow-click-tableviewcell/" class="prev" rel="prev" title="一个波纹阴影点击和长按效果的TableViewCell"><i class="iconfont icon-dajiantou"></i>&nbsp;一个波纹阴影点击和长按效果的TableViewCell</a>
+         
+        
+        <a href="https://example.com/xcodeproj-1/" class="next" rel="next" title="通过Xcodeproj深入探究Xcode工程文件 一">通过Xcodeproj深入探究Xcode工程文件 一&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yourdiscussshortname';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+ 
+
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">1994 - 2019</span>
+        
+          <span> | TomorJM ❤️</span>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>
